@@ -1,6 +1,8 @@
 \documentclass[../custom,grid]{flashcards}
-\usepackage{enumerate}
-%\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath}
 
 \begin{document}
 \cardfrontstyle{headings}
@@ -15,10 +17,316 @@
 \end{flashcard}
 
 \begin{flashcard}[Fixed Income]{Advantages and Disadvantages of Bond Portfolio Management Strategies}
-    \begin{tabular}{l l l} %\toprule
-        Strategy & Advantages & Disadvantages \\ %\midrule
-        %Pure Bond Indexing & \begin{itemize} \item Zero tracking error \item Same risk factors as index \item Low fees \end{itemize} & \begin{itemize} \item Costly and difficult \item Lower expected return than index \end{itemize} \\
+    \begin{tabular}{>{\raggedright}p{1in} p{1.6in}  p{1.6in}} \toprule
+        \multicolumn{1}{c}{\textit{Strategy}} &
+        \multicolumn{1}{c}{\textit{Advantages}} &
+        \multicolumn{1}{c}{\textit{Disadvantages}}
+        \\ \midrule
+        Pure Bond Indexing &
+        \vspace{-3mm}
+        \begin{itemize}[nosep,leftmargin=*]
+            \item Zero tracking error
+            \item Same risk factors as index
+            \item Low fees 
+            \vspace*{-\baselineskip}
+        \end{itemize} &
+        \vspace{-3mm}
+        \begin{itemize}[nosep,leftmargin=*]
+            \item Costly and difficult
+            \item Lower expected return than index
+            \vspace*{-\baselineskip}
+        \end{itemize}
+        \\ \midrule
+        Enhanced indexing by matching primary risk factors &
+        \vspace{-3mm}
+        \begin{itemize}[nosep,leftmargin=*]
+            \item Less costly
+            \item Higher expected return
+            \item Same risk factors as index
+            \vspace*{-\baselineskip}
+        \end{itemize} &
+        \vspace{-3mm}
+        \begin{itemize}[nosep,leftmargin=*]
+            \item Higher management fees
+            \item Higher tracking error
+            \item Lower expected return than index
+            \vspace*{-\baselineskip}
+        \end{itemize}
+        \\ \midrule
+        Enhanced indexing by small risk factor mismatches &
+        \vspace{-3mm}
+        \begin{itemize}[nolistsep,leftmargin=*]
+            \item Same duration as index
+            \item Higher expected return
+            \item Lower restrictions
+            \vspace*{-\baselineskip}
+        \end{itemize} &
+        \vspace{-3mm}
+        \begin{itemize}[nolistsep,leftmargin=*]
+            \item Higher risk
+            \item Higher tracking error
+            \item Higher management fees
+            \vspace*{-\baselineskip}
+        \end{itemize}
+        \\ \midrule
+        Active management by larger risk factor mismatches &
+        \vspace{-3mm}
+        \begin{itemize}[nolistsep,leftmargin=*]
+            \item Higher expected return
+            \item Lower restrictions
+            \item Manage duration
+            \vspace*{-\baselineskip}
+        \end{itemize} &
+        \vspace{-3mm}
+        \begin{itemize}[nolistsep,leftmargin=*]
+            \item Higher risk
+            \item Higher tracking error
+            \item Higher management fees
+            \vspace*{-\baselineskip}
+        \end{itemize}
+        \\ \midrule
+        Full-blown active management &
+        \vspace{-3mm}
+        \begin{itemize}[nolistsep,leftmargin=*]
+            \item Higher expected return
+            \item Few restrictions
+            \item No duration limits
+            \vspace*{-\baselineskip}
+        \end{itemize} &
+        \vspace{-3mm}
+        \begin{itemize}[nolistsep,leftmargin=*]
+            \item Higher risk
+            \item Higher tracking error
+            \item Higher management fees
+            \vspace*{-2\baselineskip}
+        \end{itemize}
+        \\ \bottomrule 
     \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Four Criteria for Selecting a Benchmark Bond Index}
+    \begin{enumerate}
+        \item \textit{Market value risk} varies with duration. More risk aversion equates to lower market risk and shorter benchmark duration.
+        \item \textit{Income risk} varies indirectly with maturity. Higher dependence on stable income equates to longer maturity of the benchmark. Often is opposite from market value risk.
+        \item \textit{Credit risk} of the benchmark should closely match that of the portfolio.
+        \item \textit{Liability framework risk} applies only to portfolios matching a liability structure and should be minimized.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Stratified Sampling}
+    \begin{flushleft}
+        First, create a matrix of bonds according to risk factors such as sector, rating, duration, callability, etc.\newline
+
+        Measure the total value of the bonds in each cell, and determine each cell's weight in the index.\newline
+
+        Select a sample of bonds from each cell in an amount that produces the same weight in the portfolio as that cell's weight in the index.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Risk Factors Used in Bond Benchmark Multifactor Models}
+    \begin{itemize}
+        \item \textbf{Duration.} Estimates the change in value given small, parallel yield curve shifts. Convexity must also be considered.
+        \item \textbf{Key rate duration.} Measures sensitivity to yield curve twists.
+        \item \textbf{Present value distribution of cash flows.} Measures the proportion of the index's total duration attributable to cash flows falling within selected time periods. Matching the PVD will create the same sensitivities to yield curve twists and shifts.
+        \item \textbf{Sector and quality percent.} Matches the weights of sectors and qualities in the index.
+        \item \textbf{Sector duration contributions.} Matches the proportion of the index duration contributed by each sector.
+        \item \textbf{Quality spread duration contribution.} Matches the proportion of the index duration contributed by rating categories.
+        \item \textbf{Sector/coupon/maturity cell weights.} Matching sector, coupon, and maturity weights mimics callability of bonds in the index.
+        \item \textbf{Issuer exposure.} Use enough securities such that risk attributable to any particular issuer is minimized.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Summary of Factors Used for Bond Risk Exposure}
+    \begin{tabular}{
+        >{\raggedright}p{.6in}
+        >{\raggedright}p{.6in}
+        >{\raggedright}p{.5in}
+        >{\raggedright}p{.5in}
+        >{\raggedright}p{.6in}
+        >{\raggedright}p{.6in}
+        >{\raggedright\arraybackslash}p{.6in}}
+        & \multicolumn{3}{|>{\centering}p{1.6in}|}{\textit{Primary Risk Factors}} & &\\ \midrule
+        \textit{Risk} & \textit{Interest Rate} & \multicolumn{2}{|>{\centering}p{1in}|}{\textit{Yield Curve}} & \textit{Spread} & \textit{Credit} & \textit{Optionality}\\ \midrule
+        \textit{What is Measured} & Exposure to yield curve shifts & \multicolumn{2}{|>{\centering}p{1in}|}{Exposure to yield curve twists} & Exposure to spread changes & Exposure to credit changes & Exposure to call or put\\ \midrule
+        \textit{Measurement used} & Duration & PVD & Key rate duration & Spread duration & Duration contribution by credit rating & Delta\\
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Present Value Distribution of Cash Flows}
+    \begin{flushleft}
+        PVD measures the proportion of an index's total duration attributable cash flows (both coupons and redemptions) falling within selected time periods.\newline
+
+        Assuming the time periods are six month intervals, first find the PV of cash flows from the index that fall in every six-month period. Divide by total PV of the index cash flows to get the weights of each period.\newline
+
+        Multiply the duration of each period by its weight to get duration contribution for each period. Divide by the index duration and repeat for all time periods. This is the present value distribution.\newline
+
+        Matching the PVD of the index will match sensitivities to both shifts and twists in the yield curve.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Classical Immunization}
+    \begin{flushleft}
+        The process of structuring a bond portfolio that balance any change in value with the return from reinvestment of coupon and principal received throughout the investment period. The goal of classical immunization is to form a portfolio such that:
+        \begin{itemize}
+            \item If interest rates increase, the gain in reinvestment income exceeds the loss in portfolio value.
+            \item If interest rates decrease, the gain in portfolio value exceeds the loss in investment income.
+        \end{itemize}
+        Without rebalancing, classical immunization only works for a one-time instantaneous change in interest rates. Portfolios cease to be immunized when:
+        \begin{itemize}
+            \item Interest rates fluctuate more than once.
+            \item Time passes and the durations differ.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Immunization of a Single Liability}
+    \begin{enumerate}
+        \item Select a bond or portfolio with an effective duration equal to the liability's duration. If the liability is payable on a single date, the duration is the time horizon until payment.
+        \item Set the PV of the bond equal to the PV of the liability.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Bond Characteristics to Consider When Immunizing}
+    \begin{itemize}
+        \item \textit{Credit rating.} Immunization implicitly assumes that none of the bonds will default.
+        \item \textit{Embedded options.} Make duration difficult to estimate because cash flows are difficult to forecast.
+        \item \textit{Liquidity.} Important because rebalancing requires selling bonds.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Immunization Risk}
+    \begin{flushleft}
+        A measure of how much the end value of an immunized portfolio falls short of its target value because of nonparallel changes in interest rates.\newline
+
+        In general the portfolio that has the lowest reinvestment risk will be the best for immunization.
+        \begin{itemize}
+            \item An immunized portfolio of zero-coupon bonds that mature at the investment horizon has zero immunization risk because there is zero reinvestment risk.
+            \item If cash flows are concentrated around the horizon(e.g., bullet), reinvestment and immunization risk will be low.
+            \item If cash flows are highly dispersed around the horizon (e.g., barbell), reinvestment and immunization risk will be high.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Effective Duration of a Portfolio}
+    \begin{flushleft}
+        The effective duration of a portfolio is the weighted average of the bonds in the portfolio.
+    \end{flushleft}
+    \begin{align*}
+        D_p &= \sum_{i=1}^n w_iD_i = w_1D_1 + w_2D_2 + w_3D_3 + \cdots + w_nD_n\\
+        \\
+        \text{where:}\\
+        D_p &= \text{the effective duration of the portfolio}\\
+        w_i &= \text{the weight of bond $i$ in the portfolio}\\
+        D_i &= \text{the effective duration of bond $i$}\\
+    \end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Dollar Duration}
+    \begin{flushleft}
+        A measure of exposure in dollars.
+    \end{flushleft}
+    \begin{align*}
+        DD &= -(\text{modified or effective duration})(0.01)(\text{price})\\
+        \\
+        DD_p &= \sum_{i=1}^n DD_i = DD_1 + DD_2 + DD_3 + \cdots + DD_n\\
+        \\
+        \text{where:}\\
+        DD_p &= \text{the dollar duration of the portfolio}\\
+        DD_i &= \text{the dollar duration of bond or sector $i$}\\
+    \end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Steps to Adjust a Portfolio's Dollar Duration}
+    \begin{enumerate}
+        \item Calculate the new dollar duration of the portfolio.
+        \item Calculate the rebalancing ratio and use it to calculate the required percentage change in the value of the portfolio.
+        \[
+            \text{rebalancing ratio} = \frac{\text{old $DD$}}{\text{new $DD$}}
+        \]
+        \item The required percentage change in the value of the portfolio is $1 - \text{rebalancing ratio}$.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Three Spread Duration Measures for Fixed-rate Bonds}
+    \begin{enumerate}
+        \item \textbf{Nominal spread} is teh spread between the nominal yield on a non-Treasury bond and a Treasury of the same maturity.
+        \item \textbf{Zero-volatility spread} or static spread is the spread that must be added to the Treasury spot rate curve to make the PV of the bond's cash flows equal to its price.
+        \item \textbf{Option-adjusted spread} is determined using a binomial interest rate tree. It measures the spread with the option removed.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Four Extensions to Classical Immunization}
+    \begin{enumerate}
+        \item \textbf{Multifunctional duration} or key rate duration by focusing on certain key interest rate maturities.
+        \item \textbf{Multiple-liability immunization} aims to immunize several liabilities by monitoring portfolio value and duration for multiple investment horizons.
+        \item \textbf{Increased risk} by lowering the minimum risk requirement of classical immunization allows for excess portfolio value.
+        \item \textbf{Contingent immunization} mixes active and passive immunization strategies.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Contingent Immunization}
+    \begin{itemize}
+        \item Cusion spread is the difference in the immunization rate and the minimum required return.
+        \item Determine the PV of liability and compare this to the PV of the assets to determine the surplus value.
+        \item Continue to compute the value of the surplus as time passes. As long as it's positive, the portfolio can be actively managed.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Three Risks Associated with Managing Against a Liability Structure}
+    \begin{enumerate}
+        \item \textbf{Interest rate risk} is the primary concern when managing a fixed-income portfolio. To avoid match duration and convexity of the liability. Convexity can be difficult to measure, particularly for bonds with negative convexity such as MBS and callable corporates.
+        \item \textbf{Contingent claim risk} (a.k.a. call risk or prepayment risk) is highest when interest rates have fallen. This causes a loss in steady coupon payments as well as the necessity to reinvest at lower rates. To avoid, the convexity of the bonds must be taken into account.
+        \item \textbf{Cap risk} is present if bonds in the portfolio have floating rates. If the coupon doesn't fully adjust upward for rising interest rates, the market value of the bond adjusts downward. The assets and liabilities will not adjust in sync and the surplus will deteriorate.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Maturity Variance}
+    \begin{flushleft}
+        The variance of the differences in the maturities of the bonds used in the immunization strategy and the maturity date of the liability. Written as M-Square or $M^2$.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Three Conditions for Multiple Liability Immunization}
+    \begin{flushleft}
+        \begin{enumerate}
+            \item Assets and liabilities have the same present values.
+            \item Assets and liabilities have the same aggregate durations.
+            \item The range of the distribution of durations of individual assets exceeds the distribution of liabilities. This is necessary to use the cash flows generated from our assets to meet our cash outflow needs.
+        \end{enumerate}
+        These conditions will assure immunization only against parallel rate shifts. For nonparallel shifts, linear programming models can be used to create minimum-risk immunized portfolios.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Cash Flow Matching}
+    \begin{flushleft}
+        Cash flow matching is used to construct a portfolio that will a fund a stream of liabilities with coupons and maturity values. It will cause the durations to be matched, but it is more stringent than immunization by matching duration alone because the timing and amount of cash flows must match the liabilities. To construct the portfolio:
+    \begin{itemize}
+        \item Select a bond with maturity equal to the last liability payment date.
+        \item Buy enough so that the final payments fully fund that liability.
+        \item Using a recursive procedure, select another bond based on maturity value and coupon so that its cash flows plus the coupon of the previous bond fund the latest unfunded liability.
+        \item Continue until all liabilities have been funded.
+    \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Differences Between Cash Flow Matching and Multiple-liability Immunization}
+    \begin{itemize}
+        \item Cash flow matching depends on the cash flows of the portfolio, so expectations of reinvestment rates and borrowing rates are important. Deviations from a perfect match should be small, which can increase the cost. Immunization by matching duration may cost less.
+        \item In a cash-flow-matched portfolio, only cash flows occurring before a liability may be used to meet that obligation. In a duration-matched portfolio, the portfolio only needs to have sufficient value on each liability payment.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Combination Matching}
+    \begin{flushleft}
+    Also known as horizon matching. Is a combination of multiple-liability immunization and cash flow matching. A portfolio is duration matched, and in the early years is also cash flow matched in order to make sure assets are properly dispersed to meet near-term obligations.\newline
+
+    Combination matching has the following advantages over multiple-liability immunization.
+    \begin{itemize}
+        \item Provides liquidity in the initial period.
+        \item Reduced the risk from nonparallel shifts in the yield curve. The initial cash needs are met with cash flows, so there is no rebalancing needed to meet the initial cash requirements.
+    \end{itemize}
+    The primary disadvantage of combination matching is that it tends to be more expensive than multiple-liability matching.
+    \end{flushleft}
 \end{flashcard}
 
 \end{document}

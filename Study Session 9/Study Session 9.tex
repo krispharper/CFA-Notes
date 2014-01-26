@@ -1,4 +1,4 @@
-\documentclass[../custom,grid]{flashcards}
+\documentclass[../custom]{flashcards}
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{array}
@@ -249,7 +249,7 @@
 
 \begin{flashcard}[Fixed Income]{Three Spread Duration Measures for Fixed-rate Bonds}
     \begin{enumerate}
-        \item \textbf{Nominal spread} is teh spread between the nominal yield on a non-Treasury bond and a Treasury of the same maturity.
+        \item \textbf{Nominal spread} is the spread between the nominal yield on a non-Treasury bond and a Treasury of the same maturity.
         \item \textbf{Zero-volatility spread} or static spread is the spread that must be added to the Treasury spot rate curve to make the PV of the bond's cash flows equal to its price.
         \item \textbf{Option-adjusted spread} is determined using a binomial interest rate tree. It measures the spread with the option removed.
     \end{enumerate}
@@ -266,7 +266,7 @@
 
 \begin{flashcard}[Fixed Income]{Contingent Immunization}
     \begin{itemize}
-        \item Cusion spread is the difference in the immunization rate and the minimum required return.
+        \item Cushion spread is the difference in the immunization rate and the minimum required return.
         \item Determine the PV of liability and compare this to the PV of the assets to determine the surplus value.
         \item Continue to compute the value of the surplus as time passes. As long as it's positive, the portfolio can be actively managed.
     \end{itemize}
@@ -327,6 +327,157 @@
     \end{itemize}
     The primary disadvantage of combination matching is that it tends to be more expensive than multiple-liability matching.
     \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Cyclical and Secular Changes}
+    \begin{flushleft}
+        Cyclical changes focus on supply and demand analysis to predict bond price and spread changes. For example, increases in the number of corporate issues are sometimes associated with narrower spreads and strong returns. Conversely, corporate bond returns sometimes decline when supply falls unexpectedly.\newline
+
+        Some secular changes are that intermediate-term and bullet maturity bonds have come to dominate the corporate bond market. Callable issues still dominate the high yield segment, but that is expected to change. Some implications associated with this structure are:
+        \begin{itemize}
+            \item Securities with embedded options may trade at a premium due to scarcity.
+            \item Credit managers seeking longer durations will pay a premium due to tendency toward intermediate maturities.
+            \item Credit-based derivatives will be used more often to take advantage of return and diversifications benefits across sectors and structures.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Liquidity in the Bond Market}
+    \begin{flushleft}
+        There's generally a positive relationship between liquidity and price. As liquidity decreases, investors will pay less.\newline
+
+        Bond markets are moving toward increased liquidity (i.e., faster and cheaper trading) mainly due to trading innovations and competition among managers.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Rationales for Secondary Market Bond Trading}
+    \begin{itemize}
+        \item \textbf{Yield/spread pickup trades.} The most common rationale is for additional yield, which is possible within specified duration and credit-quality bounds.
+        \item \textbf{Credit-upside trades.} Managers try to find issues which will be upgraded before the prices are positively affected by the upgrade.
+        \item \textbf{Credit-defense trades.} The opposite of credit-upside trades, managers sell bonds from sectors where they expect a credit downgrade.
+        \item \textbf{New issue swaps.} Move to new issues because they often have better liquidity. This is particularly true of on-the-run treasuries.
+        \item \textbf{Sector-rotation trades.} The aim is to switch out of a sector or industry that is expected to underperform and into one that is expected to outperform on a total return basis.
+        \item \textbf{Yield curve-adjustment trades.} Attempt to align a portfolio's duration with anticipated changes in the yield curve.
+        \item \textbf{Structure trades.} Use bond structures (e.g., callable or putable bonds) which will have strong performance given expected changes in volatility and yield curve shape.
+        \item \textbf{Cash flow reinvestment trades.} The need to reinvest cash flows in the secondary market is particularly common when portfolio cash flows do not coincide with new issues in the primary market.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{General Rules for Buying Bonds Based on Duration and Interest Rates}
+    \begin{itemize}
+        \item If you expect interest rates to rise, buy short-duration bonds and sell long-duration bonds.
+        \item If you expect interest rates to fall, buy long-duration bonds and sell short-duration bonds.
+        \item If the sector yield spread is expected to widen, buy short-duration bonds in the sector.
+        \item If the sector yield spread is expected to narrow, buy long-duration bonds in the sector.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Three Different Yield Spread Measures}
+    \begin{itemize}
+        \item \textbf{Nominal spread.} The yield difference between corporate and government bonds of the same maturity. Currently the basic unit of price and relative value analysis for most of the corporate bond market.
+        \item \textbf{Swap spreads.} The spread paid by the fixed-rate payer above the rate on the Treasury with the same maturity as the swap. They are used in Europe as an indication of credit spreads.
+        \item \textbf{Option-adjusted spread.} The effective spread for the class after removing any embedded options. Used when comparing corporates with MBS. Declining in use because of fewer corporates that have options.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Three Different Types of Spread Analysis}
+    \begin{itemize}
+        \item \textbf{Mean-reversion analysis.} Based on the assumption that spreads between sectors tend to revert to their historical means.
+            \begin{itemize}
+                \item If the current spread is higher than the mean, buy the sector. High relative yields means low relative prices.
+                \item If the current spread is lower than the mean, sell the sector. Low relative yields means high relative prices.
+            \end{itemize}
+        \item \textbf{Quality-spread analysis.} Based on the spread differential between low- and high-quality credits. E.g., buy issues with a spread wider than that which is justified by its intrinsic quality.
+        \item \textbf{Percentage yield spread analysis.} Yields on corporate bonds divided by the yields on treasuries with the same duration. If the ratio is higher than the historical ratio, the spread is expected to fall. Not a useful or valid methodology because it assumes that corporate yields are driven primarily by Treasury yields.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Structural Analysis}
+    \begin{flushleft}
+        The analysis of the performance of structures (e.g., bullet, callable, putable, and sinking fund) on a relative-value basis. Becoming less useful as corporate markets move toward mostly bullet structures like the European corporate bond markets. Can still be used to enhance risk-adjusted returns of corporate portfolios.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Analysis of Bonds with Early Retirement Provisions}
+    \begin{itemize}
+        \item \textbf{Callable bonds.} Their price and return differentials are driven by the embedded option. Because of negative convexity caused by the embedded option, callable bonds
+            \begin{itemize}
+                \item Underperform non-callable bonds when interest rate fall. Due to the embedded option, their prices don't rise as much.
+                \item Outperform non-callable bonds when interest rates rise as the probability of being called falls. When the rate is lower than the coupon, negative convexity means they respond less to rising rates.
+                \item Behave similarly to non-callable bonds when yields are very high. I.e., the call option has little value.
+            \end{itemize}
+        \item \textbf{Sinking funds.} Provide for the early retirement of a portion of an issue of bonds. Priced at a discount to par and historically retained upside price potential during interest rate declines as long as they are priced at a discount to par. Can be called back at par. Price does not fall as much relative to callable and bullet structures when rates rise.
+        \item \textbf{Putable bonds.} Because of scarcity, there is little consensus on performance and valuation. Managers should only consider putable bonds as an alternative when there is strong belief in rising interest rates as that will increase the value of the put option.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Credit Analysis}
+    \begin{flushleft}
+        Involves examining financial statements, bond documents, and credit rating trends. It should include
+        \begin{itemize}
+            \item Capacity to pay for corporate bonds.
+            \item The quality of the collateral and the services for ABS.
+            \item The ability to asses and collect taxes for municipal bonds.
+            \item An assessment of the country's ability to pay (economic risk) and willingness to pay (political risk) for sovereign bonds.
+        \end{itemize}
+        The primary disadvantage to credit analysis is that information continually needs to be researched and updated, which is becoming more and more difficult as the bond universe expands.
+    \end{flushleft}
+\end{flashcard}
+
+
+\begin{flashcard}[Fixed Income]{Summary of Relative Valuation Methodologies}
+    \begin{tabular}{
+        >{\raggedright}p{1in}
+        >{\raggedright}p{1.6in}
+        >{\raggedright\arraybackslash}p{1.6in}}
+        \toprule
+        \textit{Methodology} & \textit{Description} & \textit{Strategy}\\ \midrule
+
+        Total return analysis &
+        Consider coupons as well as potential price changes. &
+        Project returns based on past economic changes.\\ \midrule
+
+        Primary market analysis &
+        Increases in new issues decreases relative yields. &
+        Expected rate fall means more new issues and refi.\\ \midrule
+
+        Liquidity and trading analysis &
+        Liquidity increases demand which increases prices. &
+        Find issues which are expected to rise in price.\\ \midrule
+
+        Spread analysis &
+        High rate volatility, spreads increase. &
+        Mean-reversion, quality, percentage yield spread.\\ \midrule
+
+        Structural analysis &
+        Study the structure of bond issues. &
+        Predict performance based on macro events.\\ \midrule
+
+        Credit curve analysis &
+        High rate volatility, spreads increase. &
+        Tends to change with economic cycle. \\ \midrule
+
+        Asset allocation &
+        Macro allocation across sectors, micro within. &
+        Identify sectors expected to outperform.\\
+        \bottomrule
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Rationales for Not Trading}
+    \begin{itemize}
+        \item \textbf{Trading constraints.} Considered to be a major contributor to inefficiencies in the corporate bond market. Some examples are
+            \begin{itemize}
+                \item Constrained to investing to a specific quality, e.g., BBB and higher.
+                \item Restrictions on structures (e.g., no callables or convertables) and foreign bonds.
+                \item High-yield corporate exposure limits for insurance companies.
+                \item Structure and quality restrictions for European investors.
+                \item In some countries, commercial banks can only own floating-rate securities.
+            \end{itemize}
+        \item \textbf{Story disagreement.} The lack of consensus between buy-side and sell-side analysts. Can lead to conflicting recommendations.
+        \item \textbf{Buy and hold.} An unwillingness to recognize a loss or a desire to keep turnover low. May also be due to lack of liquidity.
+        \item \textbf{Seasonality.} The slowing of trading at the ends of months, quarters and years when managers are preoccupied with reports and filings.
+    \end{itemize}
 \end{flashcard}
 
 \end{document}

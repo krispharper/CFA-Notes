@@ -6,477 +6,256 @@
 
 \begin{document}
 \cardfrontstyle{headings}
-\cardfrontfoot{Study Session 9}
+\cardfrontfoot{Study Session 10}
 
-\begin{flashcard}[Fixed Income]{Active Return and Tracking Risk}
-    \begin{flushleft}
-        Active return is the difference between portfolio and index returns.\newline
-
-        Tracking risk is the standard deviation of active return, and measures the variability of portfolio excess return.
-    \end{flushleft}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Advantages and Disadvantages of Bond Portfolio Management Strategies}
-    \begin{tabular}{>{\raggedright}p{1in} p{1.6in}  p{1.6in}} \toprule
-        \multicolumn{1}{c}{\textit{Strategy}} &
-        \multicolumn{1}{c}{\textit{Advantages}} &
-        \multicolumn{1}{c}{\textit{Disadvantages}}
-        \\ \midrule
-        Pure Bond Indexing &
-        \vspace{-3mm}
-        \begin{itemize}[nosep,leftmargin=*]
-            \item Zero tracking error
-            \item Same risk factors as index
-            \item Low fees 
-            \vspace*{-\baselineskip}
-        \end{itemize} &
-        \vspace{-3mm}
-        \begin{itemize}[nosep,leftmargin=*]
-            \item Costly and difficult
-            \item Lower expected return than index
-            \vspace*{-\baselineskip}
-        \end{itemize}
-        \\ \midrule
-        Enhanced indexing by matching primary risk factors &
-        \vspace{-3mm}
-        \begin{itemize}[nosep,leftmargin=*]
-            \item Less costly
-            \item Higher expected return
-            \item Same risk factors as index
-            \vspace*{-\baselineskip}
-        \end{itemize} &
-        \vspace{-3mm}
-        \begin{itemize}[nosep,leftmargin=*]
-            \item Higher management fees
-            \item Higher tracking error
-            \item Lower expected return than index
-            \vspace*{-\baselineskip}
-        \end{itemize}
-        \\ \midrule
-        Enhanced indexing by small risk factor mismatches &
-        \vspace{-3mm}
-        \begin{itemize}[nolistsep,leftmargin=*]
-            \item Same duration as index
-            \item Higher expected return
-            \item Lower restrictions
-            \vspace*{-\baselineskip}
-        \end{itemize} &
-        \vspace{-3mm}
-        \begin{itemize}[nolistsep,leftmargin=*]
-            \item Higher risk
-            \item Higher tracking error
-            \item Higher management fees
-            \vspace*{-\baselineskip}
-        \end{itemize}
-        \\ \midrule
-        Active management by larger risk factor mismatches &
-        \vspace{-3mm}
-        \begin{itemize}[nolistsep,leftmargin=*]
-            \item Higher expected return
-            \item Lower restrictions
-            \item Manage duration
-            \vspace*{-\baselineskip}
-        \end{itemize} &
-        \vspace{-3mm}
-        \begin{itemize}[nolistsep,leftmargin=*]
-            \item Higher risk
-            \item Higher tracking error
-            \item Higher management fees
-            \vspace*{-\baselineskip}
-        \end{itemize}
-        \\ \midrule
-        Full-blown active management &
-        \vspace{-3mm}
-        \begin{itemize}[nolistsep,leftmargin=*]
-            \item Higher expected return
-            \item Few restrictions
-            \item No duration limits
-            \vspace*{-\baselineskip}
-        \end{itemize} &
-        \vspace{-3mm}
-        \begin{itemize}[nolistsep,leftmargin=*]
-            \item Higher risk
-            \item Higher tracking error
-            \item Higher management fees
-            \vspace*{-2\baselineskip}
-        \end{itemize}
-        \\ \bottomrule 
-    \end{tabular}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Four Criteria for Selecting a Benchmark Bond Index}
-    \begin{enumerate}
-        \item \textit{Market value risk} varies with duration. More risk aversion equates to lower market risk and shorter benchmark duration.
-        \item \textit{Income risk} varies indirectly with maturity. Higher dependence on stable income equates to longer maturity of the benchmark. Often is opposite from market value risk.
-        \item \textit{Credit risk} of the benchmark should closely match that of the portfolio.
-        \item \textit{Liability framework risk} applies only to portfolios matching a liability structure and should be minimized.
-    \end{enumerate}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Stratified Sampling}
-    \begin{flushleft}
-        First, create a matrix of bonds according to risk factors such as sector, rating, duration, callability, etc.\newline
-
-        Measure the total value of the bonds in each cell, and determine each cell's weight in the index.\newline
-
-        Select a sample of bonds from each cell in an amount that produces the same weight in the portfolio as that cell's weight in the index.
-    \end{flushleft}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Risk Factors Used in Bond Benchmark Multifactor Models}
+\begin{flashcard}[Fixed Income]{Effects of Leverage on Variability of Returns}
     \begin{itemize}
-        \item \textbf{Duration.} Estimates the change in value given small, parallel yield curve shifts. Convexity must also be considered.
-        \item \textbf{Key rate duration.} Measures sensitivity to yield curve twists.
-        \item \textbf{Present value distribution of cash flows.} Measures the proportion of the index's total duration attributable to cash flows falling within selected time periods. Matching the PVD will create the same sensitivities to yield curve twists and shifts.
-        \item \textbf{Sector and quality percent.} Matches the weights of sectors and qualities in the index.
-        \item \textbf{Sector duration contributions.} Matches the proportion of the index duration contributed by each sector.
-        \item \textbf{Quality spread duration contribution.} Matches the proportion of the index duration contributed by rating categories.
-        \item \textbf{Sector/coupon/maturity cell weights.} Matching sector, coupon, and maturity weights mimics callability of bonds in the index.
-        \item \textbf{Issuer exposure.} Use enough securities such that risk attributable to any particular issuer is minimized.
+        \item As leverage increases, the variability of returns increases.
+        \item As the investment return increases, the variability of returns increases.
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Summary of Factors Used for Bond Risk Exposure}
-    \begin{tabular}{
-        >{\raggedright}p{.6in}
-        >{\raggedright}p{.6in}
-        >{\raggedright}p{.5in}
-        >{\raggedright}p{.5in}
-        >{\raggedright}p{.6in}
-        >{\raggedright}p{.6in}
-        >{\raggedright\arraybackslash}p{.6in}}
-        & \multicolumn{3}{|>{\centering}p{1.6in}|}{\textit{Primary Risk Factors}} & &\\ \midrule
-        \textit{Risk} & \textit{Interest Rate} & \multicolumn{2}{|>{\centering}p{1in}|}{\textit{Yield Curve}} & \textit{Spread} & \textit{Credit} & \textit{Optionality}\\ \midrule
-        \textit{What is Measured} & Exposure to yield curve shifts & \multicolumn{2}{|>{\centering}p{1in}|}{Exposure to yield curve twists} & Exposure to spread changes & Exposure to credit changes & Exposure to call or put\\ \midrule
-        \textit{Measurement used} & Duration & PVD & Key rate duration & Spread duration & Duration contribution by credit rating & Delta\\
-    \end{tabular}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Present Value Distribution of Cash Flows}
+\begin{flashcard}[Fixed Income]{Repurchase Agreement}
     \begin{flushleft}
-        PVD measures the proportion of an index's total duration attributable cash flows (both coupons and redemptions) falling within selected time periods.\newline
+        The borrower (seller) agrees to repurchase it from the lender (buyer) on an agreed upon date and at an agreed upon price.\newline
 
-        Assuming the time periods are six month intervals, first find the PV of cash flows from the index that fall in every six-month period. Divide by total PV of the index cash flows to get the weights of each period.\newline
-
-        Multiply the duration of each period by its weight to get duration contribution for each period. Divide by the index duration and repeat for all time periods. This is the present value distribution.\newline
-
-        Matching the PVD of the index will match sensitivities to both shifts and twists in the yield curve.
+        It is legally a sale and purchase, but it's effectively a collateralized loan where the difference in price is the interest on the loan. The rate of interest on the repo is called the repo rate.
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Classical Immunization}
-    \begin{flushleft}
-        The process of structuring a bond portfolio that balance any change in value with the return from reinvestment of coupon and principal received throughout the investment period. The goal of classical immunization is to form a portfolio such that:
-        \begin{itemize}
-            \item If interest rates increase, the gain in reinvestment income exceeds the loss in portfolio value.
-            \item If interest rates decrease, the gain in portfolio value exceeds the loss in investment income.
-        \end{itemize}
-        Without rebalancing, classical immunization only works for a one-time instantaneous change in interest rates. Portfolios cease to be immunized when:
-        \begin{itemize}
-            \item Interest rates fluctuate more than once.
-            \item Time passes and the durations differ.
-        \end{itemize}
-    \end{flushleft}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Immunization of a Single Liability}
+\begin{flashcard}[Fixed Income]{Four Repo Delivery Scenarios}
     \begin{enumerate}
-        \item Select a bond or portfolio with an effective duration equal to the liability's duration. If the liability is payable on a single date, the duration is the time horizon until payment.
-        \item Set the PV of the bond equal to the PV of the liability.
+        \item The borrower physically delivers the collateral to the lender. This can be costly.
+        \item The collateral is deposited in a custodial account at the borrower's bank. This reduces the fees of normal delivery.
+        \item The transfer of securities is done electronically through banks. This is less expensive than physical delivery, but incurs fees and changes.
+        \item Delivery is sometimes not required for low credit risk borrowers, familiar parties, or short-term transactions.
     \end{enumerate}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Bond Characteristics to Consider When Immunizing}
+\begin{flashcard}[Fixed Income]{Factors Affecting the Repo Rate}
     \begin{itemize}
-        \item \textit{Credit rating.} Immunization implicitly assumes that none of the bonds will default.
-        \item \textit{Embedded options.} Make duration difficult to estimate because cash flows are difficult to forecast.
-        \item \textit{Liquidity.} Important because rebalancing requires selling bonds.
+        \item Increases with the credit risk of the borrower when delivery is not required.
+        \item Declines as the quality of the collateral increases.
+        \item Increases with the term of the repo.
+        \item Lower for physical delivery. If held by the borrower's bank, the rate will be higher. If no delivery takes place, it will be even higher.
+        \item Lower for collateral with limited availability.
+        \item The federal funds rate is a benchmark for repo rates. As it increases, repo rates increase.
+        \item Changes with seasonal factors which change the demand for funds.
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Immunization Risk}
-    \begin{flushleft}
-        A measure of how much the end value of an immunized portfolio falls short of its target value because of nonparallel changes in interest rates.\newline
+\begin{flashcard}[Fixed Income]{Disadvantages of Standard Deviation and Variance}
+    \begin{itemize}
+        \item Bond returns are often not normally distributed. Bonds with options have non-normal return distributions.
+        \item The number of inputs increases quadratically with portfolio size.
+        \item Obtaining estimates for inputs is difficult. Historical risk measures may not be indicative of future measures. A bond's options change in influence over time.
+    \end{itemize}
+\end{flashcard}
 
-        In general the portfolio that has the lowest reinvestment risk will be the best for immunization.
-        \begin{itemize}
-            \item An immunized portfolio of zero-coupon bonds that mature at the investment horizon has zero immunization risk because there is zero reinvestment risk.
-            \item If cash flows are concentrated around the horizon(e.g., bullet), reinvestment and immunization risk will be low.
-            \item If cash flows are highly dispersed around the horizon (e.g., barbell), reinvestment and immunization risk will be high.
-        \end{itemize}
+\begin{flashcard}[Fixed Income]{Semivariance, Shortfall Risk and Value at Risk}
+    \begin{itemize}
+        \item \textbf{Semivariance} measures the dispersion of returns below a target return. It is not commonly used because
+            \begin{itemize}
+                \item Difficult to compute for large portfolios.
+                \item If the returns are symmetric, semivariance will give the same ranking as variance, which is better understood.
+                \item If returns are asymmetric, downside risk can be difficult to forecast.
+                \item Because it only uses half the distribution, a smaller sample size is considered, which is generally statistically less accurate.
+            \end{itemize}
+        \item \textbf{Shortfall risk} measures the probability that actual returns will be less than the target return. The primary disadvantage is that it doesn't account for outliers, so the magnitude of the shortfall is ignored.
+        \item \textbf{Value at risk} is the probability of a return less than a given amount over a specific time period. Like shortfall risk, it doesn't provide the magnitude of losses above those specified by VaR.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Cheapest to Deliver}
+    \begin{flushleft}
+        A bond that the counterparty in the short position can deliver to satisfy the obligation of the futures contract.\newline
+
+        A conversion factor determines the price received at delivery. The quoted price for the CTD is the product of the quoted futures price and the conversion factor.
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Effective Duration of a Portfolio}
-    \begin{flushleft}
-        The effective duration of a portfolio is the weighted average of the bonds in the portfolio.
-    \end{flushleft}
-    \begin{align*}
-        D_p &= \sum_{i=1}^n w_iD_i = w_1D_1 + w_2D_2 + w_3D_3 + \cdots + w_nD_n\\
-        \\
-        \text{where:}\\
-        D_p &= \text{the effective duration of the portfolio}\\
-        w_i &= \text{the weight of bond $i$ in the portfolio}\\
-        D_i &= \text{the effective duration of bond $i$}\\
-    \end{align*}
+\begin{flashcard}[Fixed Income]{Advantages of Futures Over Cash Market Instruments}
+    \begin{itemize}
+        \item Futures are more liquid.
+        \item Futures are less expensive.
+        \item Futures are more easily shorted than an actual bond.
+    \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Dollar Duration}
+\begin{flashcard}[Fixed Income]{How to Use Futures to Change Dollar Duration}
     \begin{flushleft}
-        A measure of exposure in dollars.
+        To increase dollar duration, buy futures contracts.\newline
+
+        To decrease dollar duration, sell futures contracts.
     \end{flushleft}
-    \begin{align*}
-        DD &= -(\text{modified or effective duration})(0.01)(\text{price})\\
-        \\
-        DD_p &= \sum_{i=1}^n DD_i = DD_1 + DD_2 + DD_3 + \cdots + DD_n\\
-        \\
-        \text{where:}\\
-        DD_p &= \text{the dollar duration of the portfolio}\\
-        DD_i &= \text{the dollar duration of bond or sector $i$}\\
-    \end{align*}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Steps to Adjust a Portfolio's Dollar Duration}
-    \begin{enumerate}
-        \item Calculate the new dollar duration of the portfolio.
-        \item Calculate the rebalancing ratio and use it to calculate the required percentage change in the value of the portfolio.
+\begin{flashcard}[Fixed Income]{Dollar Duration Hedging Formula}
+    \begin{flushleft}
+        The number of contracts to construct a hedge is
+        \begin{align*}
+            \text{number of contracts} &= \frac{\text{DD}_T - \text{DD}_P}{\text{DD}_f}
+        \intertext{Using duration instead of dollar duration, we have}
+            \text{number of contracts} &= \frac{(D_T - D_P) P_P}{D_\text{CTD} P_\text{CTD}} (\text{CTD conversion factor})
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Basis Risk}
+    \begin{flushleft}
+        Price basis is the difference between the spot price and the futures price at delivery.\newline
+
+        Basis risk is the variability of the basis. It should be considered for hedges which will end before delivery. Basis can change unexpectedly.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Cross Hedge}
+    \begin{flushleft}
+        The underlying security in the futures contract is not identical to the asset being hedge (e.g., using Treasury bond futures to hedge corporates). It can be either long or short. Cross hedges must be used when there is no corresponding futures contract for a position, or if such a contract is too illiquid.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Hedge Ratio for Cross Hedges}
+    \begin{flushleft}
+        A hedge ratio should be used when the futures contract doesn't perfectly match the underlying bond's risk factors. The ratio is
+        \begin{align*}
+            \text{hedge ratio} &= \frac{\text{exposure of bond to risk factor}}{\text{exposure of futures to risk factor}} \\
+            &= \frac{\text{exposure of bond to risk factor}}{\text{exposure of CTD to risk factor}} \times \frac{\text{exposure of CTD to risk factor}}{\text{exposure of futures to risk factor}}
+        \end{align*}
+        where the last term represents the conversion factor of the CTD bond.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Yield Beta}
+    \begin{flushleft}
+        Yield beta is obtained from the regression equation
         \[
-            \text{rebalancing ratio} = \frac{\text{old $DD$}}{\text{new $DD$}}
+            \text{yield on bond} = \alpha + \beta (\text{yield on CTD}) + \varepsilon
         \]
-        \item The required percentage change in the value of the portfolio is $1 - \text{rebalancing ratio}$.
-    \end{enumerate}
+        The yield beta, $\beta$, shows the relationship between changes in yields on the bond and the CTD.\newline
+
+        When yield spread is not constant, we adjust the hedge ratio for interest rate risk to use the yield beta as
+        \[
+            \text{hedge ratio} = \frac{D_P P_P}{D_{\text{CTD}} P_{\text{CTD}}} (\text{CTD conversion factor}) (\text{yield beta})
+        \]
+        This implies that if $\beta > 1$ (i.e. the yield on the hedged bond is more volatile than that of the CTD), then more futures contracts will be needed to to hedge the bond.
+    \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Three Spread Duration Measures for Fixed-rate Bonds}
+\begin{flashcard}[Fixed Income]{Three Basic Sources of Hedging Error}
     \begin{enumerate}
-        \item \textbf{Nominal spread} is the spread between the nominal yield on a non-Treasury bond and a Treasury of the same maturity.
-        \item \textbf{Zero-volatility spread} or static spread is the spread that must be added to the Treasury spot rate curve to make the PV of the bond's cash flows equal to its price.
-        \item \textbf{Option-adjusted spread} is determined using a binomial interest rate tree. It measures the spread with the option removed.
+        \item Forecast of the basis at the time the hedge is lifted.
+        \item Estimated durations. Estimating duration for bonds with options can be particularly difficult.
+        \item Estimated yield betas.
     \end{enumerate}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Four Extensions to Classical Immunization}
-    \begin{enumerate}
-        \item \textbf{Multifunctional duration} or key rate duration by focusing on certain key interest rate maturities.
-        \item \textbf{Multiple-liability immunization} aims to immunize several liabilities by monitoring portfolio value and duration for multiple investment horizons.
-        \item \textbf{Increased risk} by lowering the minimum risk requirement of classical immunization allows for excess portfolio value.
-        \item \textbf{Contingent immunization} mixes active and passive immunization strategies.
-    \end{enumerate}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Contingent Immunization}
-    \begin{itemize}
-        \item Cushion spread is the difference in the immunization rate and the minimum required return.
-        \item Determine the PV of liability and compare this to the PV of the assets to determine the surplus value.
-        \item Continue to compute the value of the surplus as time passes. As long as it's positive, the portfolio can be actively managed.
-    \end{itemize}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Three Risks Associated with Managing Against a Liability Structure}
-    \begin{enumerate}
-        \item \textbf{Interest rate risk} is the primary concern when managing a fixed-income portfolio. To avoid match duration and convexity of the liability. Convexity can be difficult to measure, particularly for bonds with negative convexity such as MBS and callable corporates.
-        \item \textbf{Contingent claim risk} (a.k.a. call risk or prepayment risk) is highest when interest rates have fallen. This causes a loss in steady coupon payments as well as the necessity to reinvest at lower rates. To avoid, the convexity of the bonds must be taken into account.
-        \item \textbf{Cap risk} is present if bonds in the portfolio have floating rates. If the coupon doesn't fully adjust upward for rising interest rates, the market value of the bond adjusts downward. The assets and liabilities will not adjust in sync and the surplus will deteriorate.
-    \end{enumerate}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Maturity Variance}
+\begin{flashcard}[Fixed Income]{Formula for the Duration of a Bond Option}
     \begin{flushleft}
-        The variance of the differences in the maturities of the bonds used in the immunization strategy and the maturity date of the liability. Written as M-Square or $M^2$.
+        \[
+            \text{option delta} \times \text{duration of the underlying} \times \frac{\text{price of the underlying}}{\text{price of the option}}
+        \]
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Three Conditions for Multiple Liability Immunization}
-    \begin{flushleft}
-        \begin{enumerate}
-            \item Assets and liabilities have the same present values.
-            \item Assets and liabilities have the same aggregate durations.
-            \item The range of the distribution of durations of individual assets exceeds the distribution of liabilities. This is necessary to use the cash flows generated from our assets to meet our cash outflow needs.
-        \end{enumerate}
-        These conditions will assure immunization only against parallel rate shifts. For nonparallel shifts, linear programming models can be used to create minimum-risk immunized portfolios.
-    \end{flushleft}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Cash Flow Matching}
-    \begin{flushleft}
-        Cash flow matching is used to construct a portfolio that will a fund a stream of liabilities with coupons and maturity values. It will cause the durations to be matched, but it is more stringent than immunization by matching duration alone because the timing and amount of cash flows must match the liabilities. To construct the portfolio:
+\begin{flashcard}[Fixed Income]{Protective Put and Covered Call}
     \begin{itemize}
-        \item Select a bond with maturity equal to the last liability payment date.
-        \item Buy enough so that the final payments fully fund that liability.
-        \item Using a recursive procedure, select another bond based on maturity value and coupon so that its cash flows plus the coupon of the previous bond fund the latest unfunded liability.
-        \item Continue until all liabilities have been funded.
-    \end{itemize}
-    \end{flushleft}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Differences Between Cash Flow Matching and Multiple-liability Immunization}
-    \begin{itemize}
-        \item Cash flow matching depends on the cash flows of the portfolio, so expectations of reinvestment rates and borrowing rates are important. Deviations from a perfect match should be small, which can increase the cost. Immunization by matching duration may cost less.
-        \item In a cash-flow-matched portfolio, only cash flows occurring before a liability may be used to meet that obligation. In a duration-matched portfolio, the portfolio only needs to have sufficient value on each liability payment.
+        \item \textbf{Protective put.} Owning a bond and buying an interest rate put. This provides protection from rising interest rates as it will compensate for the loss in value on the bond.
+        \item \textbf{Covered call.} Owning a bond and selling an interest rate call. Provides income from the sale of the call, but offers no protection for rising or falling interest rates.
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Combination Matching}
-    \begin{flushleft}
-    Also known as horizon matching. Is a combination of multiple-liability immunization and cash flow matching. A portfolio is duration matched, and in the early years is also cash flow matched in order to make sure assets are properly dispersed to meet near-term obligations.\newline
-
-    Combination matching has the following advantages over multiple-liability immunization.
+\begin{flashcard}[Fixed Income]{Three Types of Credit Risk}
     \begin{itemize}
-        \item Provides liquidity in the initial period.
-        \item Reduced the risk from nonparallel shifts in the yield curve. The initial cash needs are met with cash flows, so there is no rebalancing needed to meet the initial cash requirements.
-    \end{itemize}
-    The primary disadvantage of combination matching is that it tends to be more expensive than multiple-liability matching.
-    \end{flushleft}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Cyclical and Secular Changes}
-    \begin{flushleft}
-        Cyclical changes focus on supply and demand analysis to predict bond price and spread changes. For example, increases in the number of corporate issues are sometimes associated with narrower spreads and strong returns. Conversely, corporate bond returns sometimes decline when supply falls unexpectedly.\newline
-
-        Some secular changes are that intermediate-term and bullet maturity bonds have come to dominate the corporate bond market. Callable issues still dominate the high yield segment, but that is expected to change. Some implications associated with this structure are:
-        \begin{itemize}
-            \item Securities with embedded options may trade at a premium due to scarcity.
-            \item Credit managers seeking longer durations will pay a premium due to tendency toward intermediate maturities.
-            \item Credit-based derivatives will be used more often to take advantage of return and diversifications benefits across sectors and structures.
-        \end{itemize}
-    \end{flushleft}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Liquidity in the Bond Market}
-    \begin{flushleft}
-        There's generally a positive relationship between liquidity and price. As liquidity decreases, investors will pay less.\newline
-
-        Bond markets are moving toward increased liquidity (i.e., faster and cheaper trading) mainly due to trading innovations and competition among managers.
-    \end{flushleft}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Rationales for Secondary Market Bond Trading}
-    \begin{itemize}
-        \item \textbf{Yield/spread pickup trades.} The most common rationale is for additional yield, which is possible within specified duration and credit-quality bounds.
-        \item \textbf{Credit-upside trades.} Managers try to find issues which will be upgraded before the prices are positively affected by the upgrade.
-        \item \textbf{Credit-defense trades.} The opposite of credit-upside trades, managers sell bonds from sectors where they expect a credit downgrade.
-        \item \textbf{New issue swaps.} Move to new issues because they often have better liquidity. This is particularly true of on-the-run treasuries.
-        \item \textbf{Sector-rotation trades.} The aim is to switch out of a sector or industry that is expected to underperform and into one that is expected to outperform on a total return basis.
-        \item \textbf{Yield curve-adjustment trades.} Attempt to align a portfolio's duration with anticipated changes in the yield curve.
-        \item \textbf{Structure trades.} Use bond structures (e.g., callable or putable bonds) which will have strong performance given expected changes in volatility and yield curve shape.
-        \item \textbf{Cash flow reinvestment trades.} The need to reinvest cash flows in the secondary market is particularly common when portfolio cash flows do not coincide with new issues in the primary market.
+        \item \textbf{Default risk} is the risk that the issuer will not be able to pay. It is dependent on an action of the issuer.
+        \item \textbf{Credit spread risk} is the risk of increase in the yield spread on an asset. It's a function of changes in the market's collective evaluation of credit quality.
+        \item \textbf{Downgrade risk} is the possibility that the credit rating of an asset or issuer is downgraded by a credit-rating organization. Downgrades result in rising yields and falling prices.
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{General Rules for Buying Bonds Based on Duration and Interest Rates}
+\begin{flashcard}[Fixed Income]{Three Types of Credit Derivative Instruments}
     \begin{itemize}
-        \item If you expect interest rates to rise, buy short-duration bonds and sell long-duration bonds.
-        \item If you expect interest rates to fall, buy long-duration bonds and sell short-duration bonds.
-        \item If the sector yield spread is expected to widen, buy short-duration bonds in the sector.
-        \item If the sector yield spread is expected to narrow, buy long-duration bonds in the sector.
-    \end{itemize}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Three Different Yield Spread Measures}
-    \begin{itemize}
-        \item \textbf{Nominal spread.} The yield difference between corporate and government bonds of the same maturity. Currently the basic unit of price and relative value analysis for most of the corporate bond market.
-        \item \textbf{Swap spreads.} The spread paid by the fixed-rate payer above the rate on the Treasury with the same maturity as the swap. They are used in Europe as an indication of credit spreads.
-        \item \textbf{Option-adjusted spread.} The effective spread for the class after removing any embedded options. Used when comparing corporates with MBS. Declining in use because of fewer corporates that have options.
-    \end{itemize}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Three Different Types of Spread Analysis}
-    \begin{itemize}
-        \item \textbf{Mean-reversion analysis.} Based on the assumption that spreads between sectors tend to revert to their historical means.
+        \item \textbf{Credit options.} Provide protection from adverse price movements due to credit events or changes in the asset's spread. There are two types of credit options.
             \begin{itemize}
-                \item If the current spread is higher than the mean, buy the sector. High relative yields means low relative prices.
-                \item If the current spread is lower than the mean, sell the sector. Low relative yields means high relative prices.
+                \item \textbf{Binary credit options} are based on the underlying asset's price. A binary credit put option gives protection only after a credit event and if the value of the underlying is less than the strike price. The option value or payoff is $\text{OV} = \max ((\text{strike} - \text{value}), 0)$.
+                \item \textbf{Credit spread options} are based on the underlying asset's yield spread. A credit spread call option will give protection if the reference asset's spread at maturity is above the strike spread. The option value or payoff is $\text{OV} = \max ((\text{actual spread} - \text{strike spread}) \times \text{notional} \times \text{risk factor}, 0)$.
             \end{itemize}
-        \item \textbf{Quality-spread analysis.} Based on the spread differential between low- and high-quality credits. E.g., buy issues with a spread wider than that which is justified by its intrinsic quality.
-        \item \textbf{Percentage yield spread analysis.} Yields on corporate bonds divided by the yields on treasuries with the same duration. If the ratio is higher than the historical ratio, the spread is expected to fall. Not a useful or valid methodology because it assumes that corporate yields are driven primarily by Treasury yields.
+        \item \textbf{Credit forwards.} Forward contracts wherein the payment is a function of the credit spread over the benchmark. They are a zero-sum game. The payoff is $\text{FV} = (\text{spread at maturity} - \text{contract spread}) \times \text{notional} \times \text{risk factor}$.
+        \item \textbf{Credit swaps.} E.g., credit default swaps are insurance against default on an underlying asset or issuer. One party pays a periodic fee in exchange for a commitment to pay after a credit event. The terms are custom-designed for the counterparties. They can be cash settled, or use physical delivery.
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Structural Analysis}
-    \begin{flushleft}
-        The analysis of the performance of structures (e.g., bullet, callable, putable, and sinking fund) on a relative-value basis. Becoming less useful as corporate markets move toward mostly bullet structures like the European corporate bond markets. Can still be used to enhance risk-adjusted returns of corporate portfolios.
-    \end{flushleft}
-\end{flashcard}
-
-\begin{flashcard}[Fixed Income]{Analysis of Bonds with Early Retirement Provisions}
+\begin{flashcard}[Fixed Income]{Sources of Excess Return on International Bonds}
     \begin{itemize}
-        \item \textbf{Callable bonds.} Their price and return differentials are driven by the embedded option. Because of negative convexity caused by the embedded option, callable bonds
-            \begin{itemize}
-                \item Underperform non-callable bonds when interest rate fall. Due to the embedded option, their prices don't rise as much.
-                \item Outperform non-callable bonds when interest rates rise as the probability of being called falls. When the rate is lower than the coupon, negative convexity means they respond less to rising rates.
-                \item Behave similarly to non-callable bonds when yields are very high. I.e., the call option has little value.
-            \end{itemize}
-        \item \textbf{Sinking funds.} Provide for the early retirement of a portion of an issue of bonds. Priced at a discount to par and historically retained upside price potential during interest rate declines as long as they are priced at a discount to par. Can be called back at par. Price does not fall as much relative to callable and bullet structures when rates rise.
-        \item \textbf{Putable bonds.} Because of scarcity, there is little consensus on performance and valuation. Managers should only consider putable bonds as an alternative when there is strong belief in rising interest rates as that will increase the value of the put option.
+        \item \textbf{Market selection} involves finding opportunities for value enhancement.
+        \item \textbf{Currency selection} decides how much active currency management and currency hedging a manager will use. He should not employ any currency hedging without the ability to forecast interest rate changes and their impact on exchange rates.
+        \item \textbf{Duration management} is finding maturities which correspond to anticipated shifts and twists in the yield curve. Limited maturity offerings may be overcome by using fixed income derivatives.
+        \item \textbf{Sector selection} involves credit analysis of entire sectors to add value. This is not an analysis of individual securities.
+        \item \textbf{Credit analysis} recognizes value-added opportunities in individual securities.
+        \item \textbf{Markets outside the benchmark} are corporates not included in foreign bond indicies, which are usually composed of sovereign issues.
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Credit Analysis}
+\begin{flashcard}[Fixed Income]{Country Beta}
     \begin{flushleft}
-        Involves examining financial statements, bond documents, and credit rating trends. It should include
-        \begin{itemize}
-            \item Capacity to pay for corporate bonds.
-            \item The quality of the collateral and the services for ABS.
-            \item The ability to asses and collect taxes for municipal bonds.
-            \item An assessment of the country's ability to pay (economic risk) and willingness to pay (political risk) for sovereign bonds.
-        \end{itemize}
-        The primary disadvantage to credit analysis is that information continually needs to be researched and updated, which is becoming more and more difficult as the bond universe expands.
+        A country beta or yield beta measures the relationship between changes in the foreign and domestic yields. It is given by the following regression
+        \[
+            \Delta \text{yield}_\text{foreign} = \beta \Delta \text{yield}_\text{domestic} + \varepsilon
+        \]
+        Multiplying the country beta by the change in domestic rate gives the change in foreign rate. Multiplying that by the bond's duration gives the estimated change in price.
     \end{flushleft}
 \end{flashcard}
 
-
-\begin{flashcard}[Fixed Income]{Summary of Relative Valuation Methodologies}
-    \begin{tabular}{
-        >{\raggedright}p{1in}
-        >{\raggedright}p{1.6in}
-        >{\raggedright\arraybackslash}p{1.6in}}
-        \toprule
-        \textit{Methodology} & \textit{Description} & \textit{Strategy}\\ \midrule
-
-        Total return analysis &
-        Consider coupons as well as potential price changes. &
-        Project returns based on past economic changes.\\ \midrule
-
-        Primary market analysis &
-        Increases in new issues decreases relative yields. &
-        Expected rate fall means more new issues and refi.\\ \midrule
-
-        Liquidity and trading analysis &
-        Liquidity increases demand which increases prices. &
-        Find issues which are expected to rise in price.\\ \midrule
-
-        Spread analysis &
-        High rate volatility, spreads increase. &
-        Mean-reversion, quality, percentage yield spread.\\ \midrule
-
-        Structural analysis &
-        Study the structure of bond issues. &
-        Predict performance based on macro events.\\ \midrule
-
-        Credit curve analysis &
-        High rate volatility, spreads increase. &
-        Tends to change with economic cycle. \\ \midrule
-
-        Asset allocation &
-        Macro allocation across sectors, micro within. &
-        Identify sectors expected to outperform.\\
-        \bottomrule
-    \end{tabular}
+\begin{flashcard}[Fixed Income]{Interest Rate Parity}
+    \begin{flushleft}
+        \begin{align*}
+            F &= S_0 \left ( \frac{1 + c_d}{1 + c_f} \right )\\
+            \\
+            \text{where:}\\
+            F &= \text{the forward exchange rate (domestic per foreign)}\\
+            S_0 &= \text{the current spot exchange rate (domestic per foreign)}\\
+            c_d &= \text{the domestic short-term rate}\\
+            c_f &= \text{the foreign short-term rate}
+        \end{align*}
+    \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Rationales for Not Trading}
+\begin{flashcard}[Fixed Income]{Methods of Hedging Currency Risk for International Bonds}
     \begin{itemize}
-        \item \textbf{Trading constraints.} Considered to be a major contributor to inefficiencies in the corporate bond market. Some examples are
+        \item \textbf{Forward hedge.} Used to eliminate most of the currency risk. Assuming forward contracts are available and actively traded, a manager enters a forward contract to sell the foreign currency at the current forward rate.
+        \item \textbf{Proxy hedge.} Enter into a forward contract between the domestic currency and a second foreign currency that is correlated with the first. Proxy hedges are used when forward contracts on the first currency are not actively traded or if hedging the first currency is expensive.
+        \item \textbf{Cross hedge.} Enter into a contract to deliver the original foreign currency for a third currency. This effectively eliminates the currency risk of the bond by replacing it with the risk of another currency. This doesn't eliminate the risk exposure, just changes it.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Advantages and Disadvantages of Investing in Emerging Market Debt}
+    \begin{itemize}
+        \item Advantages
             \begin{itemize}
-                \item Constrained to investing to a specific quality, e.g., BBB and higher.
-                \item Restrictions on structures (e.g., no callables or convertables) and foreign bonds.
-                \item High-yield corporate exposure limits for insurance companies.
-                \item Structure and quality restrictions for European investors.
-                \item In some countries, commercial banks can only own floating-rate securities.
+                \item Generally provides diversification.
+                \item Increased quality in emerging market sovereign bonds.
+                \item Increased resiliency. Emerging markets tend to bounce back faster.
+                \item An undiversifed index like the EMBI+ offers return-enhancing potential.
             \end{itemize}
-        \item \textbf{Story disagreement.} The lack of consensus between buy-side and sell-side analysts. Can lead to conflicting recommendations.
-        \item \textbf{Buy and hold.} An unwillingness to recognize a loss or a desire to keep turnover low. May also be due to lack of liquidity.
-        \item \textbf{Seasonality.} The slowing of trading at the ends of months, quarters and years when managers are preoccupied with reports and filings.
+        \item Disadvantages
+            \begin{itemize}
+                \item Unlike emerging market governments, corporations are not able to offset negative events.
+                \item Returns can be highly volatile with negatively skewed distributions.
+                \item Lack of transparency and regulations means higher credit risk.
+                \item Lax legal systems which don't protect against government actions.
+                \item Lack of standardized covenants forces managers to carefully study each issue.
+                \item Political risk including instability, changes in taxation and regulation, currency exchange restrictions, relaxed bankruptcy regulations, imposed exchange rate changes.
+                \item Lack of diversification of the EMBI+ which is concentrated in Latin America.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Fixed Income]{Criteria to Determine the Optimal Mix of Active Managers}
+    \begin{itemize}
+        \item \textbf{Style analysis.} Most active returns can be explained by selected style. Primary concerns are not just the style employed, but also risk factors associated with the style.
+        \item \textbf{Selection bets.} Includes credit spread analysis and the identificaion of over- and under-valued securities.
+        \item \textbf{Investment process.} Investigate all aspects of the investment process including types of research performed, how alpha is attained, and if decisions are made by committee or individual.
+        \item \textbf{Alpha correlations.} Alphas should be diversified so that alphas of various managers are not all correlated. This reduces volatility of alpha as well as the chance that all alphas will be negative at the same time.
     \end{itemize}
 \end{flashcard}
 

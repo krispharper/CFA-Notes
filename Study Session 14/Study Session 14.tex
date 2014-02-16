@@ -1,7 +1,7 @@
 \documentclass[../custom,grid]{flashcards}
 %\usepackage{booktabs}
 %\usepackage{array}
-%\usepackage{amsmath}
+\usepackage{amsmath}
 \usepackage{enumitem}
 
 \newcommand{\studyArea}{Risk Management}
@@ -89,7 +89,112 @@
 
 \begin{flashcard}[\studyArea]{Issues to Consider When Using VaR}
     \begin{itemize}
-        \item 
+        \item The VaR time period should relate to the situation. Stocks and bonds might use monthly VaR, while a leveraged derivatives portfolio might use daily VaR.
+        \item The percentage selected will affect the VaR. A 1\% VaR will generally show greater risk than a 5\% VaR.
+        \item The left tail should be examined. VaR measures the left tail of a distribution, i.e., the negative returns portion. But it only shows a snapshot at a particular percentage.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Analytical VaR Method}
+    \begin{flushleft}
+        Based on the normal distribution and one-tailed confidence intervals.
+        \begin{align*}
+            \text{VaR} &= \left (\hat{R}_p - z \sigma \right ) V_p\\
+            \\
+            \text{where:}\\
+            \hat{R}_p &= \text{expected return on the portfolio}\\
+            V_p &= \text{value of the portfolio}\\
+            z &= \text{$z$-value corresponding to the level of significance}\\
+            \sigma &= \text{standard deviation of returns}
+        \end{align*}
+        5\% and 1\% VaR are 1.65 and 2.33 standard deviations below the mean, respectively. For periods less than one year, divide the return and the standard deviation by the number of periods and the square root of the number of periods, respectively. For 1-day VaR, return can be approximated as zero.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Advantages and Disadvantages of the Analytical VaR Method}
+    \begin{itemize}
+        \item Advantages
+        \begin{itemize}
+            \item Easy to calculate and understand.
+            \item Allows modeling the correlations of risks.
+            \item Can be applied to varying time periods as relevant.
+        \end{itemize}
+        \item Disadvantages
+        \begin{itemize}
+            \item Assumes normal distribution of returns.
+                \begin{itemize}
+                    \item Some securities have skewed returns. Long option positions have positive skew with frequent small losses to due premia and occasional large gains. Short option positions have the opposite situations and negative skew.
+                    \item Variance-covariance VaR is modified to deal with skew using the delta-normal method. But these adjustments are complex and don't allow convenient second-order modeling.
+                \end{itemize}
+            \item Many assets have leptokurtosis (i.e., fat tails). VaR tends to underestimate the loss.
+            \item Difficult to estimate standard deviation in large portfolios as it requires correlations between assets which grows quadratically with the number of assets.
+        \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Advantages and Disadvantages of the Historical VaR Method}
+    \begin{flushleft}
+        Historical VaR or historical simulation takes past daily returns, ranks them and identifies the lowest $N\%$. The highest of these lowest $N\%$ is the 1-day $N\%$ VaR.
+        \begin{itemize}
+            \item Advantages
+            \begin{itemize}
+                \item Very easy to calculate and understand.
+                \item Does not assume a distribution of returns.
+                \item Can be applied to different time periods.
+            \end{itemize}
+            \item Disadvantages
+            \begin{itemize}
+                \item Assumes the pattern of historical returns will repeat in the future. Many securities also change characteristics with the passage of time.
+            \end{itemize}
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Advantages and Disadvantages of the Monte Carlo VaR Method}
+    \begin{flushleft}
+        The Monte Carlo method generates thousands of possible outcomes from the distributions of inputs specified by the user. The inputted distributions can be normal for some assets, skewed for others, etc. The possible outcomes are then ranked similar to the historical VaR method.
+        \begin{itemize}
+            \item Advantages
+            \begin{itemize}
+                \item Can incorporate any assumptions regarding return patterns, correlations, or other factors.
+            \end{itemize}
+            \item Disadvantages
+            \begin{itemize}
+                \item The output is only as good as the inputted assumptions.
+                \item Its complexity can lead to an overconfidence in the results.
+                \item Can be costly and computer intensive to implement.
+            \end{itemize}
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Advantages and Disadvantages of VaR}
+    \begin{itemize}
+        \item Advantages
+        \begin{itemize}
+            \item Industry standard required by many regulators.
+            \item Aggregates all risk into a single, easy to understand number.
+            \item Can be used in capital allocation by giving each unity a certain amount of VaR. When units have less than perfect correlation, the firm-wide VaR is less than the sum of the unit VaR.
+        \end{itemize}
+        \item Disadvantages
+        \begin{itemize}
+            \item Some methods, e.g., Monte Carlo, are difficult and expensive.
+            \item Different computation methods can generate different VaR estimates.
+            \item Can generate a false sense of security. Only as good as inputs. Additionally, it's a measure of probability, so the situation can always be worse.
+            \item One-sided focusing on the downside while ignoring any upside potential.
+        \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Tools and Metrics to Complement VaR}
+    \begin{itemize}
+        \item \textbf{Back-testing} should be used to compare actual results with expected outcomes projected by VaR.
+        \item \textbf{Incremental VaR} (IVaR) is calculated by measuring the difference in VaR before and after the portfolio is changed in some way (e.g., an asset is added). It measures the effect of an individual item.
+        \item \textbf{Cash flow at risk} (CFaR) measures the risk of the company's cash flows. CFaR is useful for companies which cannot be valued directly. CFaR measures the minimum cash flow loss at a given probability over a give time period.
+        \item \textbf{Earnings at risk} (EaR) is analogous to CFaR from an accounting earning standpoint.
+        \item \textbf{Tail value at risk} (TVaR) is VaR plus the average of the outcomes in the tail.
+        \item \textbf{Cerdit VaR} measures risk due to credit events.
+        \item \textbf{Stress testing} tests various situations which may occur and their impact on the portfolio.
     \end{itemize}
 \end{flashcard}
 \end{document}

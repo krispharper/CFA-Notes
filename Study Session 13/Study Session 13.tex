@@ -1,7 +1,8 @@
-\documentclass[../custom,grid]{flashcards}
+\documentclass[../custom]{flashcards}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{amsmath}
+\usepackage{enumitem}
 
 \begin{document}
 \cardfrontstyle{headings}
@@ -390,15 +391,15 @@
 \end{flashcard}
 
 \begin{flashcard}[Alternative Investments]{Classifications of Hedge Funds by Strategy}
-    \begin{itemize}
-        \item \textbf{Convertible arbitrage} seeks to exploit mispricings of convertible securities such as convertible bonds, preferred stock or warrants. Long and short positions are used to hedge risks.
+    \begin{itemize}[itemsep=.5\itemsep]
+        \item \textbf{Convertible arbitrage} exploits mispricings of convertibles such as convertible bonds, preferred stock or warrants. Hedge risk with long and short positions.
         \item \textbf{Distressed securities} may be undervalued and offer better returns because many investors are not allowed to invest in them. Generally illiquid making shorting difficult and so funds are typically long and not hedged.
-        \item \textbf{Emerging markets} generally only permit long positions, and often there are no derivatives.
+        \item \textbf{Emerging markets} generally only use long positions, often with no derivatives.
         \item \textbf{Equity market neutral} combines long and short positions in under- and over-valued securities to eliminate systematic risk.
         \item \textbf{Hedge equity strategies} have long and short positions in under- and over-valued securities to exploit mispricings. Unlike market neutral funds, they don't remove systematic risk. Might be long, short or neutral depending on markets.
         \item \textbf{Fixed income arbitrage} involves taking long and short fixed income positions based on expected changes in the yield or credit curves.
-        \item \textbf{Global macro strategies} take positions in major financial and non-financial markets. They focus on an entire area of investment rather than individual securities or classes.
-        \item \textbf{Merge arbitrage} or \textbf{deal arbitrage} focuses on mergers, spin-offs, takeovers, etc.
+        \item \textbf{Global macro strategies} take positions in major financial and non-financial markets. Focus on an entire investment area instead of individual securities or classes.
+        \item \textbf{Merger arbitrage} focuses on mergers, spin-offs, takeovers, etc.
         \item \textbf{Fund of funds} is a single fund which invests in many hedge funds. Has higher fees as all managers get paid.
     \end{itemize}
 \end{flashcard}
@@ -460,5 +461,76 @@
 
         The idea behind downside deviation is to focus on negative returns and not penalize a fund for high positive returns.
     \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Alternative Investments]{Limitations of Using Sharpe Ratio for Hedge Funds}
+    \begin{flushleft}
+        Hedge fund Sharpe ratios are computed using annualized returns.
+        \[
+            \text{Sharpe}_{\text{HF}} = \frac{\text{annualized return} - \text{annualized risk-free rate}}{\text{annualized standard deviation}}
+        \]
+        Disadvantages to hedge fund Sharpe ratios are
+        \begin{itemize}
+            \item \textbf{Time dependency.} The annual ratio is typically estimated using shorter time periods.
+            \item \textbf{Assumes normality.} The ratio uses standard deviation, which is inappropriate for skewed return distributions.
+            \item \textbf{Assumes liquidity.} Infrequent or missing returns data points causes downward-biased standard deviations.
+            \item \textbf{Assumes uncorrelated returns.} Returns correlated across time will artificially lower standard deviation.
+            \item \textbf{Stand-alone measure.} Does not consider diversification effects.
+            \item \textbf{Uses historical data.} Has little power to predict winners.
+            \item \textbf{Can be manipulated.} Managers can report higher returns to inflate the ratio.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Alternative Investments]{Trading Strategies of Managed Futures Programs}
+    \begin{flushleft}
+        Managed futures are run by Commodity Pool Operators (CPOs), which themselves can be commodity trading advisors (CTAs). Typically classified by style or strategy. Sometimes considered a subset of global macro hedge funds specializing in derivatives.\newline
+
+        CTA strategies can be classified two different ways.
+        \begin{itemize}
+            \item \textbf{Systematic trading strategies} apply sets of rules to trade along short-, intermediate-, or long-term trends. They may also trade in a contrarian strategy.
+            \item \textbf{Discretionary trading strategies} are based on the discretion of the CTA.
+        \end{itemize}
+
+        Managed futures can also be classified by the markets in which they trade. Those which trade in
+        \begin{itemize}
+            \item \textbf{Financial markets} trade in interest rate and currency futures, options and forward contracts.
+            \item \textbf{Currency markets} trade exclusively in currency derivatives.
+            \item \textbf{Diversified markest} trade in all financial derivatives markets above as well as commodity derivatives.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Alternative Investments]{Managed Futures Role in a Portfolio}
+    \begin{flushleft}
+        The primary benefit to managed futures is the significant diversification offered. Private funds seem to add value whereas publicly traded funds have performed poorly, both stand-alone and in portfolios.\newline
+
+        Risk should be considered when selecting a CTA. The beta corresponding to an individual CTA compared to a fund of CTAs can be a good indicator of risk-adjusted performance. This works similar to stock betas in comparison to the overall market.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[Alternative Investments]{Strategies for Distressed Securities Investing}
+    \begin{itemize}
+        \item \textbf{Long-only value investing} finds opportunities where prospects will improve.
+            \begin{itemize}
+                \item \textit{High-yield investing} buys publicly-traded, below-investment grade debt.
+                \item \textit{Orphan equities investing} purchases equities of firms emerging from reorganization.
+            \end{itemize}
+        \item \textbf{Distressed debt arbitrage} purchases a company's distressed debt while shorting the equity. Can earn a return in two ways.
+            \begin{enumerate}
+                \item If conditions worsen, debt and equity will both fall in value, but equity will fall more because debt has seniority.
+                \item If conditions improve, the priority of interest payments over dividend payments means debtholders will have higher returns.
+            \end{enumerate}
+        \item \textbf{Private equity} acquires positions in the distressed company which give some amount of control. The investor can then assist and gain more ownership during reorganization. Vulture funds specialize in purchasing undervalued distressed securities use this strategy.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[Alternative Investments]{Risks Associated with Distressed Securities Investing}
+    \begin{itemize}
+        \item \textbf{Event risk} refers to the idea that return on investment depends on an event for a particular company. These events are generally unrelated to the economy and provide diversification benefits.
+        \item \textbf{Market liquiditiy risk} refers to low liquidity and the possible cyclical supply and demand for these investments.
+        \item \textbf{Market risk} from macroeconomic changes is usually less important than event or market risk.
+        \item \textbf{J-factor risk} is risk presented by courts and judges which is an unpredictable human element. Anticipation of a bankruptcy judge's ruling, an investor knows whether to buy the distressed company's debt or equity.
+    \end{itemize}
 \end{flashcard}
 \end{document}

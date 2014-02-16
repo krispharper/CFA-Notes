@@ -1,18 +1,20 @@
 \documentclass[../custom]{flashcards}
 \usepackage{amsmath}
 
+\newcommand{\studyArea}{Global Bonds and Fixed Income Derivatives}
+
 \begin{document}
 \cardfrontstyle{headings}
 \cardfrontfoot{Study Session 10}
 
-\begin{flashcard}[Fixed Income]{Effects of Leverage on Variability of Returns}
+\begin{flashcard}[\studyArea]{Effects of Leverage on Variability of Returns}
     \begin{itemize}
         \item As leverage increases, the variability of returns increases.
         \item As the investment return increases, the variability of returns increases.
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Repurchase Agreement}
+\begin{flashcard}[\studyArea]{Repurchase Agreement}
     \begin{flushleft}
         The borrower (seller) agrees to repurchase it from the lender (buyer) on an agreed upon date and at an agreed upon price.\newline
 
@@ -20,7 +22,7 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Four Repo Delivery Scenarios}
+\begin{flashcard}[\studyArea]{Four Repo Delivery Scenarios}
     \begin{enumerate}
         \item The borrower physically delivers the collateral to the lender. This can be costly.
         \item The collateral is deposited in a custodial account at the borrower's bank. This reduces the fees of normal delivery.
@@ -29,7 +31,7 @@
     \end{enumerate}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Factors Affecting the Repo Rate}
+\begin{flashcard}[\studyArea]{Factors Affecting the Repo Rate}
     \begin{itemize}
         \item Increases with the credit risk of the borrower when delivery is not required.
         \item Declines as the quality of the collateral increases.
@@ -41,7 +43,7 @@
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Disadvantages of Standard Deviation and Variance}
+\begin{flashcard}[\studyArea]{Disadvantages of Standard Deviation and Variance}
     \begin{itemize}
         \item Bond returns are often not normally distributed. Bonds with options have non-normal return distributions.
         \item The number of inputs increases quadratically with portfolio size.
@@ -49,7 +51,7 @@
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Semivariance, Shortfall Risk and Value at Risk}
+\begin{flashcard}[\studyArea]{Semivariance, Shortfall Risk and Value at Risk}
     \begin{itemize}
         \item \textbf{Semivariance} measures the dispersion of returns below a target return. It is not commonly used because
             \begin{itemize}
@@ -63,7 +65,7 @@
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Cheapest to Deliver}
+\begin{flashcard}[\studyArea]{Cheapest to Deliver}
     \begin{flushleft}
         A bond that the counterparty in the short position can deliver to satisfy the obligation of the futures contract.\newline
 
@@ -71,7 +73,7 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Advantages of Futures Over Cash Market Instruments}
+\begin{flashcard}[\studyArea]{Advantages of Futures Over Cash Market Instruments}
     \begin{itemize}
         \item Futures are more liquid.
         \item Futures are less expensive.
@@ -79,7 +81,7 @@
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{How to Use Futures to Change Dollar Duration}
+\begin{flashcard}[\studyArea]{How to Use Futures to Change Dollar Duration}
     \begin{flushleft}
         To increase dollar duration, buy futures contracts.\newline
 
@@ -87,7 +89,7 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Dollar Duration Hedging Formula}
+\begin{flashcard}[\studyArea]{Dollar Duration Hedging Formula}
     \begin{flushleft}
         The number of contracts to construct a hedge is
         \begin{align*}
@@ -98,7 +100,7 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Basis Risk}
+\begin{flashcard}[\studyArea]{Basis Risk}
     \begin{flushleft}
         Price basis is the difference between the spot price and the futures price at delivery.\newline
 
@@ -106,13 +108,13 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Cross Hedge}
+\begin{flashcard}[\studyArea]{Cross Hedge}
     \begin{flushleft}
         The underlying security in the futures contract is not identical to the asset being hedge (e.g., using Treasury bond futures to hedge corporates). It can be either long or short. Cross hedges must be used when there is no corresponding futures contract for a position, or if such a contract is too illiquid.
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Hedge Ratio for Cross Hedges}
+\begin{flashcard}[\studyArea]{Hedge Ratio for Cross Hedges}
     \begin{flushleft}
         A hedge ratio should be used when the futures contract doesn't perfectly match the underlying bond's risk factors. The ratio is
         \begin{align*}
@@ -123,7 +125,7 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Yield Beta}
+\begin{flashcard}[\studyArea]{Yield Beta}
     \begin{flushleft}
         Yield beta is obtained from the regression equation
         \[
@@ -139,7 +141,7 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Three Basic Sources of Hedging Error}
+\begin{flashcard}[\studyArea]{Three Basic Sources of Hedging Error}
     \begin{enumerate}
         \item Forecast of the basis at the time the hedge is lifted.
         \item Estimated durations. Estimating duration for bonds with options can be particularly difficult.
@@ -147,7 +149,7 @@
     \end{enumerate}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Formula for the Duration of a Bond Option}
+\begin{flashcard}[\studyArea]{Formula for the Duration of a Bond Option}
     \begin{flushleft}
         \[
             \text{option delta} \times \text{duration of the underlying} \times \frac{\text{price of the underlying}}{\text{price of the option}}
@@ -155,14 +157,14 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Protective Put and Covered Call}
+\begin{flashcard}[\studyArea]{Protective Put and Covered Call}
     \begin{itemize}
         \item \textbf{Protective put.} Owning a bond and buying an interest rate put. This provides protection from rising interest rates as it will compensate for the loss in value on the bond.
         \item \textbf{Covered call.} Owning a bond and selling an interest rate call. Provides income from the sale of the call, but offers no protection for rising or falling interest rates.
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Three Types of Credit Risk}
+\begin{flashcard}[\studyArea]{Three Types of Credit Risk}
     \begin{itemize}
         \item \textbf{Default risk} is the risk that the issuer will not be able to pay. It is dependent on an action of the issuer.
         \item \textbf{Credit spread risk} is the risk of increase in the yield spread on an asset. It's a function of changes in the market's collective evaluation of credit quality.
@@ -170,7 +172,7 @@
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Three Types of Credit Derivative Instruments}
+\begin{flashcard}[\studyArea]{Three Types of Credit Derivative Instruments}
     \begin{itemize}
         \item \textbf{Credit options.} Provide protection from adverse price movements due to credit events or changes in the asset's spread. There are two types of credit options.
             \begin{itemize}
@@ -182,7 +184,7 @@
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Sources of Excess Return on International Bonds}
+\begin{flashcard}[\studyArea]{Sources of Excess Return on International Bonds}
     \begin{itemize}
         \item \textbf{Market selection} involves finding opportunities for value enhancement.
         \item \textbf{Currency selection} decides how much active currency management and currency hedging a manager will use. He should not employ any currency hedging without the ability to forecast interest rate changes and their impact on exchange rates.
@@ -193,7 +195,7 @@
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Country Beta}
+\begin{flashcard}[\studyArea]{Country Beta}
     \begin{flushleft}
         A country beta or yield beta measures the relationship between changes in the foreign and domestic yields. It is given by the following regression
         \[
@@ -203,7 +205,7 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Interest Rate Parity}
+\begin{flashcard}[\studyArea]{Interest Rate Parity}
     \begin{flushleft}
         \begin{align*}
             F &= S_0 \left ( \frac{1 + c_d}{1 + c_f} \right )\\
@@ -217,7 +219,7 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Methods of Hedging Currency Risk for International Bonds}
+\begin{flashcard}[\studyArea]{Methods of Hedging Currency Risk for International Bonds}
     \begin{itemize}
         \item \textbf{Forward hedge.} Used to eliminate most of the currency risk. Assuming forward contracts are available and actively traded, a manager enters a forward contract to sell the foreign currency at the current forward rate.
         \item \textbf{Proxy hedge.} Enter into a forward contract between the domestic currency and a second foreign currency that is correlated with the first. Proxy hedges are used when forward contracts on the first currency are not actively traded or if hedging the first currency is expensive.
@@ -225,7 +227,7 @@
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Advantages and Disadvantages of Investing in Emerging Market Debt}
+\begin{flashcard}[\studyArea]{Advantages and Disadvantages of Investing in Emerging Market Debt}
     \begin{itemize}
         \item Advantages
             \begin{itemize}
@@ -247,7 +249,7 @@
     \end{itemize}
 \end{flashcard}
 
-\begin{flashcard}[Fixed Income]{Criteria to Determine the Optimal Mix of Active Managers}
+\begin{flashcard}[\studyArea]{Criteria to Determine the Optimal Mix of Active Managers}
     \begin{itemize}
         \item \textbf{Style analysis.} Most active returns can be explained by selected style. Primary concerns are not just the style employed, but also risk factors associated with the style.
         \item \textbf{Selection bets.} Includes credit spread analysis and the identification of over- and under-valued securities.

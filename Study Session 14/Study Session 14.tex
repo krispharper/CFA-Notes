@@ -1,10 +1,15 @@
 \documentclass[../custom,grid]{flashcards}
-%\usepackage{booktabs}
-%\usepackage{array}
+\usepackage{booktabs}
+\usepackage{array}
 \usepackage{amsmath}
 \usepackage{enumitem}
+\usepackage{multirow}
 
 \newcommand{\studyArea}{Risk Management}
+
+\def\labelitemii{$\circ$}
+\def\labelitemiii{$\diamond$}
+\def\labelitemiv{$\cdot$}
 
 \begin{document}
 \cardfrontstyle{headings}
@@ -195,6 +200,451 @@
         \item \textbf{Tail value at risk} (TVaR) is VaR plus the average of the outcomes in the tail.
         \item \textbf{Cerdit VaR} measures risk due to credit events.
         \item \textbf{Stress testing} tests various situations which may occur and their impact on the portfolio.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Scenario Analysis and Stress Testing}
+    \begin{flushleft}
+        In scenario analysis, a user defines events such as
+        \begin{itemize}[parsep=1pt,itemsep=1pt]
+            \item Yield curve shifts and twists.
+            \item Changes in yield volatilities.
+            \item Changes in the value and volatility of equity indices.
+            \item Changes in the value of currencies or foreign exchange rate volatilities.
+            \item Changes in swap spreads.
+        \end{itemize}
+        The value of the portfolio is compared before and after these events. Sometimes actual or hypothetical extreme events are used.\newline
+
+        Scenario analysis weakness is the inability to measure byproducts of factor movements. I.e., it's hard to model the interactions of multiple factors.\newline
+
+        Stress testing is often used as a complement to VaR. The idea is to reveal abnormal situations which might not be covered when using historical standard deviations. Some stressing models are
+        \begin{itemize}[parsep=1pt,itemsep=1pt]
+            \item \textbf{Factor push analysis} in which factors are pushed to the most disadvantageous combination.
+            \item \textbf{Maximum loss optimization} which uses mathematical and computer modeling to find the worst combination of factors.
+            \item \textbf{Worst-case secenario} which uses the worst case an analyst thinks likely to occur.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Types of Credit Risk}
+    \begin{flushleft}
+        Current credit risk is the amount of a payment currently due. Current credit risk is zero on all but one date.\newline
+
+        Potential credit risk is based on payments due in the future and exists even if there is no current credit risk. It can change over time.\newline
+
+        Cross-default provisions are present in most lending agreements and specify that if a debtor defaults on one payment, he defaults on all obligations. This means that there is a credit risk associated with payments to due to other creditors.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Credit VaR}
+    \begin{itemize}
+        \item Also called credit at risk or default VaR.
+        \item Defined as an expected loss due to default at a given probability during a given time period.
+        \item Is much more difficult to calculate than VaR.
+        \item While VaR is a measure of left-tail risk, credit VaR measures right-tail risk because defaults are most likely when market values are highest and returns are greatest.
+        \item Even if the probability of default can be estimated, recovery rates still need to be calculated.
+        \item Pricing data on credit derivatives and option pricing models are sometimes used to estimate credit VaR. Credit risk is one-sided like options.
+        \item Credit risk across multiple exposures is difficult to aggregate and depends on the correlations between them.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Credit Risk of Swaps and Options}
+    \begin{flushleft}
+        Swaps can be modeled as a series of forward contracts. As such, swaps have current credit risk on each payment date and potential credit risk throughout their lives. The credit risk is highest at the middle of the life. At initiation, the credit risk is zero, and later in life there are fewer payments so credit risk decreases. Currency swaps don't fit this model because of the return of notional at the end of the swap. Thus, their credit risk is between the midpoint and end of the swap's life.\newline
+
+        In an option, on the long position faces credit risk. The buyer decides when to exercise the option and faces the risk the seller will be unable to perform. Both American and European style options have potential credit risk equal to the market value of the option. Current credit risk only exists after the option is exercised.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Relationship of Liquidity to VaR}
+    \begin{flushleft}
+        Liquidity is not considered when measuring VaR. There is an implicit assumption that positions can be sold at their estimated market values. Thus, VaR can give a misleading estimation of potential loss.\newline
+
+        Liquidity is difficult to measure because historical volatilities may not be accurate. The inability to quickly adjust a position can lead to large losses, and managers should be aware of their positions as they relate to trading volume and bid-ask spreads.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Methods of Managing Market Risk}
+    \begin{flushleft}
+        Risk budgeting finds acceptable levels of risk and allocates risk to different business units. In an enterprise risk management (ERM) system, capital is allocated to portfolio managers based on risk and exposure to each sector. This allow monitoring of the risk budget as well as measuring risk-adjusted performance with return on VaR.\newline
+
+        In addition to VaR, other methods for budgeting risk include
+        \begin{itemize}
+            \item \textbf{Position limits} that put a dollar cap on a position.
+            \item \textbf{Liquidity limits} which set nominal position limits as a percentage of trading volume.
+            \item \textbf{Performance stopouts} which set absolute dollar losses over a certain period.
+            \item \textbf{Risk factor limits} which limit exposure to particular risk factors.
+            \item \textbf{Scenario analysis limits} which limit loss due to a particular scenario.
+            \item \textbf{Leverage limits} which limit the amount of leverage a manager can use.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Methods of Managing Credit Risk}
+    \begin{itemize}[itemsep=1pt,parsep=1pt]
+        \item \textbf{Limiting exposure} of loans to any particular counterparty.
+        \item \textbf{Marking to market} is used in derivative contracts in which the value is positive to one party and negative to another. The negative party pays the positive and the contract is repriced.
+        \item \textbf{Collateral} may be used in transactions with credit risk. Margin is a form of collateral in derivatives contracts.
+        \item \textbf{Payment netting} is used when one side pays and other other receives. The payments are netted and only one side pays.
+        \item \textbf{Closeout netting} is used in bankruptcy proceedings. All transactions between a bankrupt company and a counterparty are netted.
+        \item \textbf{Minimum credit standards} for debtors are a good idea, but can be difficult to impose. Low-credit entities can use SPVs to create a high credit subsidiary.
+        \item \textbf{Credit derivatives} transfer credit risk to another party.
+        \begin{itemize}
+            \item \textbf{Credit default swaps} protect the buyer after a credit event.
+            \item \textbf{Credit spread forwards} require payment from one party based on the credit spread at a particular date. 
+            \item \textbf{Credit options} receive a payment when the rate on an asset exceeds a reference by the specified spread.
+            \item \textbf{Toal return swaps} get a variable return from a dealer in exchange for the total return on an asset.
+        \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Methods of Measuring Risk-Adjusted Performance}
+    \begin{itemize}[itemsep=1pt,parsep=1pt]
+        \item \textbf{Sharpe ratio} measures excess return over the risk-free rate per unit of risk measured as standard deviation.
+        \[
+            S_P = \frac{\overline{R}_P - \overline{R}_F}{\sigma_P}
+        \]
+        Its biggest disadvantage is that it relies on excess returns having a normal distribution, which options and other asymmetric payoff instruments don't have.
+        \item \textbf{Risk-adjusted return on invested capital} (RAROC) is the ratio of expected return to a measure of risk like VaR. This is then compared to historical RAROC or a benchmark RAROC.
+        \item \textbf{Return over maximum drawdown} (RoMAD) is the annual return divided by the largest drawdown. A drawdown is the percentage drop from a high water mark to a subsequent low.
+        \[
+            \text{RoMAD} = \frac{\overline{R}_P}{\text{maximum drawdown}}
+        \]
+        \item \textbf{Sortino ratio} is excess return, calculated as portfolio return less minimum acceptable portfolio return (MAR), divided by risk, measured as standard deviation of returns using only returns below MAR. By only using downside volatility measurements, good performance cannot inflate the risk metric.
+        \[
+            \text{Sortino Ratio} = \frac{\overline{R}_P - \text{MAR}}{\text{downside deviation}}
+        \]
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Methods for Risk-Based Capital Allocation}
+    \begin{itemize}
+        \item \textbf{Nominal position limits} specify amount allocated to managers based on desired return and exposure to risk. Has the downside of being exceeded by using derivatives to replicate the exposure of other assets.
+        \item \textbf{VaR-based position limits} can be used in lieu or or in addition to nominal limits. Capital is allocated to units according VaR. The benefit is firm VaR is the sum of the unit VaR. The drawback is that it doesn't consider correlation between units which may cause overestimation of VaR and misallocation.
+        \item \textbf{Maximum loss limits} specify a maximum allowable loss. The benefit is the ability to set limits such that the maximum losses never exceed the firm's capital. The drawback is the possibility of all units exceeding their limits due to unforeseen events.
+        \item \textbf{Internal and regulatory capital requirements} are often specified using VaR to limit the probability of insolvency. They may be set by bank regulators, internal management, or other entities.
+        \item \textbf{Behavioral conflicts} must be considered when allocating capital. A common example is portfolio managers who have performance-based compensation taking on more risk than necessary. A risk management system must take this conflict into account.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{FX Swap}
+    \begin{flushleft}
+        An FX swap is not actually a swap. It rolls a maturing forward contract using a spot transaction into a new forward contract. It swaps the old contract for the new one.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Currency Option Mechanics}
+    \begin{flushleft}
+        Currency options require two currencies. A call on one currency is a put on the other. The option is from the perspective of the base currency.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Currency Call and Put Option Relationships}
+    \begin{tabular}{
+            >{\raggedright}p{1in}
+            >{\raggedright}p{1.6in}
+            >{\raggedright\arraybackslash}p{1.6in}} \toprule
+        \textit{As the price of the base currency increases} &
+        \textit{The call option to buy the base currency} &
+        \textit{The put option to sell the base currency}\\ \midrule
+
+        From 0 to the strike price &
+        Is out-of-the-money and rising in value. Delta is shifting from 0 to 0.5. &
+        Is in-the-money and falling in value. Delta is shifting from -1 to -0.5.\\ \midrule
+
+        To the strike price &
+        Is at-the-money. Delta is approximately 0.5. &
+        Is at-the-money. Delta is approximately -0.5.\\ \midrule
+
+        From the strike price upward &
+        Is in-the-money and rising in value. Delta is shifting from 0.5 to 1.0. &
+        Is out-of-the-money and falling in value. Delta is shifting from -0.5 to 0.\\ \bottomrule
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Domestic Currency Returns for a Foreign Currency Investment}
+    \begin{flushleft}
+        \begin{align*}
+            R_{\text{DC}} &= (1 + R_{\text{FC}})(1 + R_{\text{FX}}) - 1\\
+            &= R_{\text{FC}} + R_{\text{FX}} + R_{\text{FC}} R_{\text{FX}}\\
+            \\
+            \text{where:}\\
+            R_{\text{DC}} &= \text{the domestic currency return}\\
+            R_{\text{FC}} &= \text{the return of the foreign asset measured in its local currency}\\
+            R_{\text{FX}} &= \text{the percentage change in value of the foreign currency}\\
+        \end{align*}
+
+        $R_{\text{FC}}$ and $R_{\text{FX}}$ are sometimes called the local market return and the local currency return, respectively. For investments in multiple currencies, the equation becomes
+        \begin{align*}
+            R_{\text{DC}} &= \sum_{i=1}^n w_i R_{\text{DC}, i}\\
+            \\
+            \text{where:}\\
+            w_i &= \text{the proportion of the portfolio invested in assets traded in currency $i$}\\
+            R_{\text{DC}, i} &= \text{the domestic currency return for asset $i$}\\
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Variance of Domestic Currency Returns}
+    \begin{flushleft}
+        \begin{align*}
+            \sigma^2(R_{\text{DC}}) &= w_{\text{FC}}^2 \sigma^2(R_{\text{FC}}) + w_{\text{FX}}^2 \sigma^2(R_{\text{FX}}) + 2 w_{\text{FC}} w_{\text{FX}} \sigma(R_{\text{FC}}) \sigma(R_{\text{FX}}) \rho(R_{\text{FC}}, R_{\text{FX}})\\
+            \\
+            \text{where:}\\
+            \rho(R_{\text{FC}}, R_{\text{FX}}) &= \text{the correlation between $R_{\text{FC}}$ and $R_{\text{FX}}$}\\
+        \end{align*}
+        If an investor holds a single foreign currency denominated asset, the formula simplifies to
+        \[
+            \sigma^2(R_{\text{DC}}) = \sigma^2(R_{\text{FC}}) + \sigma^2(R_{\text{FX}}) + 2 \sigma(R_{\text{FC}}) \sigma(R_{\text{FX}}) \rho(R_{\text{FC}}, R_{\text{FX}})
+        \]
+        If $R_{\text{FC}}$ is a risk free return, the formula for the standard deviation of $R_{\text{DC}}$ is
+        \[
+            \sigma(R_{\text{DC}}) = \sigma(R_{\text{FX}}) (1 + R_{\text{FC}})
+        \]
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Arguments for and Against Active Currency Risk Management}
+    \begin{itemize}
+        \item Arguments against hedging currency risk
+        \begin{itemize}
+            \item Hedging and trading currencies takes time and money.
+            \item In the long run, unhedged currency effects are a zero-sum game. If one currency appreciates, the other must depreciate.
+            \item In the long run, currencies revert to a theoretical fair value.
+        \end{itemize}
+        \item Arguments for hedging currency risk
+        \begin{itemize}
+            \item In the short run, currency movements can be large.
+            \item Inefficient pricing can be exploited.
+            \item Many FX trades are decided by international trade transactions or central bank policies, which are not motivated by fair value.
+        \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Different Levels of Currency Hedging}
+    \begin{itemize}
+        \item \textbf{Passive hedging} is rule-based, usually matching the currency exposure to the benchmark. Requires rebalancing.
+        \item \textbf{Discretionary hedging} deviates from passive hedging by a specified percentage. Allows a manager to pursue modest currency returns relative to the benchmark.
+        \item \textbf{Active currency management} allows for greater deviations from the benchmark. It is expected to generate positive currency return and alpha, not reduce risk.
+        \item \textbf{Currency overlays} outsource currency management. At the extreme, overlay managers purely seek currency alpha, not risk reduction.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Currency Risk Hedging and the IPS}
+    \begin{flushleft}
+        The client's IPS should specify whether or not to hedge currency risk. Relevant sections might be, investor objectives, time horizon, liquidity need, and the benchmark used. The IPS should also specify
+        \begin{itemize}
+            \item Target percentage of hedged currency exposure.
+            \item How much discretion managers have around the target.
+            \item Frequency of rebalancing.
+            \item Benchmarks to use to evaluate currency decisions.
+            \item Allowable or prohibited hedging tools.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Issues with Diversification of Strategic Currency Risk Management}
+    \begin{itemize}
+        \item In the long run, currency volatility is lower than in the short run, which reduces the need to hedge long-term portfolios.
+        \item Positive correlation of $R_{\text{FC}}$ and $R_{\text{FX}}$ increase the volatility of $R_{\text{DC}}$ and increases the need for currency hedging.
+        \item Correlation varies by time period, giving diversification at times and not at others. This suggests a varying hedge ratio.
+        \item Evidence suggests higher correlation for bond than equity portfolios, meaning hedging is more important for bond portfolios.
+        \item The hedge ratio---the percentage of currency exposure to hedge---varies by manager preference.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Issues with Costs of Strategic Currency Risk Management}
+    \begin{itemize}
+        \item The bid-ask cost on currency trades is generally small, but frequent rebalancing can be costly.
+        \item Options require a premium which is lost if the option expires out-of-the-money.
+        \item Forward currency contracts are often shorting than the hedging period, so they require FX swaps. This creates cash flow volatility from gains and losses on the contracts.
+        \item Overhead costs can be high, requiring a back office and trading infrastructure. Cash must be held in multiple currencies for settlement and margins.
+        \item Hedging every currency movement is generally too costly. Managers choose partial hedges and rebalance monthly instead of daily.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Overall Factors Influencing Hedging Currency Risk}
+    \begin{itemize}
+        \item Time horizon for portfolio objectives.
+        \item High risk aversion.
+        \item Client's concern with opportunity costs of missing currency returns.
+        \item High short-term income and liquidity needs.
+        \item High foreign currency bond exposure.
+        \item Low hedging costs.
+        \item Client's doubt of benefits of discretionary management.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Economic Factors Affecting Currency Value}
+    \begin{flushleft}
+        Currencies with the following characteristics will tend to increase in value.
+        \begin{itemize}
+            \item More undervalued relative to their fundamental value.
+            \item Have the greatest rate of increase in their fundamental value.
+            \item Higher real or nominal interest rates.
+            \item Lower inflation relative to other countries.
+            \item Countries with decreasing risk premia.
+        \end{itemize}
+        Currencies with the opposite conditions will tend to decrease in value.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Principals and Patterns of Technical Analysis of Currencies}
+    \begin{flushleft}
+        The three principals driving technical analysis of currencies are
+        \begin{enumerate}
+            \item Past price data can predict future price movement, and because prices reflect fundamental information, there is no need to analyze said information.
+            \item People tend to react to similar events in similar ways, and so past price patterns tend to repeat.
+            \item It doesn't matter what the currency should be worth, only what it will trade at.
+        \end{enumerate}
+        Some patterns used by technical analysts are
+        \begin{itemize}
+            \item An overbought market has gone up too far and the price is likely to reverse.
+            \item A support level exists where there are many bids. A price that falls to that level is likely to reverse as the purchases are executed.
+            \item A resistance level exists where there are many offers. A price that rises to that level is likely to reverse as the sells are executed.
+            \item A shorter-term moving average crosses a longer-term moving average.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Carry Trades}
+    \begin{flushleft}
+        \begin{itemize}
+            \item Covered interest rate parity (CIRP) holds by arbitrage and states that the currency with the higher interest rate will trade at a forward discount ($F_0 < S_0$) and the currency with the lower interest rate will trade at a forward premium ($F_0 > S_0$).
+            \item The carry trades uses violations of uncovered interest rate parity (UCIRP). UCIRP states that the forward rate determined by CIRP is an unbiased estimate of the future spot rate. This means that the currency with the higher interest rate will decrease by the interest rate differential.
+            \item Historical evidence indicates that
+            \begin{itemize}
+                \item Generally, the higher interest rate currency depreciated less than expected, and a carry trade has earned a profit.
+                \item A small percentage of the time, the higher interest rate currency has depreciated a lot generating large losses on the carry trade.
+            \end{itemize}
+        \end{itemize}
+
+        Carry trades are usually done by borrowing in the lower interest rate currencies of developed economies (funding currencies) and investing in the higher rate currencies of emerging economies (investing currencies).
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Volatility Trading Strategies}
+    \begin{itemize}
+        \item \textbf{Delta hedging.} Uses a delta-neutral position, which has zero delta. It will only change value when the volatility of the underlying assets changes.
+        \item \textbf{Long straddle.} An at-the-money call and put, bought when volatility is expected to increase. The options' deltas will offset each other creating a delta-neutral position.
+        \item \textbf{Short straddle.} Selling an at-the-money call and put, used when volatility is expected to decrease.
+        \item \textbf{Strangle.} Out-of-the-money calls and puts with offsetting deltas are purchased. Gives similar but more moderate payoffs to a straddle. Costs less than a straddle.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Currency Hedging Actions Based on Market Expectations}
+    \begin{tabular}{p{1.3in} p{1.3in} >{\raggedright\arraybackslash}p{1.6in}} \toprule
+        \multicolumn{2}{c}{\textit{Expectation:}} &
+        \multicolumn{1}{c}{\textit{Action:}}\\ \midrule
+
+        \multirow{2}{*}[-9mm]{Relative currency:} &
+        Appreciation &
+        Reduce the hedge on or increase the long position in the currency.\\ \cmidrule(r){2-3}        
+
+        &
+        Depreciation &
+        Increase the hedge on or decrease the long position in the currency.\\ \midrule
+        
+        \multirow{2}{*}{Volatility:} &
+        Rising &
+        Long straddle or strangle.\\ \cmidrule(r){2-3}
+
+        &
+        Falling &
+        Short straddle or strangle.\\ \midrule
+
+        \multirow{2}{*}{Market conditions:} &
+        Stable &
+        Carry trade.\\ \cmidrule(r){2-3}
+
+        &
+        Crisis. &
+        Discontinue the carry trade.\\ \bottomrule
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Advantages of Forward Contracts in Currency Hedging}
+    \begin{itemize}
+        \item Can be customized while futures are standardized.
+        \item Available for almost any currency pair, while futures trade for only a limited number of currencies.
+        \item Don't require margin.
+        \item Higher trading volume than futures which gives better liquidity.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Roll Yield}
+    \begin{flushleft}
+        Roll yield or roll return is a return from the movement of the forward price toward the spot price. Effectively the profit or loss on a forward or futures contract if the spot price is unchanged at expiration. Roll yield on a contract held to expiration is calculated as $(F_T - S_T) / S_0$.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Impact of Forward Premia and Discounts and Roll Yield on Hedging Costs}
+    \begin{tabular}{
+            >{\raggedright}p{1in}
+            >{\raggedright}p{1.6in}
+            >{\raggedright\arraybackslash}p{1.6in}} \toprule
+        If the hedge requires: &
+        \boldmath{$F_{P/B} > S_{P/B}$} and \boldmath{$i_B < i_P$}\newline
+        Upward-sloping forward price curve. &
+        \boldmath{$F_{P/B} < S_{P/B}$} and \boldmath{$i_B > i_P$}\newline
+        Downward-sloping forward price curve.\\ \midrule
+
+        A long forward position in currency B, the hedge earns &
+        Negative roll yield, increasing hedging costs. &
+        Positive roll yield, decreasing hedging costs.\\ \midrule
+
+        A short forward position in currency B, the hedge earns &
+        Positive roll yield, decreasing hedging costs. &
+        Negative roll yield, increasing hedging costs.\\ \midrule
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Trading Strategies Designed to Reduce Hedging Costs}
+    \begin{itemize}
+        \item \textbf{Over- or under-hedge with forward contracts} based on the manager's view. If a manager expects a currency to appreciate or depreciate, he can reduce or increase the hedge ratio, respectively. This creates a positive convexity situation
+        \item \textbf{Buy at-the-money put options} gives asymmetric protection with full upside potential and no downside risk. Has high initial cost, but no opportunity cost.
+        \item \textbf{Buy out-of-the-money put options} is less expensive but offers less protection.
+        \item \textbf{Risk reversal} or \textbf{collar} is buying and selling puts and calls with offsetting deltas, respectively. This has lower initial cost, but limits upside potential compared to buying only puts.
+        \item \textbf{Put spread} is buying out-of-the-money puts and selling puts that are further out of the money. There is downside protection starting at the strike price of the bought put, but it will be lost if the price falls below the strike price of the second put.
+        \item \textbf{Seagull spread} is a put spread combined with selling a call. Has less initial cost than a put spread, with the same downside protection, but limits upside potential.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Examples of Exotic Options}
+    \begin{itemize}
+        \item \textbf{Knock-in options} are plain vanilla options which come into existence if the underlying reaches a specified level.
+        \item \textbf{Knock-out options} are plain vanilla options which cease to exist if the underlying reaches a specified level.
+        \item \textbf{Binary} or \textbf{digital options} pay a fixed amount that doesn't vary with the difference in price between the strike and underlying price.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Cross Hedge and Macro Hedge}
+    \begin{flushleft}
+        A cross hedge refers to hedging with an instrument that is not perfectly correlated with the exposure being hedged. Generally not necessary in currency hedging because forward contracts for most currency pairs are available.\newline
+
+        Cross hedges introduce more risk. When the correlation of returns between hedging instruments and the position being hedged is imperfect, there is residual risk.\newline
+        
+        A macro hedge is a type of cross hedge covering portfolio-wide risk factors. E.g., using bond futures, credit derivatives, and volatility trading to hedge multiple risks in a portfolio.\newline
+
+        One example of a macro hedge is using derivatives contracts based on a basket of currencies which may not match the portfolio exactly. This can reduce hedging costs, however.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Minimum-variance Hedge Ratio}
+    \begin{flushleft}
+        A mathematical approach to determining hedge ratio. It's a regression of the past changes in the value of the portfolio ($R_{\text{DC}}$) to the past changes in the value of the hedging instrument. The hedge ration is the beta (slope) of this regression. It minimizes tracking error.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Considerations for Hedging Emerging Market Currency Exposures}
+    \begin{itemize}
+        \item Larger bid-ask spreads because of low trading volume. Spreads tend to increase during financial crises.
+        \item Lower liquidity and higher transaction costs. One example is multiple investors using carry trades all attempting to liquidate during a financial crisis.
+        \item Transactions between two emerging market currencies can be costly.
+        \item Currency returns are non-normal with a negative skew.
+        \item Higher yield of currencies leads to large forward discounts which produces negative roll yield.
+        \item Contagion is common. During financial crises, correlations of emerging markets with each other tend towards 1.0.
+        \item There is tail risk generated by governments which intervene in the markets creating long periods of stability followed by sharp price movements. These negative events are more frequent that would be predicted by a normal distribution.
     \end{itemize}
 \end{flashcard}
 \end{document}

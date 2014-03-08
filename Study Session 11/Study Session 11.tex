@@ -1,0 +1,369 @@
+\documentclass[../custom,grid]{flashcards}
+\usepackage{enumitem}
+%\usepackage{amsmath}
+%\usepackage{tikz}
+%\usepackage{float}
+
+\newcommand{\studyArea}{Equity Portfolio Management}
+
+\def\labelitemii{$\circ$}
+\def\labelitemiii{$\diamond$}
+\def\labelitemiv{$\cdot$}
+
+\begin{document}
+\cardfrontstyle{headings}
+\cardfrontfoot{Study Session 11}
+
+\begin{flashcard}[\studyArea]{Equity as an Inflation Hedge}
+    \begin{flushleft}
+        An inflation hedge is an asset whose nominal returns are positively correlated with inflation. Bonds are a poor inflation hedge because future cash flows are fixed, which means their prices drop during inflation. Historical evidence suggests that equities provide a good inflation hedge.\newline
+
+        Two important qualifiers are
+        \begin{itemize}
+            \item Corporate income and capital gains taxes are not indexed to inflation, therefore inflation can reduce stock investors' returns. This can be avoided by pricing stocks with these considerations included.
+            \item The ability of an individual stock to hedge inflation depends on its industry and competitive position. The more competitive the industry, the less effective it will be as an inflation hedge.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Information Ratio}
+    \begin{flushleft}
+        The information ratio combines expected active return and tracking risk. It is expected active return divided by tracking risk. Historically it has been highest for semiactive management and lowest for passive management.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Investment Style Based on Investor's Situation and Beliefs}
+    \begin{flushleft}
+        If the investor is taxable, passive management is more likely because it requires less turnover.\newline
+
+        If the investor believes that markets are efficient, he is likely to choose a passive strategy because he doesn't believe the returns of active management will justify the costs of research and trading. Historically, active management doesn't perform better on average.\newline
+
+        Large-cap stocks lend themselves to passive management because information is more efficient. Small-cap markets have more mispricings. If an investor is unknowledgeable about international markets, that is a good place to use passive management.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Equity Index Weighting Schemes}
+    \begin{itemize}
+        \item \textbf{Price-weighted} indices use an average of the prices in the index. The divisor of the index is adjusted for stock splits and composition changes, so the total value is unaffected. Primary advantage is computational simplicity. Also a long history for performance analysis.
+        \item \textbf{Market capitalization-weighted} or \textbf{value-wighted} indices are calculated by summing the total market value of all stocks in the index. This better represents changes in aggregate investor wealth than a price weighted-index. This method automatically adjusts for price splits.
+        \item \textbf{Free float-adjusted market capitalization} indices are a subtype of value-weighted indices based on the amount of stock available for investors to purchase---the free float. Most value-weighted indices have been adjusted for free float. It is considered by many to be the best index type because it can be followed with minimal tracking risk.
+        \item \textbf{Equal-weighted} indices have all securities held at the same dollar value. These indices must be rebalanced to maintain equal representation of all component stocks.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Biases in Equity Index Weighting Schemes}
+    \begin{itemize}[itemsep=.2\itemsep]
+        \item \textbf{Price-wighted.}
+            \begin{itemize}[itemsep=.2\itemsep]
+                \item Higher priced stocks will have a greater impact on the index value.
+                \item Stock price changes with splits, repurchases, and stock dividends.
+                \item Assumes that investors purchase one share of each stock in the index, which investors rarely do.
+            \end{itemize}
+        \item \textbf{Value-weighted.}
+            \begin{itemize}[itemsep=.2\itemsep]
+                \item Firms with greater market cap have a greater impact on the index. Creates a bias towards large firms that may be mature or overvalued.
+                \item May be less diversified if they are overrepresented by large-cap firms.
+                \item Some institutional investors may not be able to mimic a value-weighted index if they are subject to maximum holdings.
+            \end{itemize}
+        \item \textbf{Equal-weighted.}
+            \begin{itemize}[itemsep=.2\itemsep]
+                \item Biased toward small-cap stocks because they have the same weight as large-cap firms even with less liquidity.
+                \item Many equal-weighted indices contain more small firms than large firms, exacerbating the small-cap bias.
+                \item Rebalancing requirement creates high transaction costs for index investors.
+                \item Emphasis on small-cap stocks means liquidity may be hard to find for many stocks.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Five Differences Between Mutual Funds and Exchange-Traded Funds}
+    \begin{enumerate}
+        \item Mutual funds are less frequently traded. In the U.S., a funds NAV is only provided once a day at the end of the day. ETFs trade throughout the day.
+        \item ETFs don't have to maintain recordkeeping for shareholders like mutual funds. These expenses can be large and are sometimes passed on to shareholders. ETFs have their own set of fees because they trade through brokers.
+        \item Mutual funds pay lower license fees to S\&P and other index providers than ETFs do.
+        \item ETFs are more tax efficient because selling an ETF is generally a transaction with another investor, as opposed to exchanging securities for cash. The first is a nontaxable transaction for the ETF, while the second is taxable for the mutual fund. These taxes may be passed on to the investor.
+        \item The cost of holding an ETF long-term is usually lower than that for a mutual fund. Mutual funds generally have higher fees because of liquidity, recordkeeping, and taxes which investors pay for through fees.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Separate Versus Pooled Accounts}
+    \begin{flushleft}
+        In a pooled account, multiple portfolios are combined under one manager. Can be advantages for small funds without dedicated managers. But it's difficult to differentiate performances of the pooled funds. A manager may have to hold excess cash to provide liquidity for the pooled funds.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Disadvantages of Equity Futures Over ETFs}
+    \begin{flushleft}
+        Futures contracts have a finite life and have to be rolled over into new contracts. The new contract may be worse than the initial one.\newline
+
+        Using basket trades and futures contracts in conjunction can be risky because the basket can't be shorted if one of the securities violates the alternative uptick rule. This rule prohibits short selling if a security drops more than 10\% from the previous close.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Equity Total Return Swap}
+    \begin{flushleft}
+        Exchange of the return on an equity security or an interest rate for the return on an equity index. This synthetically diversifies a portfolio in one transaction and is usually cheaper than trading in the underlying securities.\newline
+
+        Equity swaps can also be tax advantageous, if e.g., an investor uses them to get the return on a foreign equity index. The swap dealer would be responsible for the tax payments.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Index Construction Using Full Replication, Stratified Sampling, and Optimization}
+    \begin{itemize}[itemsep=.2\itemsep]
+        \item \textbf{Full replication} purchases all stocks according to the weighting scheme. Used for indices with less than 1,000 liquid stocks.
+            \vspace{-3mm}
+            \begin{itemize}[itemsep=.2\itemsep]
+                \item Advantages are low tracking risk and only needs rebalancing when the index stocks change or pay dividends.
+                \item Return will be the index return less fees, cash drag and transaction costs.
+            \end{itemize}
+        \item \textbf{Stratified sampling} puts stocks into a matrix with the total market value of each cell assigned. A selection of stocks from each cell are bought totaling the market value of that cell.
+            \vspace{-3mm}
+            \begin{itemize}[itemsep=.2\itemsep]
+                \item Advantage is the manager doesn't have to purchase all stocks in the index.
+                \item Tracking risk decreases as the number of cells increases.
+                \item Can be used to mimic concentrated positions in an index without taking those positions.
+            \end{itemize}
+        \item \textbf{Optimization} uses a factor model to match the factor exposures of the fund to those of the index.
+            \vspace{-3mm}
+            \begin{itemize}[itemsep=.2\itemsep]
+                \item Advantage is the factor model accounts for covariances between risk factors.
+                \item Disadvantages are historical risk sensitivities that might change, misleading models caused by a single security or time period, and updating the model leads to rebalancing.
+                \item Has lower tracking risk, particularly when combined with replication by purchasing the largest securities and mimicking the rest with optimization.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Four Categories of Investment Style}
+    \begin{enumerate}
+        \item \textbf{Value} focuses on stocks with low price-multiples. E.g., low P/E or P/B ratios.
+        \item \textbf{Growth} focuses on stocks with high past and futures earnings growth.
+        \item \textbf{Market-oriented} cannot be classified as value or growth.
+        \item \textbf{Market capitalization-based} invests in a particular category of stocks based on market value. E.g., small-cap or large-cap investors.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Value Investing}
+    \begin{itemize}
+        \item Justifications for value investing are
+            \begin{itemize}
+                \item A firm's earnings are currently low, but they will rise in the future as they revert to the mean.
+                \item Less risk that earnings and price multiples will contract for high-priced growth stocks.
+            \end{itemize}
+        \item Substyles of value in vesting are
+            \begin{itemize}
+                \item High dividend yield investors expect their stocks to maintain their dividend yield in the future.
+                \item Low price multiple investors believe that once the economy improves, their stocks will increase in value.
+                \item Contrarian investors look for temporarily depressed stocks, frequently buying stock at less than book value.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Growth Investing}
+    \begin{itemize}
+        \item Risk for growth investors is that growth does not occur, the price-multiple falls, and the price drops.
+        \item Investors may do better during a contraction than an expansion because there are fewer firms with growth prospects and so their valuations are likely to rise.
+        \item Substyles of growth investing are
+            \begin{itemize}
+                \item Consistent earnings growth firms have a record of growth that is expected to continue.
+                \item Momentum stocks have a record of high past earnings, but are likely unsustainable. The investor holds the stock as long as the momentum continues, then sells.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Market-Oriented Investing}
+    \begin{itemize}
+        \item Neither value, nor growth. Sometimes referred to as blend or core.
+        \item Portfolios resemble the market average over time.
+        \item Main risk is that a manager must outperform the market at all times, otherwise investors will use lower costs indexing.
+        \item Substyles of market-oriented investing are
+            \begin{itemize}
+                \item Value tilt or growth tilt market-oriented investing is not all-out value or growth investing and portfolios are diversified.
+                \item Growth at a reasonable price (GARP) looks for stocks with growth prospects selling at reasonable valuations.
+                \item Style rotation picks a style that is thought to be popular in the near future.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Market Capitalization-Based Investing}
+    \begin{itemize}
+        \item Invests based on the market cap of their stocks.
+        \item Investors in different substyles can be further categorized as value, growth, or market-oriented.
+        \item Substyles of market capitalization-based investing are
+            \begin{itemize}
+                \item Small-cap investors believe smaller firms are more likely to be underpriced than well-covered, large-cap stocks. Micro-cap investors focus on the smallest of small-cap stocks.
+                \item Mid-cap investors believe that mid-sized firms have less coverage than large-cap stocks, but are less risky than small-cap stocks.
+                \item Large-cap investors believe they can add value through their analysis of large-cap stocks.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Returns-Based Style Analysis}
+    \begin{flushleft}
+        Returns on a manager's funds are regressed against the returns for various security indices (e.g., large-cap value, small-cap growth, etc.). The regression coefficients represent the portfolio's exposure to an asset class are normalized to be nonnegative and sum to one.\newline
+
+        The indices used in the regression should be mutually exclusive, collectively exhaustive, and represent distinct, uncorrelated sources of risk. Without these characteristics, the results can be misleading.\newline
+
+        The coefficient of determination ($R^2$) measures the style fit. The percentage of returns attributable to security selection is then $1 - R^2$. The error term in the regression, the difference between portfolio return and returns on the style indices, is the managers selection return.\newline
+
+        A series of regressions can be used to check if a manager performs consistently over time.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Holdings-Based Style Analysis}
+    \begin{flushleft}
+        Holdings-based or composition-based style analysis looks at characteristics of the portfolio holdings to evaluate style. The following attributes are used.
+        \begin{itemize}
+            \item \textit{Value or growth:} Investing in low P/E, low P/B, and high dividend yield characterizes a value manager. High P/E, high P/B, and low dividend yield characterizes a growth manager. A manager with average ratios would be classified as market-oriented.
+            \item \textit{Expected EPS growth rate:} Large holdings in firms with high expected earnings growth would characterize a growth manager.
+            \item \textit{Earnings volatility:} Large holdings in firms with high earnings volatility would characterize a value manager because they are willing to take positions in cyclical firms.
+            \item \textit{Industry represntation:} Value managers tend to have higher concentration in utilities and finance because they typically have higher dividend yields. Growth managers tend to have higher concentration in technology and health care because they often have higher growth.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Advantages and Disadvantages of Returns-Based and Holdings-Based Style Analysis}
+    \begin{itemize}[itemsep=.2\itemsep]
+        \item \textbf{Returns-Based Style Analysis}
+            \vspace{-2mm}
+            \begin{itemize}[itemsep=.2\itemsep]
+                \item Advantages
+                    \begin{itemize}[itemsep=.2\itemsep]
+                        \item Characterizes and enables comparisons of entire portfolios.
+                        \item Summarizes the results of the investment process.
+                        \item Methodology backed by theory.
+                        \item Low information requirements.
+                        \item Different models usually result in the same conclusions.
+                        \item Low cost and can be executed quickly.
+                    \end{itemize}
+                \item Disadvantages
+                    \begin{itemize}[itemsep=.2\itemsep]
+                        \item May be inaccurate due to style drift.
+                        \item Misspecified indices can lead to misleading conclusions.
+                    \end{itemize}
+            \end{itemize}
+        \item \textbf{Holdings-Based Style Analysis}
+            \vspace{-2mm}
+            \begin{itemize}[itemsep=.2\itemsep]
+                \item Advantages
+                    \begin{itemize}[itemsep=.2\itemsep]
+                        \item Characterizes each security.
+                        \item Enables comparisons of securities.
+                        \item Can detect style drift more quickly.
+                    \end{itemize}
+                \item Disadvantages
+                    \begin{itemize}[itemsep=.2\itemsep]
+                        \item Is not consistent with selection method used by managers.
+                        \item Requires subjective judgment.
+                        \item Requires more data.
+                    \end{itemize}
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Equity Style Classification Methodologies}
+    \begin{flushleft}
+        The three methods used to classify equities as value or growth are
+        \begin{enumerate}
+            \item Assign to either value or growth.
+            \item Assign to either value, growth, or neutral.
+            \item Split between value and growth.
+        \end{enumerate}
+
+        The first two use categories which means there is no overlap in constructing indices. I.e., a stock cannot be in two different style indices. The third method allows for some of a market cap to be allocated to value and the rest to growth. Most indices use the first method.\newline
+
+        Some indices use buffering to limit the movement of securities from one category to another. This prevents turnover and lowers transaction costs.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Style Boxes}
+    \begin{flushleft}
+        A style box is a matrix with value and growth characteristics on one dimension and market cap on the other. Percentages are assigned to the cells corresponding to the portfolios allocation to that category. E.g., a portfolio might be 20\% large-cap growth and 15\% small-cap value.\newline
+
+        Different providers use different categorizations, which means portfolio style boxes can vary depending on the provider.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Style Drift}
+    \begin{flushleft}
+        Style drift is when a portfolio manager strays from his original style objective. There are two reasons why this can be problematic.
+        \begin{enumerate}
+            \item The investor will not receive the desired style exposure.
+            \item The manager may be moving to an area outside of his expertise.
+        \end{enumerate}
+        Returns-based and holdings-based style analysis can both detect style drift, with holdings-based more effective.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Socially Responsible Investing}
+    \begin{flushleft}
+        SRI uses ethical, social, or religious concerns to screen investment decisions. The screens can be negative or positive.
+        \begin{itemize}
+            \item Negative concerns cause an investor to not invest in a company. An example is avoiding alcohol or tobacco stocks.
+            \item Positive concerns cause investors to seek out companies with ethical practices. An example is seeking firms with good labor or environmental practices.
+        \end{itemize}
+        Most SRI portfolios use negative screens, and few use positive screens exclusively.\newline
+
+        SRI portfolios tend to tilt toward growth stocks and small-cap stocks. There are two benefits to monitoring the style bias created by SRI screens.
+        \begin{itemize}
+            \item The manager can minimize the bias if it's inconsistent with return objectives.
+            \item The manager can determine the appropriate benchmark.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Long-Short and Long-Only Investment Strategies}
+    \begin{flushleft}
+        Long-short strategies focus on exploiting constraints of other investors, such as institutions unable to short securities. Long-only strategies focus on fundamental analysis to find undervalued stocks.\newline
+
+        Long-short strategies can effectively earn two alphas, one on the long side an one on the short. A long-only strategy can only earn one. The distribution of active weights in a long-only portfolio is asymmetric in that it can only underweight a security as much as it has in the portfolio.\newline
+
+        A long-only investor is exposed to both systematic and unsystematic risk. A long-short investor can eliminate systematic risk in a market neutral strategy. The potential returns of a long-short investor are magnified by leverage.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Four Pricing Inefficiencies on the Short Side}
+    \begin{enumerate}
+        \item \textbf{Barriers to short sales} mean that some investors don't use short sales. One such barrier is that someone must lend the shares for the sale, and may request them back at an adverse time.
+        \item \textbf{Stocks are more likely to be overvalued} because firm management is more likely to promote their stock than disparage it.
+        \item \textbf{Buy recommendations are more common} because there is a larger pool of buyers than sellers. Additionally, analysts will anger large stockholders with sell recommendations.
+        \item \textbf{Analysts are pressured against sell recommendations} by their own firm because the firm may have large positions in the stock in question.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Equitizing a Market-Neutral Portfolio}
+    \begin{flushleft}
+        A market-neutral portfolio can add systematic risk by taking a long position in an equity futures contract using the cash received from the short sale. The total profit is the net profit from the long-short position, the profit from the futures contract and the interest earned on the cash from the short sale.\newline
+
+        This can also be achieved using ETFs. ETFs can be more cost effective because they have low expenses and don't have to be rolled over. They can usually be shorted if the investor wants to de-equitize.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Advantages and Disadvantages of Short Extension Strategies}
+    \begin{flushleft}
+        In a short extension strategy, the investor shorts a percentage of the portfolio, and then goes long that amount in other securities.
+        \begin{itemize}
+            \item Advantages
+                \begin{itemize}
+                    \item Perceived as an equity strategy, not as an alternative investment.
+                    \item Lets a manager exploit information by shorting overvalued securities.
+                    \item Doesn't need derivatives.
+                    \item More efficient and coordinated portfolio. Long positions are only used for undervalued stocks and short positions are only used for overvalued stocks.
+                \end{itemize}
+            \item Disadvantages
+                \begin{itemize}
+                    \item Higher transaction costs as more trades are executed. Also borrowing fees for stocks to cover the short position.
+                    \item All valued added comes from the manager's valuation ability. When equitizing a market-neutral portfolio, returns are diversified through the long-short position, the equity future contract, and the cash position.
+                \end{itemize}
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Active Management Sell Strategies}
+    \begin{itemize}
+        \item \textbf{Substitution} is replacing an existing security with a better one. Considering transaction costs, taxes and research, this is an opportunity cost sell discipline. If the current security will worsen in the future, this is referred to as a deteriorating fundamentals sell discipline.
+        \item \textbf{Valuation-level sell discipline} sells if P/E or P/B rises to the ratio's historical mean.
+        \item \textbf{Down-from-cost sell discipline} sells if price declines more than a set percentage from purchase price.
+        \item \textbf{Up-from-cost sell discipline} sells if price has increased more than a set percentage from purchase price.
+        \item \textbf{Target price sell discipline} determines the fundamental value at the time of purchase and sells at this value.
+    \end{itemize}
+\end{flashcard}
+\end{document}

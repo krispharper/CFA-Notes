@@ -1,11 +1,7 @@
-\documentclass[../custom,grid]{flashcards}
-%\usepackage{booktabs}
-%\usepackage{array}
+\documentclass[../custom]{flashcards}
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{float}
-%\usepackage{enumitem}
-%\usepackage{multirow}
 
 \newcommand{\studyArea}{Risk Management Applications of Derivatives}
 
@@ -373,22 +369,22 @@
         The gamma of an at-the-money option is greatest near the expiration. When gamma is large, option values are subject to large changes the position faces the most risk and the investor is most likely to use a two-option hedge. In this situation, two options are used to force both delta and gamma to zero.
     \end{flushleft}
 \end{flashcard}
-\end{document}
 
 \begin{flashcard}[\studyArea]{Duration of Interest Rate Swaps}
     \begin{itemize}
         \item For fixed-rate instruments, duration will be highest as interest rate changes will change the PV of cash flows.
         \item Floating-rate instruments have duration close to zero as future cash flows vary with interest rates.
-        \item Floating-rate instruments can have non-zero duration if the next payment is set, e.g. with swaps. The convention is to treat the duration of the floating rate side of a swap as half of the reset period.
+        \item Floating-rate instruments can have non-zero duration if the next payment is set, e.g. with swaps. The convention is to treat the duration of the floating-rate side of a swap as half of the reset period.
         \item For a pay-floating swap, the duration is
         \[
             D_{\text{pay floating}} = D_{\text{fixed}} - D_{\text{floating}} > 0
         \]
     \end{itemize}
+\end{flashcard}
 
 \begin{flashcard}[\studyArea]{Effect of Interest Rate Swaps on Cash Flow Risk}
     \begin{flushleft}
-        Entering into a fixed-payer swap reduces cash flow risk because future floating-rate payments are converted to certain fixed payments. However, this converts the low-duration floating payments to hihg-duration fixed payments. As a result, interest rates now affect the market value of the liability.
+        Entering into a fixed-payer swap reduces cash flow risk because future floating-rate payments are converted to certain fixed payments. However, this converts the low-duration floating payments to high-duration fixed payments. As a result, interest rates now affect the market value of the liability.
     \end{flushleft}
 \end{flashcard}
 
@@ -413,7 +409,7 @@
 
 \begin{flashcard}[\studyArea]{Conversion of Foreign Cash Receipts into Domestic Cash Receipts}
     \begin{flushleft}
-        Dealers will use contracts to create currency swaps which do not require exchange of principal. This is essentially a seies of exchange-rate purchases in the future at a fixed exchange rate. The amounts exchanged are a function of the current exchange rate and the interest rate of the countries involved.
+        Dealers will use contracts to create currency swaps which do not require exchange of principal. This is essentially a series of exchange-rate purchases in the future at a fixed exchange rate. The amounts exchanged are a function of the current exchange rate and the interest rate of the countries involved.
         \begin{enumerate}
             \item Divide the foreign cash flow received by the foreign interest rate to get the foreign-denominated NP. This is the foreign NP that would have produced the foreign cash flow at the given exchange rate.
             \item Using the current exchange rate, convert the foreign NP into the corresponding domestic NP.
@@ -425,4 +421,52 @@
         \end{enumerate}
     \end{flushleft}
 \end{flashcard}
+
+\begin{flashcard}[\studyArea]{Risks of Equity Swaps}
+    \begin{itemize}
+        \item Counterparty risk if the swap dealer is unable to make payments.
+        \item Basis risk if the return on the stock portfolio doesn't exactly match the index payments made to the swap dealer.
+            \item Cash flow risk in that the firm must have cash on hand in the event of a netted payment. This risk wouldn't exist had the firm sold stock and bought fixed-rate securities.
+    \end{itemize}
 \end{flashcard}
+
+\begin{flashcard}[\studyArea]{Swaps for International Diversification}
+    \begin{flushleft}
+        Swaps can be used to create international diversification by paying the return on a domestic index and receiving the return on an international index. This creates extra cash flow compared to a fixed-receiver swap because of the possibility of both indices declining and having to make two payments.\newline
+
+        Benefits of using these swaps are
+        \begin{itemize}
+            \item Costs are generally lower than selling domestic and buying international stock.
+            \item Can be defined for a temporary period of time for which exposure is desired.
+            \item Can be paid in U.S. dollars to avoid foreign currency exposure.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Use Swaps to Change Allocations}
+    \begin{flushleft}
+        Swaps can be used to synthetically change portfolio allocation. E.g., to allocate more heavily to large-cap stocks in a small-cap portfolio, a manager can enter into a swap paying the small-cap return and receiving the large-cap return.\newline
+
+        This can also be used for bond portfolios to, e.g., reallocate from high- to low-grade bonds. This is different that an interest rate swap because of the total return aspect.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Payer and Receiver Swaptions}
+    \begin{itemize}
+        \item \textbf{Payer swaption.}
+            \begin{itemize}
+                \item Gives the buyer the right to be the fixed-rate payer in a prespecified swap at a prespecified date. Similar to a protective put in that it allows payment of a fixed-rate, even if rates have increased.
+                \item If interest rates rise enough at expiration such that the new SFR is above the swaption SFR, the holder will exercise the swaption. The swaption swap has positive value.
+                \item If interest rates fall so that the new SFR is below the swaption SFR, the holder will let the swaption expire. The swaption swap has negative value.
+                \item Can be used to convert a future floating-rate loan into a fixed-rate loan.
+            \end{itemize}
+            \item \textbf{Receiver swaption.}
+                \begin{itemize}
+                    \item Gives the buyer the right to be the fixed-rate receiver in a prespecified swap at a prespecified date. The holder expects rates to fall, and the swap pays a higher fixed rate while paying a lower floating rate.
+                    \item If interest rates move high enough and the new SFR is above the swaption SFR, the holder will let the swaption expire. The swap has negative value.
+                    \item If interest rates fall and the new SFR is below the swaption SFR, the holder will exercise the swaption. The swap has positive value.
+                    \item Can be used to convert a future fixed-rate loan to a floating-rate loan.
+                \end{itemize}
+    \end{itemize}
+\end{flashcard}
+\end{document}

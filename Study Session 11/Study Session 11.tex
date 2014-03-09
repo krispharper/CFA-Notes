@@ -1,8 +1,6 @@
-\documentclass[../custom,grid]{flashcards}
+\documentclass[../custom]{flashcards}
 \usepackage{enumitem}
-%\usepackage{amsmath}
-%\usepackage{tikz}
-%\usepackage{float}
+\usepackage{amsmath}
 
 \newcommand{\studyArea}{Equity Portfolio Management}
 
@@ -379,5 +377,161 @@
             \item Models based on historical data may not be applicable to the future.
         \end{itemize}
     \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Fundamental Law of Active Management}
+    \begin{flushleft}
+        \begin{align*}
+            \text{IR} &\approx \text{IC} \sqrt{\text{IB}}\\
+            \\
+            \text{where:}\\
+            \text{IR} &= \text{information ratio}\\
+            \text{IC} &= \text{information coefficient}\\
+            \text{IB} &= \text{investor breadth}
+        \end{align*}
+
+        The IC is a comparison between forecasts and actual outcomes. The closer they are, the higher the IC. More skillful managers will have a higher IC. The IB measures the number of independent decisions an investor makes, which doesn't increase with the number of securities invested in.\newline
+
+        A derivatives-based enhanced indexing strategy has less breadth than a stock-based one, in which a manager can apply knowledge to a large number of securities requiring independent decisions.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Portfolio Allocation for a Group of Investment Managers}
+    \begin{flushleft}
+        The utility function for active return increases with active return, decreases with active risk and with the investor's risk aversion to active risk. The equation to maximize utility through manager selection is
+        \begin{align*}
+            U_A &= R_A - \lambda_A \sigma_A^2\\
+            \text{where:}\\
+            U_A &= \text{utility of active return of the managers}\\
+            R_A &= \text{expected active return of the managers}\\
+            \lambda_A &= \text{the investors' risk aversion trade-off between active risk and active return}\\
+            \sigma_A^2 &= \text{variance of active return}
+        \end{align*}
+
+        The performance of managers can be evaluated with an efficient frontier comparing expected active return and active risk using combinations of managers.\newline
+
+        Investors are usually more risk averse with active risk than total risk because
+        \begin{itemize}
+            \item Investors must believe that active return is possible by picking the correct manager.
+            \item Often there is a benchmark comparison which can be difficult to achieve.
+            \item To get the highest active return, they must be willing to invest with the highest active manager, which means less diversification.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Core-Satellite Approach}
+    \begin{flushleft}
+        Uses a core holding of a passive or enhanced index with a satellite of active manager holdings. The idea is that the active risk from the satellites is mitigated by the core. The core is benchmarked to the asset class benchmark and the satellites have more specific benchmarks.
+
+        \begin{align*}
+            \text{expected active portfolio return} &= \sum_{i=1}^n w_{a, i} \hat{R}_{a, i}\\
+            \\
+            \text{where:}\\
+            w_{a, i} &= \text{weight invested with $i$th manager}\\
+            \hat{R}_{a, i} &= \text{expected active return of $i$th manager}\\
+            \\
+            \text{portfolio active risk} &= \sqrt{\sum_{i=1}^n w_{a, i}^2 \sigma_{a, i}^2}\\
+            \\
+            \text{where:}\\
+            \sigma_{a, i}^2 &= \text{active risk of the $i$th manager}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Completeness Fund}
+    \begin{flushleft}
+        A completeness fund is combined with an active portfolio such that the combination has risk exposure of the benchmark. The completeness fund must be rebalanced as the active exposure changes.\newline
+
+        The advantage is that active return is maintained while active risk is minimized.\newline
+
+        The disadvantage is that it can reduce active returns due to misfit risk.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Misfit Active Return}
+    \begin{flushleft}
+        A normal portfolio or benchmark comprises the securities a manager normally chooses. An investor benchmark may not not match the manager's style. This gives the decomposition
+        \begin{align*}
+            \text{manager's true active return} &= \text{manager's total return}\\
+                                                &- \text{manager's normal portfolio return}\\
+            \\
+            \text{manager's misfit active return} &= \text{manager's normal portfolio return}\\
+                                                  &- \text{investor's benchmark return}
+        \end{align*}
+        Total active risk is the volatility of the manager's portfolio relative to the investor's benchmark.
+        \begin{align*}
+            \text{total active risk} &= \sqrt{(\text{true active risk})^2 + (\text{misfit active risk})^2}\\
+            \\
+            \text{true information ratio} &= \frac{\text{true active return}}{\text{true active risk}}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Alpha and Beta Separation}
+    \begin{flushleft}
+        Gain systematic risk exposure (beta) through index funds or ETFs, and add alpha with a long-short strategy.
+
+        \begin{itemize}
+            \item Advantages
+                \begin{itemize}
+                    \item Availability of equity styles outside of index investment.
+                    \item Better risk management as alpha and beta are more clearly defined.
+                    \item Investment costs are clearly as the beta component is typically cheaper.
+                \end{itemize}
+            \item Disadvantages
+                \begin{itemize}
+                    \item Can be costly to implement short positions in some markets.
+                    \item Some long-short strategies are not fully market neutral and may have non-zero beta.
+                    \item Long-short investing may be disallowed to some investors.
+                \end{itemize}
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Manager Questionnaire Sections}
+    \begin{enumerate}
+        \item \textbf{Staff and organizational structure.} Staff experience, compensation, and structure as well as firm vision and history.
+        \item \textbf{Investment philosophy and procedures.} How the firm intends to capture alpha, how research is conducted, how risk is managed and monitored, selection techniques, and portfolio composition.
+        \item \textbf{Resources and research.} Portfolio turnover, how quantitative models are used and how trading works.
+        \item \textbf{Performance.} Manager's benchmark, expected alpha, sources of risk, and portfolio holdings.
+        \item \textbf{Fee schedule.} Details on which fees are used and how they are implemented.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Fee Schedules}
+    \begin{itemize}
+        \item \textbf{Ad valorem} or \textbf{AUM fees} are charged based on AUM in a tiered structure.
+            \begin{itemize}
+                \item Advantages
+                    \begin{itemize}
+                        \item Straightforward and known in advance. Useful for budgeting purposes.
+                    \end{itemize}
+                \item Disadvantages
+                    \begin{itemize}
+                        \item Do not align the interests of managers and investors.
+                    \end{itemize}
+            \end{itemize}
+        \item \textbf{Performance-based fees} are charged as a base fee plus a percentage of alpha. May include fee caps or high water marks.
+            \begin{itemize}
+                \item Advantages
+                    \begin{itemize}
+                        \item Aligns interests of manager and investor, particularly if the fees are symmetric and penalize poor performance.
+                    \end{itemize}
+                \item Disadvantages
+                    \begin{itemize}
+                        \item More complicated and need detailed specifications.
+                        \item Increase volatility of manager compensation, which can cause problems for staff.
+                    \end{itemize}
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Categorizations of Equity Research}
+    \begin{itemize}
+        \item \textbf{Top-down approach.} Look at economy to determine future state and work down to the security level. In a global perspective, currencies and global economics are also considered.
+        \item \textbf{Bottom-up approach.} Start with individual stocks chosen based on characteristics and valuation. The analyst is more concerned with industry conditions then macroeconomic conditions.
+        \item \textbf{Buy-side.} Buy-side analysts make recommendations to their firm. They often are approved by a committee and are unavailable to outside investors.
+        \item \textbf{Sell-side.} Sell-side analysts often work for investment banks which use the research to promote stocks the bank is selling. They may also work for independent firms for hire. It is available outside the firm and is what people are most familiar with in the media. It typically gives a buy, sell, or hold recommendation.
+    \end{itemize}
 \end{flashcard}
 \end{document}

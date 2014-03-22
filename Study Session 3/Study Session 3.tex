@@ -1,0 +1,71 @@
+\documentclass[../custom,grid]{flashcards}
+\usepackage{amsmath}
+%\usepackage{enumitem}
+
+\newcommand{\studyArea}{Behavioral Finance}
+
+\def\labelitemii{$\circ$}
+\def\labelitemiii{$\diamond$}
+\def\labelitemiv{$\cdot$}
+
+\begin{document}
+\cardfrontstyle{headings}
+\cardfrontfoot{Study Session 3}
+
+\begin{flashcard}[\studyArea]{Micro and Macro Behavioral Finance}
+    \begin{itemize}
+        \item \textbf{Micro behavioral finance} describes the decision-making process of individuals. It tries to explain why they deviate from traditional finance.
+        \item \textbf{Macro behavioral finance} tries to explain how and why markets deviate from the efficiency of traditional finance. 
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Four Axioms of Rational Decision Makers}
+    \begin{itemize}
+        \item \textbf{Completeness.} Given a choice between $A$ and $B$, either $A$ or $B$ is preferred, or indifference.
+        \item \textbf{Transitivity.} If $A$ is preferred to $B$ is preferred to $C$ then $A$ must be preferred to $C$.
+        \item \textbf{Independence.} If $A$ and $B$ are mutually exclusive with $A$ preferred, and $C$ is an additional choice that adds positive utility, then $A + \alpha C$ is preferred to $B + \alpha C$. Here $\alpha C$ is some portion of $C$.
+        \item \textbf{Continuity.} If $A$ is preferred to $B$ is preferred to $C$, then there will be a combination of $A$ and $C$ indifferent from $B$.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Bayes' Formula}
+    \begin{flushleft}
+        \begin{align*}
+            P(A \vert B) &= \frac{P(B \vert A)}{P(B)} P(A)\\
+            \\
+            \text{where:}\\
+            P(A \vert B) &= \text{probability of $A$ occurring given that $B$ has occurred}\\
+            P(B \vert A) &= \text{probability of $B$ occurring given that $A$ has occurred}\\
+            P(A) &= \text{probability of $A$ occurring}\\
+            P(B) &= \text{probability of $B$ occurring}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Risk Aversion in Behavioral Finance}
+    \begin{flushleft}
+        Traditional finance assumes individuals are risk-averse and prefer greater certainty over less certainty. Behavioral finance uses the following categories.
+        \begin{itemize}
+            \item \textbf{Risk-averse} have a greater loss of utility for a given loss of wealth than they gain in utility for the same risk in wealth.
+            \item \textbf{Risk-neutral} gains or loses the same amount of utility for a given gain or loss of wealth.
+            \item \textbf{Risk seeker} gains more utility for a rise in wealth than they lose in an equivalent loss of wealth.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Traditional and Behavioral Finance Utility Functions}
+    \begin{itemize}
+        \item Traditional finance is based in utility theory with an assumption of diminishing marginal return. This implies
+            \begin{itemize}
+                \item The risk-averse utility function is concave. As more wealth is added, utility increases at a diminishing rate.
+                \item Convex indifference curves due to diminishing marginal rates of substitution.
+            \end{itemize}
+        \item Behavioral finance observes people who are both risk-seeking and risk-averse. This can lead to complex, double-inflection utility functions.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{}
+    \begin{flushleft}
+    \end{flushleft}
+\end{flashcard}
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[../custom,grid]{flashcards}
+\usepackage{amsmath}
+%\usepackage{booktabs}
+%\usepackage{array}
+%\usepackage{enumitem}
+%\usepackage{tikz}
+%\usepackage{float}
+
+\newcommand{\studyArea}{Trading, Monitoring and Rebalancing}
+
+\def\labelitemii{$\circ$}
+\def\labelitemiii{$\diamond$}
+\def\labelitemiv{$\cdot$}
+
+\begin{document}
+\cardfrontstyle{headings}
+\cardfrontfoot{Study Session 16}
+
+\begin{flashcard}[\studyArea]{Market and Limit Orders}
+    \begin{itemize}
+        \item \textbf{Market orders} execute immediately at the best possible price. May be filled by multiple trades. The advantage is the execution speed. Disadvantage is that the price isn't known ahead of time. Thus it has price uncertainty.
+        \item \textbf{Limit orders} execute at the limit price or better. Can be set to expire after a set amount of time, but if prices don't move correctly, it may not execute. Thus it has execution uncertainty.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Bid-Ask and Effective Spreads}
+    \begin{itemize}
+        \item \textbf{Limit order book} is a dealer's offering of securities.
+        \item \textbf{Inside bid} or \textbf{market bid} is the best bid price.
+        \item \textbf{Inside ask} or \textbf{market ask} is the best ask price.
+        \item \textbf{Inside bid-ask spread} or \textbf{market bid-ask spread} is the difference between the inside bid and ask.
+        \item \textbf{Midquote} is the average of the inside bid and ask.
+        \item \textbf{Effective spread} is a measure of the round trip cost of a transaction. It reflects price improvement, trades executed at better than the bid-ask quote, and price impact, trades executed at worse than the bid-ask quote.
+            \begin{align*}
+                \text{effective spread for a buy} &= 2 \times (\text{execution price} - \text{midquote})\\
+                \text{effective spread for a sell} &= 2 \times (\text{midquote} - \text{execution price})\\
+            \end{align*}
+    \end{itemize}
+\end{flashcard}
+\end{document}

@@ -1,10 +1,8 @@
-\documentclass[../custom,grid]{flashcards}
+\documentclass[../custom]{flashcards}
 \usepackage{amsmath}
-%\usepackage{booktabs}
-%\usepackage{array}
-%\usepackage{enumitem}
-%\usepackage{tikz}
-%\usepackage{float}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
 
 \newcommand{\studyArea}{Trading, Monitoring and Rebalancing}
 
@@ -68,6 +66,285 @@
             \end{itemize}
         \item \textbf{Transparency} means traders can get pre- (quotes and spreads) and post- (completed trades) trade information quickly and cheaply.
         \item \textbf{Assurity of completion} means traders have confidence counterparties will uphold their side of the trade. Brokers and clearinghouses may provide guarantees to this end.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Components of Execution Costs}
+    \begin{itemize}
+        \item \textbf{Explicit costs} commissions, taxes, stamp duties, and fees.
+        \item \textbf{Implicit costs} are more difficult to measure. They include
+            \begin{itemize}
+                \item \textbf{Bid-ask spread}
+                \item \textbf{Market or price impact costs} is the effect of the order on market prices. E.g., a large sell order triggers a price decline which the order is partially filled at.
+                \item \textbf{Opportunity costs} occur when an order is not filled and the price moves such that a potential profit is lost.
+                \item \textbf{Delay} or \textbf{slippage} costs occur when an order is unfilled because of illiquidity.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Volume-Weighted Average Price}
+    \begin{flushleft}
+        VWAP is a weighted average of execution prices during the day where the weight applied is the proportion of the day's trading volume. The disadvantages are
+        \begin{itemize}
+            \item Not useful if the trader is a significant portion of the trading volume.
+            \item Can be used to manipulate performance by executing trades late in the day after VWAP is mostly known.
+            \item Does not consider mixed trades.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Implementation Shortfall}
+    \begin{flushleft}
+        Implementation shortfall is the difference between actual return and a hypothetical return based on execution at the decision price, i.e., the market price at the time the decision to trade is made. Can be broken down into four components of cost.
+        \begin{enumerate}
+            \item \textbf{Explicit costs} are commissions, taxes, and fees.
+            \item \textbf{Realized profit and lost} is the difference between the execution price and the benchmark price.
+            \item \textbf{Delay} or \textbf{slippage cost} is the cost of not being able to execute the order during the day of initiation. If a order is not executed the first day, the delay cost is the closing price that day versus the decision price.
+            \item \textbf{Missed trade opportunity cost} is the difference between the cancellation price of the order and the decision price.
+        \end{enumerate}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Advantages and Disadvantages of Volume-Weighted Average Price and Implementation Shortfall}
+    \begin{itemize}[nosep]
+        \item Advantages of VWAP
+            \begin{itemize}[nosep]
+                \item Easily understood.
+                \item Computationally simple.
+                \item Can be applied quickly to enhance trading decisions.
+                \item Appropriate for comparing small trades in non-trending markets.
+            \end{itemize}
+        \item Disadvantages of VWAP
+            \begin{itemize}[nosep]
+                \item Not useful for trades that dominate volume.
+                \item Can be abused by traders.
+                \item Does not evaluate delayed or unfilled orders.
+                \item Does not account for market movement or trade volume.
+            \end{itemize}
+        \item Advantages of implementation shortfall
+            \begin{itemize}[nosep]
+                \item Managers can see the costs of implementing their ideas.
+                \item Shows the tradeoff between quick execution and market impact.
+                \item Decomposes and identifies costs.
+                \item Can be used to minimize cost and maximize performance.
+                \item Not subject to gaming.
+            \end{itemize}
+        \item Disadvantages of implementation shortfall
+            \begin{itemize}[nosep]
+                \item May be unfamiliar to traders.
+                \item Requires considerable data and analysis.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Econometric Models in Pre-Trade Analysis}
+    \begin{flushleft}
+        Econometric models can be used to forecast transaction costs. It has been shown that trading costs are nonlinearly related to
+        \begin{itemize}
+            \item Security liquidity, trading volume, market cap, spread, and price.
+            \item Size of the trade relative to liquidity.
+            \item Trading style, with more aggressive trades having higher costs.
+            \item Momentum.
+            \item Risk.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Summary of Major Trader Types and Their Motivations}
+    \begin{tabular}
+        {>{\raggedright}p{1.2in}
+         >{\raggedright}p{1.2in}
+         >{\raggedright}p{0.9in}
+         >{\raggedright\arraybackslash}p{0.9in}}
+        \toprule
+
+        \textit{Trader Type} &
+        \textit{Motivation} &
+        \textit{Time or Price Preference} &
+        \textit{Preferred Order Type}\\ \midrule
+
+        Information-motivated &
+        Time-sensitive information &
+        Time &
+        Market\\ \addlinespace
+
+        Value-motivated &
+        Security misvaluations &
+        Price &
+        Limit\\ \addlinespace
+
+        Liquidity-motivated &
+        Reallocation and liquidity &
+        Time &
+        Market\\ \addlinespace
+
+        Passive &
+        Reallocation and liquidity &
+        Price &
+        Limit\\ \bottomrule
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Summary Trading Tactics}
+    \begin{tabular}
+        {>{\raggedright}p{1.05in}
+         >{\raggedright}p{1.05in}
+         >{\raggedright}p{1.05in}
+         >{\raggedright\arraybackslash}p{1.05in}}
+        \toprule
+
+        \textit{Trading Tactic} &
+        \textit{Strengths} &
+        \textit{Weaknessess} &
+        \textit{Usual Trade Motivation}\\ \midrule
+
+        Liquidity-at-any-cost &
+        Quick, certain execution &
+        High costs and leakage of information &
+        Information\\ \addlinespace
+
+        Costs-are-not-important &
+        Quick, certain execution at market price &
+        Loss of control of trade costs &
+        Variety of motivations\\ \addlinespace
+
+        Need-trustworthy-agent &
+        Broker uses skill and time to get low price &
+        High commission and potential leak of intention &
+        Not information\\ \addlinespace
+
+        Advertise-to-draw-liquidity &
+        Market-determined price &
+        High costs and possible front running &
+        Not information\\ \addlinespace
+
+        Low-cost-whatever-the-liquidity &
+        Low trading costs &
+        Uncertain timing and possible trade into weakness&
+        Passive and value\\ \bottomrule
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Categories of Algorithmic Trading Strategies}
+    \begin{itemize}
+        \item \textbf{Simple logical participation strategies} trade with market flow so as not to become noticeable and minimize market impact. They include
+            \begin{itemize}
+                \item VWAP strategy spreads orders over the course of the day to equal or outperform the VWAP\@. Trades are more common towards the end of the day.
+                \item Time-weighted average price strategy spreads trades evenly over the day. Often used for thinly traded, volatile stocks.
+                \item Percent-of-volume strategy trades at 5-20\% of normal volume until the order is filled.
+            \end{itemize}
+        \item \textbf{Implementation shortfall strategies} minimize implementation shortfall or total execution costs. Trades more at the beginning of the day to minimize opportunity costs. Useful when an entire portfolio must be traded.
+        \item \textbf{Opportunistic participation} strategies trade passively but increase volume when liquidity is present.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Characteristics of Best Execution}
+    \begin{itemize}
+        \item Can't be judged independently of the investment decision. High costs doesn't mean that the strategy shouldn't be pursued.
+        \item Can't be known with certainty ex ante, as it depends on the circumstances of the trade.
+        \item Can only be assessed ex post. Is assessed over time using the costs of many trades.
+        \item Relationships and practices are integral. Is ongoing and requires diligence and dedication.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Policies and Procedures Related to Best Execution}
+    \begin{itemize}
+        \item Investment management firms should periodically provide disclosure to clients regarding
+            \begin{itemize}
+                \item General information on trading techniques, markets, and brokers.
+                \item Conflicts of interest related to trading.
+            \end{itemize}
+        \item Investment management firms should maintain documentation supporting
+            \begin{itemize}
+                \item Compliance with polices and procedures.
+                \item Disclosures made to its clients
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Costs and Benefits of Rebalancing}
+    \begin{itemize}
+        \item Benefits
+            \begin{itemize}
+                \item Theoretically equal to the loss in utility avoided by rebalancing.
+                \item Can increase returns as overvalued assets are sold and undervalued assets are bought.
+            \end{itemize}
+        \item Costs
+            \begin{itemize}
+                \item Transaction costs including commissions, bid-ask spread, and market impact.
+                \item Tax liability for selling positions which have gained in value
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Calendar Versus Percentage-of-Portfolio Rebalancing}
+    \begin{itemize}
+        \item Calendar rebalancing rebalances a portfolio on a regular set schedule, e.g., quarterly.
+            \begin{itemize}
+                \item Advantage is that it gives discipline without requiring monitoring of allocations between periods.
+                \item Disadvantage is that there might be large deviations from optimal allocation between rebalancing dates.
+            \end{itemize}
+        \item Percentage-of-portfolio rebalancing is triggered by changes in relative asset values. A corridor approach is used where allocations are allowed within a specified range.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Determining Factors for Percentage-of-Portfolio Rebalancing Corridors}
+    \begin{itemize}
+        \item \textbf{Transaction costs.} Higher transaction costs increase the width of the corridor.
+        \item \textbf{Risk tolerance.} Greater risk tolerance leads to wider corridors.
+        \item \textbf{Correlation of returns with other asset classes.} Higher correlations imply wider corridors.
+        \item \textbf{Volatility of asset class returns.} Higher volatility make deviations potentially more costly and suggest narrower corridors.
+        \item \textbf{Volatility on returns of other portfolio assets.} Also suggests narrower corridors.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Constant Proportion Portfolio Insurance}
+    \begin{flushleft}
+        Using CPPI, target weight varies with portfolio value and a specified minimum value. The difference is called the cushion. To get target allocation use
+        \[
+            \text{target investment} = M \times (\text{portfolio value} - \text{floor value} = M \times \text{cushion}
+        \]
+        where $M$ is the constant proportion for an asset class. To use CPPI, $M$ must be greater than $1$ and it doesn't change once selected.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Performance of Rebalancing Strategies in Different Markets}
+    \begin{itemize}
+        \item \textbf{Up or down trending market}
+            \begin{itemize}
+                \item CPPI will outperform. As values increase or decrease, the cushion and resulting allocation increases or decreases, respectively.
+                \item Buy-and-hold underperforms CPPI because no purchases or sales are made to capitalize on the changing market values.
+                \item Constant mix strategy has the worst performance. Increases in value require selling to bring allocations back to the target. This lowers exposure to future increases in value. The opposite is true for decreases in value.
+            \end{itemize}
+        \item \textbf{Nontrending, mean-reverting markets}
+            \begin{itemize}
+                \item CPPI will have the worst performance. A rise in value triggers more allocation, which will then add exposure to an asset that will fall in value. The opposite is true of a fall in value.
+                \item Buy-and-hold will perform better than CPPI because no buys or sells are made.
+                \item Constant mix has the best performance because increases in value trigger sales at market highs and decreases trigger buys are market lows.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Differences Between Buy-and-Hold, Constant Mix, and CPPI Rebalancing Strategies}
+    \begin{itemize}
+        \item \textbf{Buy-and-hold}
+            \begin{itemize}
+                \item Underperforms in trending markets
+                \item Produces a linear payoff curve
+                \item Good for investor who requires a floor value and risk tolerance that increases with wealth.
+            \end{itemize}
+        \item \textbf{Constant mix}
+            \begin{itemize}
+                \item Underperforms in trending markets and outperforms in mean-reverting markets.
+                \item Produces a concave payoff curve.
+                \item Risk increases proportionally with wealth, good for constant relative risk aversion.
+            \end{itemize}
+        \item \textbf{CPPI}
+            \begin{itemize}
+                \item Outperforms in upward and downward trending markets, and underperforms in mean-reverting markets.
+                \item Produces a convex payoff curve.
+                \item Good for investors concerned about downside risk, and risk tolerance increases more than proportionally to wealth.
+            \end{itemize}
     \end{itemize}
 \end{flashcard}
 \end{document}

@@ -1,0 +1,317 @@
+\documentclass[../custom,grid]{flashcards}
+\usepackage{amsmath}
+\usepackage{enumitem}
+%\usepackage{enumerate}
+%\usepackage{booktabs}
+%\usepackage{array}
+%\usepackage{tikz}
+%\usepackage{float}
+
+\newcommand{\studyArea}{Evaluating Portfolio Performance}
+
+\def\labelitemii{$\circ$}
+\def\labelitemiii{$\diamond$}
+\def\labelitemiv{$\cdot$}
+
+\begin{document}
+\cardfrontstyle{headings}
+\cardfrontfoot{Study Session 17}
+
+\begin{flashcard}[\studyArea]{Benefits of Portfolio Evaluation for Fund Sponsors}
+    \begin{itemize}
+        \item Shows where policy and allocation is and isn't effective.
+        \item Directs management to areas of value added and lost.
+        \item Quantifies the results of active management.
+        \item Shows whether other strategies can be applied successfully.
+        \item Provides feedback on the consistent application of polices in the IPS.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Three Components of Portfolio Evaluation}
+    \begin{enumerate}
+        \item \textbf{Performance measurement} calculates rates of return over specified times.
+        \item \textbf{Performance attribution} determines the source of the account's performance.
+        \item \textbf{Performance appraisal} draws conclusions about the overall issue affecting performance.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Portfolio Return with External Cash Flows}
+    \begin{flushleft}
+        If there is an external cash flow at the beginning of the period, the return is
+        \begin{align*}
+            r_t &= \frac{\text{MV}_1 - (\text{MV}_0 + \text{CF})}{\text{MV}_0 + \text{CF}}\\
+            \intertext{If there is an external cash flow at the end of the period, it should be subtracted from the account value.}
+            r_t &= \frac{(\text{MV}_1 - \text{CF}) - \text{MV}_0}{\text{MV}_0}\\
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Time- and Money-Weighted Rates of Return}
+    \begin{itemize}
+        \item \textbf{Time-weighted rate of return} calculates a compounded rate of growth over a stated evaluation period. Subperiod returns are calculated at dates of external cash flows. These returns are then compounded together to get the TWRR.
+        \item \textbf{Money-weighted rate of return} is an IRR of all funds invested during the evaluation period, including the beginning value. The MWRR is the value of $R$ such that
+            \begin{align*}
+                \text{MV}_1 &= \text{MV}_0 (1 + R)^m + \sum_{i=1}^n \text{CF}_i (1 + R)^{L_i}\\
+                \text{where:}\\
+                \text{MV}_1 &= \text{ending value of the portfolio}\\
+                \text{MV}_0 &= \text{beginning value of the portfolio}\\
+                m &= \text{number of time units in the evaluation period}\\
+                \text{CF}_i &= \text{cash flow $i$}\\
+                L_i &= \text{number of time units cash flow $i$ is in the portfolio}
+            \end{align*}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Comparison Between Time- and Money- Weighted Rates of Return}
+    \begin{itemize}
+        \item Generally TWRR is used for evaluation and GIPS because it reflects return on assets and not decisions to add or subtract funds.
+        \item If the manager controls the timing of the cash flows, MWRR can be used for GIPS reporting.
+        \item TWRR shows what would have happened to the portfolio had no cash flows occurred.
+        \item TWRR can be data intensive because it requires portfolio market values on dates of all external cash flows.
+        \item MWRR requires only a beginning and ending market value.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Data Quality Issues in Return Calculations}
+    \begin{itemize}
+        \item For illiquid assets, price estimates must be used.
+        \item Matrix pricing may be used by using dealer-quoted prices on similar securities.
+        \item Highly illiquid securities may be carried at cost, not reflecting the current price.
+        \item Account valuations should include trade date accounting including accrued interest and dividends.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Decomposition of Returns into Market, Style, and Active Management}
+    \begin{flushleft}
+        \begin{align*}
+            P &= M + S + A\\
+            \text{where:}\\
+            P &= \text{investment manager's portfolio return}\\
+            M &= \text{return on market index}\\
+            S &= B - M = \text{excess return to style, difference between benchmark and market}\\
+            A &= P - B = \text{active return}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Properties of a Valid Benchmark}
+    \begin{enumerate}
+        \item \textbf{Specified in advance.} Known to both the investment manager and the fund sponsor at the start of the evaluation period.
+        \item \textbf{Appropriate.} Consistent with manager's approach and style.
+        \item \textbf{Measurable.} Value and return can determined on a regular basis.
+        \item \textbf{Unambiguous.} Clearly defined identities and weights of components.
+        \item \textbf{Reflecive of the manager's current investment opinions.} Manager has current knowledge and expertise of the components.
+        \item \textbf{Accountable.} Manager should accept the benchmark and agree to attribute differences to active management.
+        \item \textbf{Investable.} Possible to replicate the benchmark and forgo active management.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Seven Types of Benchmarks}
+    \begin{itemize}[itemsep=.2\itemsep]
+        \item \textbf{Absolute.} A return objective.
+        \item \textbf{Manager universes.} Median manager or fund from a universe of such.
+        \item \textbf{Broad market indices.} E.g., S\&P 500, MSCI, or EAFE.
+        \item \textbf{Style indices.} E.g., large- or small-cap growth or value indices.
+        \item \textbf{Factor-model based.} Relate factor exposures to returns.
+            \begin{align*}
+                R_P &= a_P + \sum_{i=1}^K b_iF_i + \varepsilon\\
+                \text{where:}
+                R_P &= \text{periodic return on an account}\\
+                a_P &= \text{value of $R_P$ if all factors were zero}\\
+                F_i &= \text{factors that have systematic effect on performance}\\
+                b_i &= \text{sensitivity of the returns to $F_i$}\\
+                \varepsilon &= \text{error term, return not explained by model}
+            \end{align*}
+        \item \textbf{Returns-based.} Constructed using the account's returns and returns on several style indices for the same periods. These are then combined to get an allocation which tracks the account's returns.
+        \item \textbf{Custom security-based.} Designed to reflect the manager's security allocations and investment process.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Advantages of Different Benchmarks Types}
+    \begin{itemize}[nosep]
+        \item \textbf{Absolute.}
+            \begin{itemize}[nosep]
+                \item Simple and straightforward benchmark.
+            \end{itemize}
+        \item \textbf{Manager universes.}
+            \begin{itemize}[nosep]
+                \item It is measurable.
+            \end{itemize}
+        \item \textbf{Broad market indices.}
+            \begin{itemize}[nosep]
+                \item Well recognized, easy to understand, and widely available.
+                \item Unambiguous, investable, and can be specified in advance.
+                \item Appropriate if it reflects the manager's approach.
+            \end{itemize}
+        \item \textbf{Style indices.}
+            \begin{itemize}[nosep]
+                \item Widely available, understood, and accepted.
+                \item Appropriate if it reflects manager's style and is investable.
+            \end{itemize}
+        \item \textbf{Factor-model based.}
+            \begin{itemize}[nosep]
+                \item Useful in performance evaluation.
+                \item Gives insight into manager's style by showing factor exposures affecting performance.
+            \end{itemize}
+        \item \textbf{Returns-based.}
+            \begin{itemize}[nosep]
+                \item Easy to use and intuitive.
+                \item Meets the criteria of a valid benchmark.
+                \item Useful if the only information available is account returns.
+            \end{itemize}
+        \item \textbf{Custom security-based.}
+            \begin{itemize}[nosep]
+                \item Meets the criteria of a valid benchmark.
+                \item Allows continual monitoring of investment processes.
+                \item Allows sponsors to allocate risk across management teams.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Disadvantages of Different Benchmarks Types}
+    \begin{itemize}[nosep]
+        \item \textbf{Absolute.}
+            \begin{itemize}[nosep]
+                \item Not an investable alternative.
+            \end{itemize}
+        \item \textbf{Manager universes.}
+            \begin{itemize}[nosep]
+                \item Universes are subject to survivorship bias.
+                \item Must trust that the universe is accurately compiled.
+                \item Cannot be specified in advance.
+            \end{itemize}
+        \item \textbf{Broad market indices.}
+            \begin{itemize}[nosep]
+                \item Manager's style may deviate from the index's style.
+            \end{itemize}
+        \item \textbf{Style indices.}
+            \begin{itemize}[nosep]
+                \item Style index may contain imprudent weightings.
+                \item Different definitions of style can produce different returns.
+            \end{itemize}
+        \item \textbf{Factor-model based.}
+            \begin{itemize}[nosep]
+                \item Not intuitive to all managers or sponsors.
+                \item Data and modeling may not be available and may be expensive.
+                \item Different factor models can produce different output.
+            \end{itemize}
+        \item \textbf{Returns-based.}
+            \begin{itemize}[nosep]
+                \item The style indices may not reflect what the manager owns.
+                \item A significant number of returns are needed to establish a pattern.
+                \item Will not work for managers who change style.
+            \end{itemize}
+        \item \textbf{Custom security-based.}
+            \begin{itemize}[nosep]
+                \item Can be expensive to construct and maintain.
+                \item Lack of transparency can make it impossible to construct.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Steps to Construct a Security-Based Benchmark}
+    \begin{enumerate}
+        \item Identify the important elements of the manager's process.
+        \item Select securities that are consistent with that process.
+        \item Weight the securities---including cash---to reflect the manager's process.
+        \item Review and adjust as needed to replicate the manager's results.
+        \item Rebalance on a predetermined schedule.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Disadvantages to Using Manager Universes as Benchmarks}
+    \begin{itemize}
+        \item Besides being measurable, it fails all the properties of valid benchmarks.
+            \begin{itemize}
+                \item Can't identify the median manager in advance.
+                \item Because of this, it isn't unambiguous.
+                \item Not investable as the median manager will vary between periods.
+                \item Impossible to verify appropriateness due to not knowing the median manager.
+            \end{itemize}
+        \item Must trust the compiler that universe accounts have been screened, data has been validated, and calculation methods approved.
+        \item As fund sponsors get rid of underperforming managers, universes are subject to survivorship bias. This biases the median manager upwards.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Issues to Consider in Benchmark Evaluation}
+    \begin{itemize}
+        \item \textbf{Systematic bias.} The historical beta of the account relative to the benchmark should be low. Alternatively, active management returns, $A$, should be uncorrelated with investment style, $S$.
+        \item \textbf{Tracking error.} Standard deviation of $A$. Should be smaller than $\sigma (P - M)$. 
+        \item \textbf{Risk characteristics.} Account's exposure to systematic sources of risk should be similar to that of the benchmark over time.
+        \item \textbf{Coverage.} Coverage ratio is the percentage of portfolio market value that consists of securities in the benchmark. Higher coverage ratio indicates better benchmark replication.
+        \item \textbf{Turnover.} Proportion of benchmark's total market value that is bought or sold during a period. Passive portfolios should have benchmarks with low turnover.
+        \item \textbf{Positive active positions.} Active position is difference in weights of a security between the portfolio and benchmark. Many negative active positions indicate the benchmark doesn't reflect the manager's process.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Issues Arising when Assigning Benchmarks to Hedge Funds}
+    \begin{itemize}
+        \item Difficult to compute return as many hedge funds hold long and short positions which sum to nearly zero.
+        \item Can use a value-added return as the difference between portfolio and benchmark returns.
+        \item Some hedge funds target an absolute return and argue benchmarks are irrelevant.
+        \item Some funds have a definable style which can be used to compare funds to others of that style. Others do not have a definable style.
+        \item Difficulty with benchmarks has lead to using Sharpe ratio, but using standard deviation with hedge funds is questionable.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Three Components of Macro Performance Attribution}
+    \begin{itemize}
+        \item \textbf{Policy allocations.} The sponsor decides the asset categories and weights and allocates funds among managers. These are determined by risk tolerance, long-term expectations, and liabilities the fund must meet.
+        \item \textbf{Benchmark portfolio returns.} A sponsor may use broad market indices for asset categories and narrower indices for managers' investment styles.
+        \item \textbf{Fund returns, valuations, and external cash flows.} When using percentage terms, returns are calculated on the manager level, allowing the sponsor to compare managers directly. If using monetary terms, more data are needed.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Six Levels of Macro Attribution Analysis}
+    \begin{enumerate}[nosep]
+        \item \textbf{Net contributions} is the net sum of cash inflows or outflows.
+        \item \textbf{Risk-free investment} simulates value if only the risk-free return were earned.
+        \item \textbf{Asset categories} simulates passive allocation in index funds. Can be calculated as
+            \vspace{-3mm}
+            \begin{align*}
+                R_{\text{AC}} &= \sum_{i=1}^A w_i (R_i - R_F)\\
+                %\text{where:}\\
+                %R_{\text{AC}} &= \text{incremental return above $R_F$}\\
+                %R_i - R_F &= \text{excess return above the risk-free rate for asset category $i$}\\
+                %w_i &= \text{weight of asset category $i$}\\
+                %A &= \text{number of asset categories}
+            \end{align*}
+        \item \textbf{Benchmark level} allows manager benchmarks different from the policy benchmark. Can be calculated as
+            \vspace{-3mm}
+            \begin{align*}
+                R_{\text{B}} &= \sum_{i=1}^A \sum_{j=1}^M w_i w_{i,j} (R_{B_{i,j}} - R_i)\\
+                %\text{where:}\\
+                %R_{\text{B}} &= \text{incremental return for the benchmark strategy}\\
+                %w_{i,j} &= \text{weight assigned in manager $j$ in asset category $i$}\\
+                %R_{B_{i,j}} &= \text{return for manager $j$'s benchmark in asset category $i$}\\
+                %M &= \text{number of managers}
+            \end{align*}
+        \item \textbf{Active management} simulates returns actually produced by managers. Can be calculated as
+            \vspace{-3mm}
+            \begin{align*}
+                R_{\text{IM}} &= \sum_{i=1}^A \sum_{j=1}^M w_i w_{i,j} (R_{A_{i,j}} - R_{B_{i,j}})\\
+                %\text{where:}\\
+                %R_{\text{IM}} &= \text{incremental return for the investment manager level}\\
+                %R_{A_{i,j}} &= \text{return for manager $j$'s portfolio in asset category $i$}
+            \end{align*}
+        \item \textbf{Allocation effects} is a plug to sum to the portfolio ending value.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Micro Performance Attribution Formula}
+    \begin{flushleft}
+        \begin{align*}
+            R_V &= \sum_{i=1}^S (w_{P,i} - w_{B,i})(R_{B,i} - R_B) + \sum_{i=1}^S (w_{P,i} - w_{B,i})(R_{P,i} - R_{B,i})\\
+            &+ \sum_{i=1}^S w_{B,i} (R_{P,i} - R_{B,i})\\
+            \text{where:}\\
+            R_V &= \text{value added return}\\
+            w_{P,i} &= \text{portfolio weight of sector $i$}\\
+            w_{B,i} &= \text{benchmark weight of sector $i$}\\
+            R_{P,i} &= \text{portfolio return of sector $i$}\\
+            R_{B,i} &= \text{benchmark return of sector $i$}\\
+            R_B &= \text{return on the portfolio's benchmark}\\
+            S &= \text{number of sectors}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+\end{document}

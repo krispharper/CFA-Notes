@@ -4,7 +4,7 @@
 %\usepackage{enumerate}
 %\usepackage{booktabs}
 %\usepackage{array}
-%\usepackage{tikz}
+\usepackage{tikz}
 %\usepackage{float}
 
 \newcommand{\studyArea}{Evaluating Portfolio Performance}
@@ -301,8 +301,8 @@
 \begin{flashcard}[\studyArea]{Micro Performance Attribution Formula}
     \begin{flushleft}
         \begin{align*}
-            R_V &= \sum_{i=1}^S (w_{P,i} - w_{B,i})(R_{B,i} - R_B) + \sum_{i=1}^S (w_{P,i} - w_{B,i})(R_{P,i} - R_{B,i})\\
-            &+ \sum_{i=1}^S w_{B,i} (R_{P,i} - R_{B,i})\\
+            R_V &= \underbrace{\sum_{i=1}^S (w_{P,i} - w_{B,i})(R_{B,i} - R_B)}_{\text{pure sector allocation}} + \underbrace{\sum_{i=1}^S (w_{P,i} - w_{B,i})(R_{P,i} - R_{B,i})}_{\text{allocation interaction}}\\
+            &+ \underbrace{\sum_{i=1}^S w_{B,i} (R_{P,i} - R_{B,i})}_{\text{within-sector selection}}\\
             \text{where:}\\
             R_V &= \text{value added return}\\
             w_{P,i} &= \text{portfolio weight of sector $i$}\\
@@ -312,6 +312,137 @@
             R_B &= \text{return on the portfolio's benchmark}\\
             S &= \text{number of sectors}
         \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Components of Micro Performance Attribution}
+    \begin{itemize}
+        \item \textbf{Pure sector allocation.} Assumes the manager holds the same sectors as the benchmark and within each sector, securities are held at the same proportions. Performance is attributed to different sector weights.
+        \item \textbf{Within-sector selection return.} Assumes sector weights match the benchmark and attributes performance to security selection.
+        \item \textbf{Allocation interaction return.} Joint effect of weighting securities and sectors. Increasing the weight of a security will also affect the weight of the sector to which it belongs.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Steps to Create a Factor Model for Micro Attribution}
+    \begin{itemize}
+        \item Find fundamental factors which generate systematic returns.
+        \item Determine portfolio and benchmark exposure to fundamental factors at start of evaluation period.
+        \item Determine manager's active exposure---difference between actual and benchmark exposure---to each factor.
+        \item Determine active impact as added return due to active exposure.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Strengths and Weaknesses of Micro Attribution and Fundamental Factor Model Attribution}
+    \begin{itemize}
+        \item \textbf{Micro attribution}
+            \begin{itemize}
+                \item Strengths
+                    \begin{itemize}
+                        \item Separates performance between sectors and securities.
+                        \item Relatively easy to calculate.
+                    \end{itemize}
+                \item Weaknesses
+
+                    \begin{itemize}
+                        \item Needs and appropriate benchmark with securities and weights at beginning of evaluation period.
+                        \item Security selection will affect weighting.
+                    \end{itemize}
+            \end{itemize}
+        \item \textbf{Fundamental factor model attribution}
+            \begin{itemize}
+                \item Strengths
+                    \begin{itemize}
+                        \item Identifies factors other than security selection and sector allocation.
+                    \end{itemize}
+                \item Weaknesses
+                    \begin{itemize}
+                        \item Factor exposures must be determined at start of evaluation period.
+                        \item Can be complex and lead to spurious correlation.
+                    \end{itemize}
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Components of Performance Attribution}
+    \begin{itemize}
+        \item \textbf{External interest rate effect} is the default-free benchmark return and has two components. It doesn't consider actions of the manager.
+            \begin{itemize}
+                \item Expected interest rate effect is a simulation of the benchmark return had interest rates moved with the forward curve.
+                \item Unexpected interest rate effect simulates what actually happened to interest rates.
+            \end{itemize}
+        \item \textbf{Interest rate manager effect} measures manager's interest rate management ability. Portfolios are priced using Treasury forward rates and compared to a simulation using the manager's interest rate adjustments.
+        \item \textbf{Sector and quality management effect} considers yield spreads on each sector of assets in the portfolio. These value adds are the aggregated.
+        \item \textbf{Security selection effect} is the total return of each security less all the previous components. Measures contributions due to the manager's security selection.
+        \item \textbf{Trading effect} is a plug figure and assumes any unexplained component is due to manager's trading activities. It is the total return less the other effects.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Risk-Adjusted Performance Measures}
+    \abovedisplayskip=0cm
+    \belowdisplayskip=0cm
+    \begin{itemize}[nosep]
+        \item \textbf{Ex post alpha} is difference between actual return and return required to compensate for systematic risk, i.e., actual return and CAPM return.
+            \begin{align*}
+                \alpha_A &= R_{A_t} - \hat{R}_A = R_{A_t} - (R_F + \beta_A (\hat{R}_M - R_F))\\
+                %\text{where:}\\
+                %\alpha_A &= \text{ex post alpha on the account}\\
+                %R_{A_t} &= \text{actual return in period $t$}\\
+                %\hat{R}_A &= \text{return predicted by CAPM}\\
+            \end{align*}
+        \item \textbf{Treynor measure} is the slope of the line from the risk free rate through a portfolio above the SML.
+            \begin{align*}
+                T_A &= \frac{\bar{R}_A - \bar{R}_F}{\beta_A}\\
+                %\text{where:}\\
+                %\beta_A &= \text{account beta}
+            \end{align*}
+        \item \textbf{Sharpe ratio} uses total risk instead of beta. It is the slope of the CAL.
+            \begin{align*}
+                S_A &= \frac{\bar{R}_A - \bar{R}_F}{\sigma_A}\\
+                %\text{where:}\\
+                %\sigma_A &= \text{standard deviation of account returns}
+            \end{align*}
+        \item \textbf{$M^2$ measure} measures value added or lost relative to the market assuming the same risk.
+            \begin{align*}
+                M^2_A &= \bar{R}_F + \left ( \frac{\bar{R}_A - \bar{R}_F}{\sigma_A} \right ) \sigma_M\\
+            \end{align*}
+        \item \textbf{Infomration ratio} is similar to Sharpe ratio in that it measures excess return, but uses active return.
+            \begin{align*}
+                \text{IR}_A &= \frac{\text{active return}}{\text{active risk}} = \frac{\bar{R}_A - \bar{R}_B}{\sigma_{A-B}}\\
+            \end{align*}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Diagram of Risk-Adjusted Measures}
+    \begin{flushleft}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[->] (0, 0) -- (0, 5) node[above] {$R$};
+                \draw[->] (0, 0) -- (5, 0) node[right] {$\beta$};
+                \draw[ultra thick] (0, 1) -- (5, 4) node[above left] {SML};
+                \draw[ultra thick] (0, 1) -- (2, 3);
+                \draw[dashed] (2, 2.2) -- (2, 3);
+                \draw[->] (3, 4) node[above] {$\alpha_A$} -- (2.2, 2.6);
+                \draw[->] (1.2, 4) node[above, text width=2cm] {slope of this line is $T_A$} -- (1, 2.2);
+                \draw[fill] (0, 1) circle[radius=1.5pt] node[left] {$R_F$};
+                \draw[fill] (2, 3) circle[radius=1.5pt] node[above left] {$A$};
+                \draw[fill] (3, 2.8) circle[radius=1.5pt] node[below] {$M$};
+                \draw[fill] (3, 0) circle[radius=1.5pt] node[below] {1.0};
+            \end{tikzpicture}
+            \begin{tikzpicture}
+                \draw[->] (0, 0) -- (0, 5) node[above] {$R$};
+                \draw[->] (0, 0) -- (5, 0) node[right] {$\sigma$};
+                \draw[ultra thick] (0, 1) -- (5, 4) node[above left] {CML};
+                \draw[ultra thick] (0, 1) -- (2, 3);
+                \draw[dashed] (2, 3) -- (4, 5) node[left] {CAL};
+                \draw[dashed] (3, 0) -- (3, 4);
+                \draw[->] (4, 2) node[above] {$M^2_A$} -- (3.2, 1.1);
+                \draw[->] (1.2, 4) node[above, text width=2cm] {slope of this line is $S_A$} -- (1, 2.2);
+                \draw[fill] (0, 1) circle[radius=1.5pt] node[left] {$R_F$};
+                \draw[fill] (2, 3) circle[radius=1.5pt] node[above left] {$A$};
+                \draw[fill] (3, 2.8) circle[radius=1.5pt] node[below right] {$M$};
+                \draw[fill] (3, 0) circle[radius=1.5pt] node[below] {$\sigma_M$};
+            \end{tikzpicture}
+        \end{center}
     \end{flushleft}
 \end{flashcard}
 \end{document}

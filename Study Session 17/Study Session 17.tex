@@ -1,11 +1,7 @@
-\documentclass[../custom,grid]{flashcards}
+\documentclass[../custom]{flashcards}
 \usepackage{amsmath}
 \usepackage{enumitem}
-%\usepackage{enumerate}
-%\usepackage{booktabs}
-%\usepackage{array}
 \usepackage{tikz}
-%\usepackage{float}
 
 \newcommand{\studyArea}{Evaluating Portfolio Performance}
 
@@ -444,5 +440,45 @@
             \end{tikzpicture}
         \end{center}
     \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Considerations for Risk-Adjust Return Measures}
+    \begin{itemize}
+        \item Alpha and Treynor both use systematic risk. They agree in that positive alpha implies Treynor above the market. But they might not agree in relative ranking.
+        \item Sharpe and $M^2$ both measure risk as total risk and higher Sharpe means higher $M^2$.
+        \item Alpha and Treynor are criticized because they use beta and CAPM.
+            \begin{itemize}
+                \item Assumes single priced risk instead of multifactor model.
+                \item Uses a market proxy, e.g. the S\&P 500 to stand for the market.
+            \end{itemize}
+        \item $M^2$ is criticized because the benchmark may not be replicable and transaction costs are not considered.
+        \item Alpha, Treynor, and Sharpe are the more widely used measures.
+        \item The highest relative return measure doesn't imply the highest actual return.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Assumptions for Quality Control Charts}
+    \begin{itemize}
+        \item The null hypothesis states that the expected value-added return is zero.
+        \item Value-added returns are independent and normally distributed.
+        \item The investment process is consistent. The distribution of value-added returns is constant.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Considerations and Policies for Manager Replacement}
+    \begin{itemize}
+        \item Assets in the existing manager's portfolio may have to be liquidated.
+        \item Replacing a manager is requires time and effort from the fund sponsor.
+        \item Replace managers only when justified. Short periods of underperformance are not justification.
+        \item Develop formal policies and apply them to all managers.
+        \item Use portfolio performance and other information for evaluation.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Type I and Type II Errors}
+    \begin{itemize}
+        \item \textbf{Type I error} is rejecting the null hypothesis when it's true.
+        \item \textbf{Type II error} is failing to reject the null hypothesis when it's false.
+    \end{itemize}
 \end{flashcard}
 \end{document}

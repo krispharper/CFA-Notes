@@ -1,10 +1,9 @@
-\documentclass[../custom,grid]{flashcards}
-%\usepackage{amsmath}
-%\usepackage{booktabs}
-%\usepackage{array}
+\documentclass[../custom]{flashcards}
+\usepackage{array}
 \usepackage{enumitem}
-%\usepackage{tikz}
-%\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
 
 \newcommand{\studyArea}{Portfolio Management for Institutional Investors}
 
@@ -69,5 +68,277 @@
         \item \textit{Pension investment returns in relation to the operating returns of the company.} The company should favor low correlation with plan assets and the plan should avoid in investing in the sponsor company, in the same industry, or in companies that are highly correlated.
         \item \textit{Coordinating pension investments with pension liabilities.} Focus on managing the surplus and its stability, probability of unexpected increases in required contributions is minimized.
     \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Cash Balance and Employee Stock Ownership Plans}
+    \begin{itemize}
+        \item \textbf{Cash balance plans}
+            \begin{itemize}
+                \item DB plans defined in terms of an account balance.
+                \item Typically accounts get pay and interest credits, with the pay credit defined by age, salary, or length of employment, and the interest credit defined by treasury rates.
+                \item The sponsor bears all the investment risk.
+                \item At retirement, the beneficiary can receive a lump-sum or an annuity.
+            \end{itemize}
+        \item \textbf{Employee stock ownership plans}
+            \begin{itemize}
+                \item DB plan that allows employees to purchase company stock, sometimes at a discount from market price.
+                \item Can be done with before- or after-tax dollars.
+                \item ESOPs have varying amounts of regulation in different countries.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Characteristics of Different Types of Foundations}
+    \begin{tabular}{
+            >{\raggedright}m{0.7in}
+            >{\raggedright}m{0.9in}
+            >{\raggedright}m{0.9in}
+            >{\raggedright}m{0.8in}
+            >{\raggedright\arraybackslash}m{0.9in}} \toprule
+        \textit{Type of Foundation} &
+        \textit{Description} &
+        \textit{Purpose} &
+        \textit{Source of Funds} &
+        \textit{Annual Spending Requirement}\\ \midrule
+
+        Independent &
+        Private or family &
+        Grants to charities, education, social, etc. &
+        Individual or family &
+        5\% of assets without expenses \\ \addlinespace
+
+        Company sponsored &
+        Closely tied to sponsor &
+        Same as independent &
+        Corporate sponsor &
+        Same as independent \\ \addlinespace
+
+        Operating &
+        \multicolumn{2}{>{\raggedright}p{1.8in}}{Funds an organization (e.g., museum, zoo, or library) or ongoing research} &
+        Same as independent &
+        85\% of dividends and interest to operations \\ \addlinespace
+
+        Community &
+        Publicly sponsored grant organization &
+        Fund social, educational, or religious purposes &
+        General public &
+        None \\ \bottomrule
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Foundation Objectives and Constraints}
+    \begin{itemize}
+        \item \textbf{Risk.} May be more aggressive than pensions because there are no defined liability requirements. Board will consider time horizon and other circumstances when setting risk tolerance.
+        \item \textbf{Return.} Time horizon is important. If perpetual payout is needed, preservation of purchasing power is needed. One guideline is to set minimum return to payout plus inflation and expenses.
+        \item \textbf{Time horizon.} Most have infinite time horizon and can thus tolerate above-average risk choosing securities with high returns as well as maintaining purchasing power.
+        \item \textbf{Liquidity.} Spending rate is the anticipated spending requirement. Many countries have a minimum spending rate as percentage of assets. Ongoing foundations need to earn the inflation rate as well. Some maintain a fraction of annual spending as a cash reserve.
+        \item \textbf{Tax considerations.} Foundations are not taxable except that investment income of private foundations is taxed at 1\% in the U.S@.
+        \item \textbf{Legal and regulatory.} Rules vary by country and type of foundation. Most regulations concern tax-exempt status.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Types of Endowment Spending Rules}
+    \begin{itemize}
+        \item \textbf{Simple spending rule.} Spending rate multiplied by beginning market value of assets.
+            \[
+                \text{spending}_t = S \times \text{MV}_{t-1}
+            \]
+        \item \textbf{Rolling 3-year average spending rule.} Uses past three-year average market value to determine spending amount. This reduces the volatility of distributions.
+            \[
+                \text{spending}_t = S \times \frac{\text{MV}_{t-1} + \text{MV}_{t-2} + \text{MV}_{t-3}}{3}
+            \]
+        \item \textbf{Geometric spending rule.} Weights prior year's spending adjusted for inflation and the previous year's market value by a smoothing rate, usually between 0.6 and 0.8. This avoids high or low spending in trending markets.
+            \begin{align*}
+                \text{spending}_t &= (R)(\text{spending}_{t-1})(1 + I_{t-1}) + (1-R)(S)(\text{MV}_{t-1})\\
+                \text{where:}\\
+                R &= \text{smoothing rate}\\
+                I_{t-1} &= \text{previous year's rate of inflation}\\
+                S &= \text{spending rate}
+            \end{align*}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Types of Life Insurance Polices}
+    \begin{itemize}
+        \item \textbf{Whole life or ordinary life} has level premium payments over multiple years and provides a fixed payoff after death. Often includes a cash value allowing receipt upon policy termination. This cash value builds over time at a crediting rate.\newline
+
+            Company faces pressure to offer higher crediting rates, which creates a need for higher return. Disintermediation risk occurs during periods of high interest rates increasing liquidity needs as policyholders withdraw cash.\newline
+
+            Duration of whole life is usually long, policy features and interest rates make duration and time horizon difficult to predict. Overall, time horizons and durations have shortened.
+        \item \textbf{Term life} insurance gives coverage on a year-by-year basis leading to very short duration assets to match the short duration liability.
+        \item \textbf{Variable life, universal life}, and \textbf{variable universal life} include cash value build up and insurance, but the cash value is linked to investment returns. This decreases the chance of investment withdrawals, but requires competitive returns to attract customers.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Live Insurance Company Objectives}
+    \begin{itemize}[nosep]
+        \item \textbf{Risk}
+            \begin{itemize}[itemsep=.2\itemsep]
+                \item \textbf{Valuation risk} and ALM are tied with interest rate risk. Mismatches between asset and liability duration makes the surplus volatile as rates change. Thus the durations are closely tied.
+                \item \textbf{Reinvestment risk} is important for some products. Most assets in the portfolio will be coupon-bearing securities and so the value is partially determined by the rate at which incoming cash flows are invested.
+                \item \textbf{Cash flow volatility} should be minimized as life insurance companies have loss or delays of income.
+                \item \textbf{Credit risk} is a major concern and analysis is required to measure it. It has become a strong point for the industry and is managed through a broadly diversified portfolio.
+            \end{itemize}
+        \item \textbf{Return}
+            \begin{itemize}[itemsep=.2\itemsep]
+                \item Minimum return must equal assumed rate of growth in policyholder reserves. Essentially growth rate needed to meet projected policy payouts.
+                \item Better is to earn a net interest spread, a return higher than actuarial assumption. This would grow the surplus and allow the company to offer products at a lower price.
+                \item Can be difficult to measure total return in the insurance industry.
+                \item Investments are heavily fixed income with the exception of the surplus which may invest in stock, real estate, and private equity.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Life Insurance Company Constraints}
+    \begin{itemize}
+        \item \textbf{Time horizon.} Traditionally 20--40 years, but it has become shorter.
+        \item \textbf{Tax considerations.} Life insurance companies are taxable entities. Law vary, but often return up to the actuarial rate is tax free and above that is taxed.
+        \item \textbf{Liquidity.} Must consider disintermediation risk which leads to shorter duration, higher liquidity needs, and closer ALM matching. Asset marketability risk arises as a result of higher liquidity needs.
+        \item \textbf{Legal and regulatory.} Life insurance companies are heavily regulated. Regulations often address the following.
+            \begin{itemize}
+                \item Eligible investments by asset class are defined and percentage limits are stated. Criteria such as minimum interest coverage ratio on corporates are often used.
+                \item In the U.S. the prudent investor rule has been adopted by some states. This replaces eligible investments with risk versus return.
+                \item Valuation methods are often specified. This limits ability to focus on market value and total return.
+            \end{itemize}
+        \item \textbf{Unique circumstances.} Concentration of product offerings, company size, and level of surplus are common factors.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Differences Between Non-Life and Life Insurance}
+    \begin{itemize}
+        \item Liability durations are shorter. Typical policy covers one year of insurance.
+        \item Often a long tail to the policy. A filed claim could take years before payout.
+        \item Many non-life polices have inflation risk if insuring replacement value. This creates uncertain payoffs.
+        \item Non-life is hard to predict in amount and timing. Life has predictable amounts and but not timing.
+        \item Non-life insurers have an underwriting or profitability cycle, typically 3--5 years. During periods of competition, prices are lowered creating losses after payouts requiring asset liquidation.
+        \item Non-life business risk can be concentrated geographically or to specific events.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Non-Life Insurance Company Objectives}
+    \begin{itemize}
+        \item \textbf{Risk}
+            \begin{itemize}
+                \item Cash flow characteristics are often erratic and unpredictable. Thus risk tolerance for principal loss and declining income is low.
+                \item Common stock-to-surplus ratio has been changing. Traditionally the surplus might have been invested in stock, but poor stock returns in the 70s reduced this.
+            \end{itemize}
+        \item \textbf{Return}
+            \begin{itemize}
+                \item \textbf{Competitive pricing policy.} High-return objectives allow lower policy premia, but when high returns are realized, companies tend to cut premia.
+                \item \textbf{Profitability.} Investment income and return determine profitability. They also provide stability to offset underwriting cycle swings. Company seeks to maximize return on capital and surplus.
+                \item \textbf{Gowth of surplus.} Higher returns increase surplus and allow more policy issuance. Surplus can be invested in alternative investments, stock, and convertibles.
+                \item \textbf{After-tax returns.} Taxable entities. There used to be advantages to holding tax-exempt bonds and dividend-paying stocks, but not as much any more.
+                \item \textbf{Total return.} Active portfolio management and total return are the focus of at least some of the portfolio.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Non-Life Insurance Company Constraints}
+    \begin{itemize}
+        \item \textbf{Liquidity} needs are high because of uncertain cash flows. Typically the company
+            \begin{enumerate}
+                \item Holds money market securities such as T-bills and commercial paper.
+                \item Holds a laddered portfolio of highly liquid government bonds.
+                \item Matches assets against known cash flow needs.
+            \end{enumerate}
+        \item \textbf{Time horizon} is affected by two factors. It is generally short, due to the short duration of the liabilities. Secondly, in the U.S. the duration tends to swing with the underwriting cycle and change in use of tax-exempt bonds.
+        \item \textbf{Tax considerations} are changing in the U.S@. Companies are taxable entities with an after-tax return objective.
+        \item \textbf{Legal and regulatory constraints} are less onerous for non-life than life insurance companies. Asset valuation reserve is not required, but risk-based capital requirements have been established. Non-life companies are given more leeway in choosing investments.
+        \item \textbf{Unique circumstances} are not generalizable.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Leverage-Adjusted Duration Gap}
+    \begin{flushleft}
+        \begin{align*}
+            \text{LADG} &= D_{\text{assets}} - \frac{L}{A} D_{\text{liabilities}}\\
+            \text{where:}\\
+            \text{LADG} &= \text{leverage-adjusted duration gap}\\
+            D_{\text{assets}} &= \text{duration of the bank's assets}\\
+            D_{\text{liabilites}} &= \text{duration of the bank's liabilities}\\
+            L / A &= \text{leverage measure using market values}
+        \end{align*}
+
+        LADG predicts change in market value of bank equity capital if interest rates change. If LADG is
+        \begin{itemize}
+            \item Zero, equity should be unaffected by interest rate changes.
+            \item Positive, equity should change inversely to rates.
+            \item Negative, equity should change as rates change.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Bank Objectives and Constraints}
+    \begin{itemize}
+        \item \textbf{Risk.} Acceptable risk should be set in an ALM framework based on effect on overall balance sheet. Usually have a below-average risk tolerance because portfolio losses can't interfere with liability needs.
+        \item \textbf{Return.} Objective for the securities portfolio is to earn a positive interest spread---the difference between the cost of funds and the interest earned on loans and investments.
+        \item \textbf{Liquidity.} Needs are driven by withdrawals and demand for loans, as well as regulation. The resulting portfolio is generally short and liquid.
+        \item \textbf{Time horizon.} Short and linked to duration of liabilities.
+        \item \textbf{Taxes.} Banks are taxable entities. After tax return is the objective.
+        \item \textbf{Legal and regulatory.} Banks are highly regulated. Risk-based capital guidelines require reserves against assets. The riskier the assets, the higher the capital requirement. This give portfolios a high-quality, short-term, liquid asset tilt.
+        \item \textbf{Unique circumstances.} No generalizable issues.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Pension Liability Exposures}
+    \begin{tabular}{
+            >{\raggedright}m{1.1in}
+            >{\raggedright}m{.8in}
+            >{\raggedright}m{1.2in}
+            >{\raggedright\arraybackslash}m{1.1in}} \toprule
+        \textit{Pension Plan Segment} &
+        \textit{Market or Non-Market Exposure} &
+        \textit{Risk Exposure} &
+        \textit{Liability Mimicking Assets}\\ \midrule
+
+        \multicolumn{4}{l}{\textbf{Modeled in the Benchmark}}\\% & & &\\
+
+        Inactive- and active-accrued &
+        Market &
+        Term structure &
+        Nominal or real bonds\\ \midrule
+
+        \multirow{3}{1.1in}{Active-future wage growth} &
+        Market &
+        Term structure &
+        Nominal bonds\\
+
+        &
+        Market &
+        Inflation &
+        Real return bonds\\
+
+        &
+        Market &
+        Economic growth &
+        Equities\\ \midrule
+
+        \multicolumn{4}{l}{\textbf{Generally Not modeled in the Benchmark}}\\% & & &\\
+
+        Active-future service rendered &
+        Market &
+        More uncertain &
+        Not funded\\ \midrule
+
+        Active-future participants &
+        Market &
+        Very uncertain &
+        Not funded\\ \midrule
+
+        Liability noise-demographics &
+        Non-market &
+        Plan demographics &
+        Not easily hedged\\ \midrule
+
+        Liability noise-inactive &
+        Non-market &
+        Model, uncertainty &
+        Not easily hedged or modeled\\ \midrule
+
+        Liability noise-active &
+        Non-market &
+        Model, uncertainty &
+        Not easily hedged or modeled\\ \bottomrule
+    \end{tabular}
 \end{flashcard}
 \end{document}

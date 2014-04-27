@@ -1,9 +1,9 @@
 \documentclass[../custom,grid]{flashcards}
 \usepackage{enumitem}
-%\usepackage{booktabs}
-%\usepackage{array}
-%\usepackage{multirow}
-%\usepackage{amsmath}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
 %\usepackage{tikz}
 %\usepackage{float}
 
@@ -47,6 +47,297 @@
         \item Misinterpretation of correlations versus causality. An alternative to correlation for uncovering predictive relationships is a multiple regression.
         \item Falling into psychological traps including anchoring, status quo, confirming evidence, overconfidence, prudence, and recallability traps.
         \item Model and input uncertainty.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Statistical Tools for Capital Market Expectations}
+    \begin{itemize}
+        \item \textbf{Projecting historical data} is most straightforward. Historical mean return, standard deviation, and correlations are projected into the future. Arithmetic mean is used for standard deviation and for single period returns, but geometric mean is more accurate for multiple periods.
+        \item \textbf{Shrinkage estimators} are weighted averages of historical data and other estimates which shrink influence of historical outliers. Mean return and covariance are the parameters adjusted most often. Useful for small datasets with unreliable historical estimates.
+        \item \textbf{Time series analysis} forecasts a variable using previous values. Can be used to forecast means or variances. Stocks, futures, and foreign exchange exhibit volatility clustering in which high or low volatility is persistent across periods. That is,
+            \[
+                \sigma^2_t = \theta \sigma_{t-1}^2 + (1 - \theta) \varepsilon_t^2
+            \]
+            where $\sigma^2_t$ is current period volatility and $\theta$ is a rate of decay.
+        \item \textbf{Multifactor models} are used to forecast returns and covariances and reduce the forecasting procedure to a common set of factors. Eliminates noise present in a sample and ensures consistent forecasts given a consistent covariance matrix.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Gordon Growth Model}
+    \begin{flushleft}
+        \begin{align*}
+            \hat{R}_i &= \frac{\text{Div}_0 (1 + g)}{P_0} + g = \frac{\text{Div}_1}{P_0} + g\\
+            \text{where:}\\
+            \hat{R}_i &= \text{expected return on stock $i$}\\
+            \text{Div}_t &= \text{dividend in period $t$}\\
+            P_0 &= \text{current stock price}\\
+            g &= \text{growth rate}
+        \end{align*}
+
+        Advantage is the theoretical accuracy of modeling based on future cash flows. Disadvantage is not accounting for current market conditions. Thus more suitable for long-term valuation.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Grinold-Kroner Cash Flow Model}
+    \begin{flushleft}
+        \begin{align*}
+            \hat{R}_j &= \frac{D_1}{P_0} + i + g - \Delta S + \Delta \frac{P}{E}\\
+            \text{where:}\\
+            \hat{R}_j &= \text{expected return on stock $j$ (compound annual growth rate)}\\
+            \frac{D_1}{P_0} &= \text{dividend yield}\\
+            i &= \text{expected inflation}\\
+            g &= \text{real growth rate}\\
+            \Delta S &= \text{percentage change in shares outstanding}\\
+            \Delta \frac{P}{E} &= \text{percentage change in P/E ration (repricing term)}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Components of the Grinold-Kroner Model}
+    \begin{itemize}
+        \item \textbf{Expected income return} is the current yield investors expect to receive.
+            \[
+                \text{expected income return} = \frac{D_1}{P_0} - \Delta S
+            \]
+        \item \textbf{Expected nominal earnings growth} is real growth in stock price plus expected inflation.
+            \[
+                \text{expected nominal earnings growth} = i + g
+            \]
+        \item \textbf{Repricing return} is expected change in the P/E ratio.
+            \[
+                \text{expected repricing return} = \Delta \frac{P}{E}
+            \]
+        \item Grinold-Kroner model is the sum of these components.
+            \begin{align*}
+                \hat{R}_i &= E(\text{income return}) + E(\text{nominal earnings growth}) + E(\text{repricing return})\\
+                &= \left ( \frac{D_1}{P_0} - \Delta S \right ) + (i + g) + \left ( \Delta \frac{P}{E} \right )
+            \end{align*}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Risk Premium Approach}
+    \begin{itemize}
+        \item Estimates a bond yield, $\hat{R}_B$, and adds an equity risk premium.
+        \item To find $\hat{R}_B$, risk premia are added together.
+            \begin{align*}
+                \hat{R}_B &= \text{real risk-free rate} + \text{inflation risk premium} + \text{default risk premium}\\
+                &+ \text{liquidity risk premium} + \text{maturity risk premium} + \text{tax premium}
+            \end{align*}
+        \item Inflation premium represents loss in purchasing power over time. Can be measured by comparing inflation-indexed bonds to non-inflation-indexed bonds.
+        \item Default risk premium compensates for non-payment. Can be measured by comparing yields on bonds with different credit risks.
+        \item Liquidity risk premium compensates for holding illiquid bonds.
+        \item Maturity risk premium reflects yield differences in different maturities.
+        \item Tax premium accounts for different tax treatments.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{International Capital Asset Pricing Model}
+    \begin{flushleft}
+        \begin{align*}
+            \hat{R}_i &= R_F + \beta_i (\hat{R}_M - R_F)\\
+            \text{where:}\\
+            \hat{R}_i &= \text{expected return on asset $i$}\\
+            R_F &= \text{risk-free return}\\
+            \beta_i &= \text{sensitivity of asset $i$ returns to global market}\\
+            \hat{R}_M &= \text{expected return on the global investable market}
+        \end{align*}
+
+        Using $\beta_i = \rho_{i, M} \sigma_i / \sigma_M$, we can solve for the risk premium as
+        \[
+            \text{RP}_i = \rho_{i, M} \sigma_i \frac{\hat{R}_M - R_F}{\sigma_M}
+        \]
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Singer and Terhaar Analysis}
+    \begin{flushleft}
+        Adjustment to ICAPM for illiquidity and market segmentation. Liquidity is not typically a concern for developed markets, but can be for real estate and private equity. The latter may have lock-up periods.\newline
+
+        In segmented markets, capital doesn't flow freely across borders like in integrated markets. Frequently caused by government investment restrictions. Two assets with the same risk can have different returns because capital cannot flow to the higher return asset.\newline
+
+        To adjust for partial market segmentation, find the ERP for a global market and a local market and take a weighted average. The weighting is the degree of integration.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Survey and Panel Methods}
+    \begin{flushleft}
+        In the survey method, economists and analysts are polled about their expectations for the economy or capital markets.\newline
+
+        If the group polled is fairly constant over time, this is the panel method.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Cyclical and Trend Economic Growth}
+    \begin{itemize}
+        \item Cyclical economic growth
+            \begin{itemize}
+                \item Inventory cycle is 2--4 years.
+                    \begin{itemize}
+                        \item Measured using inventory-to-sales ratio
+                        \item Increases as businesses gain confidence in the economy and add to inventories.
+                    \end{itemize}
+                \item Business cycle is 9--11 years with five phases.
+                    \begin{enumerate}
+                        \item Initial recovery
+                        \item Early upswing
+                        \item Late upswing
+                        \item Slowdown
+                        \item Recession
+                    \end{enumerate}
+            \end{itemize}
+        \item Trend-growth
+            \begin{itemize}
+                \item GDP is usually measured in real terms.
+                \item Output gap is difference between a long-term trending GDP and current GDP.
+                \item A recession is decreases in GDP over two consecutive quarters.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Characteristics of Business Cycle Phases}
+    \vspace{-3mm}
+    \begin{itemize}[nosep]
+        \item \textbf{Initial recovery}
+            \begin{itemize}[nosep]
+                \item Duration of a few months
+                \item Falling inflation and large output gap
+                \item Low or falling short-term interest rates
+                \item Bond yields bottoming out and rising stock prices
+            \end{itemize}
+        \item \textbf{Early upswing}
+            \begin{itemize}[nosep]
+                \item Duration of a year to several years
+                \item Increasing growth with low inflation and output gap is narrowing
+                \item Rising short-term interest rates
+                \item Flat or rising bond yields and rising stock prices
+            \end{itemize}
+        \item \textbf{Late upswing}
+            \begin{itemize}[nosep]
+                \item Inflation increases and output gap eliminated
+                \item Central bank limits growth of money supply
+                \item Rising bond yields and stock prices, but increased risk and volatility
+            \end{itemize}
+        \item \textbf{Slowdown}
+            \begin{itemize}[nosep]
+                \item Duration of a few months to longer than a year
+                \item Inflation still strong and falling inventory levels
+                \item Bond yields have peaked, may be falling and yield curve may invert
+                \item Falling stock prices
+            \end{itemize}
+        \item \textbf{Recession}
+            \begin{itemize}[nosep]
+                \item Duration of six months to a year
+                \item Inflation tops out and large declines in inventory
+                \item Falling short-term interest rates
+                \item Falling bond yields and stock prices increase in later stages
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Effects of Inflation on Asset Classes}
+    \begin{flushleft}
+        Inflation is negative for bonds and bonds will decline in price during a expansion and rise in price during an recession.\newline
+
+        Low inflation can be positive for equities. Equities provide an inflation hedge when inflation is moderate and when prices can be passed on to the consumer. Inflation above 3\% can be bad because the central bank may restrict economic growth.\newline
+
+        Deflation results in declining economic growth and asset prices. Also reduces value of real assets financed with debt. If leverage is used, declines in value lead to steeper declines in the equity position.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Consumer and Business Spending in the Business Cycle}
+    \begin{flushleft}
+        Consumer confidence increases during recovery and consumers begin to spend more. At the same time, stock prices rise. Consumers continue spending until the economy shows definite signs that it has peaked and reversed. Then they save more until the cycle starts over.\newline
+
+        Business spending is more volatile, particularly on inventory and investments. The peak of inventory spending signals a decline.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Taylor Rule}
+    \begin{flushleft}
+        \begin{align*}
+            r_{\text{target}} &= r_{\text{neutral}} + \frac{(\text{GDP}_{\text{expected}} - \text{GDP}_{\text{trend}}) + (i_{\text{expected}} - i_{\text{target}})}{2}\\
+            \text{where:}\\
+            r_{\text{target}} &= \text{short-term interest rate target}\\
+            r_{\text{neutral}} &= \text{neutral short-term interest rate}\\
+            \text{GDP}_{\text{expected}} &= \text{expected GDP growth rate}\\
+            \text{GDP}_{\text{trend}} &= \text{long-term GDP growth rate trend}\\
+            i_{\text{expected}} &= \text{expected inflation rate}\\
+            i_{\text{target}} &= \text{target inflation rate}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Effects of Monetary and Fiscal Policy on the Yield Curve}
+    \begin{tabular}
+        {>{\raggedright}m{0.8in}
+         >{\raggedright}m{0.8in}
+         >{\raggedright}m{1.3in}
+         >{\raggedright\arraybackslash}m{1.3in}} \toprule
+
+        & & \multicolumn{2}{c}{\textit{Monetary Policy}} \\
+
+        & & Stimulative & Restrictive \\ \cmidrule(r){3-4}
+
+        \multirow{2}{*}{\textit{Fiscal Policy}} &
+        Stimulative &
+        Yield curve is steep and economy is likely to grow &
+        Yield curve is flat and economy is unclear \\ \addlinespace
+
+        &
+        Restrictive &
+        Yield curve is moderately steep and economy is unclear &
+        Yield curve is inverted and economy is likely to contract \\ \bottomrule
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Components of Economic Trend Growth Rate}
+    \begin{itemize}
+        \item Changes in employment levels
+            \begin{itemize}
+                \item Population growth
+                \item Rate of labor force participation
+            \end{itemize}
+        \item Changes in productivity
+            \begin{itemize}
+                \item Spending on new capital inputs
+                \item Total factor productivity growth
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Government Policies to Enhance Growth}
+    \begin{itemize}
+        \item Provide infrastructure needed for growth, but interfere with the economy as little as possible.
+        \item Have a responsible fiscal policy. Consistently high budget deficits lead to high inflation. They are also accompanied by trade deficits, which may lead to devaluation of the currency. Also, public borrowing may crowd out private borrowing.
+        \item Have tax policies that are transparent, consistently applied, pulled from a wide base, and not overly burdensome.
+        \item Promote competition in the marketplace to increase economic efficiency. Technological advances and openness to foreign competition to reduction of tariffs are important factors for growth.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Exogenous Shocks}
+    \begin{flushleft}
+        Exogenous shocks are unanticipated events that occur outside the normal course of an economy. These events are not built into market prices like endogenous events.\newline
+
+        Can be caused by natural disasters, political events, or changes in government policy.\newline
+
+        Negative shocks are more common. Often spread to other countries in a process called contagion.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Macroeconomic, Exchange Rate, and Interest Rate Links}
+    \begin{flushleft}
+        Macroeconomic links are similarities in business cycles across countries. International trade and capital flows are linked, so a recession in one country dampens exports and investment in another.\newline
+
+        Exchange rate links are formed by adoption or pegging of one country's currency by another. Countries are not always successful in maintaining a peg, and so there is a risk premium with the weaker country having higher interest rates.\newline
+
+        Interest rate differentials reflect differences in economic growth and monetary and fiscal policy. In theory, real interest rate differentials would not exist. Countries with high real interest rates should see their currency increase.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Consideration for Investing in Emerging Markets}
+    \begin{itemize}
+        \item \textbf{Responsible fiscal and monetary policies.} Deficit to GDP ratio of over 4\% indicates substantial credit risk. Most emerging countries borrow short-term and must refinance frequently.
+        \item \textbf{Expected growth.} Expect a growth rate of at least 4\%. Less than that may indicate economy is growing slower than population. Tariffs, tax policies and regulation of foreign investment are all important factors for growth.
     \end{itemize}
 \end{flashcard}
 \end{document}

@@ -1,0 +1,399 @@
+\documentclass[../custom]{flashcards}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\newcommand{\studyArea}{Global Investment Performance Standards}
+
+\def\labelitemii{$\circ$}
+\def\labelitemiii{$\diamond$}
+\def\labelitemiv{$\cdot$}
+
+\begin{document}
+\cardfrontstyle{headings}
+\cardfrontfoot{Study Session 18}
+
+\begin{flashcard}[\studyArea]{GIPS Objectives}
+    \begin{itemize}
+        \item Establish global, industry-wide best practices for the calculation and presentation of performance so that performance of GIPS-compliant firms can be compared.
+        \item Facilitate accurate and unambiguous presentation of investment performance results to clients.
+        \item Facilitate comparisons of performance between managers.
+        \item Encourage full disclosure and fair competition.
+        \item Encourage self-regulation.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{GIPS Characteristics}
+    \begin{itemize}
+        \item Voluntary, minimum standards for performance presentation.
+        \item Contain requirements and best practices.
+        \item Only investment management firms can claim compliance.
+        \item Provide a standard where local laws may not exist.
+        \item Includes all actual, fee-paying, discretionary accounts in composites.
+        \item Must present five years of history, or since inception.
+        \item Must use prescribed calculations and provide discloses.
+        \item Goal of full disclosure and fair representation.
+        \item In cases of conflict, the local law should be followed.
+        \item Encourages monitoring processes and controls.
+        \item Must document the polices used.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Definition of a Firm}
+    \begin{flushleft}
+        A firm is defined as
+        \begin{quotation}
+            \noindent
+            ``an investment firm, subsidiary, or division held out to clients or potential clients as a distinct business entity.''
+        \end{quotation}
+
+        A distinct business entity is defined as
+        \begin{quotation}
+            \noindent
+            ``a unit, division, department, or office that is organizationally or functionally separated from other units, divisions, departs, or offices and that retains discretion over the assets it manages and that should have autonomy over the investment decision-making process.''
+        \end{quotation}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Fundamentals of Compliance}
+    \begin{itemize}
+        \item Must establish, update, and publish policies and procedures for meeting GIPS.
+        \item May not assert that calculations are in accord with GIPS unless it's a firm in compliance making a presentation to a client.
+        \item Cannot claim partial compliance.
+        \item Only investment management firms, not pension plans or consultants, can claim compliance.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Input Data Requirements}
+    \begin{itemize}
+        \item \textbf{Standard 1.A.1.} All data and supporting information for performance presentation, including calculations, must be stored.
+        \item \textbf{Standard 1.A.2.} For periods after 01.01.2011, portfolios must be valued at fair value. Cost or book values are not allowed.
+        \item \textbf{Standard 1.A.3.} 
+            \begin{itemize}
+                \item Before 01.01.2001, portfolios must be valued quarterly.
+                \item Thereafter, monthly.
+                \item After 01.01.2010, monthly and on dates of all large cash flows.
+            \end{itemize}
+        \item \textbf{Standard 1.A.4.} After 01.01.2010, portfolios must be valued on month end.
+        \item \textbf{Standard 1.A.5.} After 01.01.2005, firms must use trade date accounting.
+        \item \textbf{Standard 1.A.6.} Accrual accounting must be used for fixed income and other assets that accrue interest. Market values must include accrued interest.
+        \item \textbf{Standard 1.A.7.} After 01.01.2006, composites must have consistent beginning and ending valuation dates.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Input Data Recommendations}
+    \begin{itemize}
+        \item \textbf{Standard 1.B.1.} Portfolios should be valued at each external cash flow.
+        \item \textbf{Standard 1.B.2.} Valuations should be obtained from an independent third party.
+        \item \textbf{Standard 1.B.3.} Dividends from equities should be accrued as of the ex-dividend date.
+        \item \textbf{Standard 1.B.4.} When presenting net-of-fees, firms should accrue management fees.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Calculation Methodology Requirements}
+    \begin{itemize}
+        \item \textbf{Standard 2.A.1.} Total returns must be used.
+        \item \textbf{Standard 2.A.2.} Time-weighted rates of return adjusted for cash flows must be used. Periodic returns must be geometrically linked.
+            \begin{itemize}
+                \item Starting 01.01.2005, approximated rates of return adjusted for daily weighted external cash flows must be used.
+                \item Starting 01.01.2010, firms must value portfolios on the date of all large external cash flows.
+            \end{itemize}
+        \item \textbf{Standard 2.A.3.} Returns from cash and cash equivalents held in portfolios must be included in total return calculations.
+        \item \textbf{Standard 2.A.4.} Actual trading expenses must be deducted before return calculations. Estimated trading expenses are not permitted.
+        \item \textbf{Standard 2.A.5.} If the actual trading expenses cannot be identified, when calculating gross- or net-of-fees returns, the entire bundled fee must be removed.
+        \item \textbf{Standard 2.A.6.} Composite returns must be calculated by asset-weighting the returns using beginning-of-period values, or a method that reflects external cash flows.
+        \item \textbf{Standard 2.A.7.} After 01.01.2006, returns must be calculated by assets-weighting individual returns quarterly. After 01.01.2010, it must be monthly.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Calculation Methodology Recommendations}
+    \begin{itemize}
+        \item \textbf{Standard 2.B.1.} Returns should be calculated net of non-reclaimable withholding taxes on dividends, interest, and capital gains. Reclaimable withholding taxes should be accrued.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Original and Modified Dietz Methods}
+    \begin{flushleft}
+        Original Dietz method is
+        \begin{align*}
+            R_{\text{Dietz}} &= \frac{\text{EMV} - \text{BMV} - \text{CF}}{\text{BMV} + 0.5 \text{CF}}\\
+            \text{where:}\\
+            \text{CF} &= \text{net cash flow for the period}
+        \end{align*}
+
+        Modified Dietz method is
+        \[
+            R_{\text{MDietz}} = \frac{\text{EMV} - \text{BMV} - \text{CF}}{\text{BMV} + \sum_{i=1}^n W_i \times \text{CF}_i}
+        \]
+
+        Here, $W_i$ is the proportion of whole period that $\text{CF}_i$ has been held in the portfolio. That is
+        \[
+            W_i = \frac{\text{CD} - D}{\text{CD}}
+        \]
+        which implicitly assumes cash flows occur at the end of the day.\newline
+
+        Advantage of the modified Dietz method is that you don't need to know the value of the portfolio at every cash flow. Disadvantage is inaccuracy for large cash flows or cash flows in volatile markets.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Modified IRR Method}
+    \begin{flushleft}
+        \begin{align*}
+            \text{EMV} &= \sum_{i=1}^n \left ( F_i (1 + R)^{W_i} \right ) + \text{BMV} (1 + R)\\
+            \text{where:}\\
+            \text{EMV} &= \text{ending market value of the portfolio}\\
+            F_i &= \text{cash flow $i$}\\
+            W_i &= \text{weight of cash flow $i$ (i.e., proportion of the period)}\\
+            R &= \text{MIRR}
+        \end{align*}
+        
+        Has the same advantages and disadvantages as the modified Dietz method, but is also difficult to do manually. It is also possible to have multiple solutions if there are positive and negative cash flows over a given period.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Daily Valuation Method}
+    \begin{flushleft} 
+        Calculates true TWRR by breaking the period into subperiods defined by cash flows. Each subperiod has return
+        \begin{align*}
+            R_i &= \frac{\text{EMV} - \text{BMV}}{\text{BMV}}\\
+            \intertext{and all subperiod returns are linked with}
+            R_{T} &= \left ( \prod_{i=1}^n (1 + R_i) \right ) - 1\\
+            \text{where:}\\
+            R_T &= \text{total return}\\
+            R_i &= \text{subperiod return}
+        \end{align*}
+
+        Advantage is it calculates true TWRR\@. Disadvantage is it requires precise valuation on each cash flow date. If prices are inaccurate, then error margin may be higher than using approximate methods.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Composite Construction Requirements}
+    \begin{itemize}[itemsep=.2\itemsep]
+        \item \textbf{Standard 3.A.1.} All actual, fee-paying, discretionary portfolios must be included in at least one composite. Non-discretionary portfolios may not be included.
+        \item \textbf{Standard 3.A.2.} Must include only assets under management within the defined firm.
+        \item \textbf{Standard 3.A.3.} Can't link simulated or model performance with actual performance.
+        \item \textbf{Standard 3.A.4.} Must be defined by similar investment objectives. Definition must be available.
+        \item \textbf{Standard 3.A.5.} Must include new portfolios on a timely basis.
+        \item \textbf{Standard 3.A.6.} Terminated portfolios must be included historically.
+        \item \textbf{Standard 3.A.7.} Portfolios can't be switched from one composite to another unless client guidelines or redefinition make it appropriate. Historical record must remain with the initial composite.
+        \item \textbf{Standard 3.A.8.} After 01.01.2010 carve-outs can't be included in a composite unless the carve-out is managed separately with its own cash balance.
+        \item \textbf{Standard 3.A.9.} Portfolios below a composite's minimum asset level can't be included.
+        \item \textbf{Standard 3.A.10.} Large cash flows should be removed from composites until the account reflects the composite style.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Composite Construction Recommendations}
+    \begin{itemize}
+        \item \textbf{Standard 3.B.1.} If a minimum asset level is used, the composite should not be presented to clients not meeting this level.
+        \item \textbf{Standard 3.B.2.} To remove effect of significant cash flows, firms should use temporary accounts.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Disclosure Requirements}
+    \begin{itemize}[itemsep=.2\itemsep]
+        \item \textbf{Standard 4.A.1.} Must disclose using a compliance statement.
+        \item \textbf{Standard 4.A.2--4.} Definitions of firm, composite, and benchmark.
+        \item \textbf{Standard 4.A.5--6.} Fees besides trading expenses.
+        \item \textbf{Standard 4.A.7--9.} Currency, measure of internal dispersion, and fee schedule.
+        \item \textbf{Standard 4.A.10--11.} Composite creation date and availability of composite description.
+        \item \textbf{Standard 4.A.12--13.} Valuation methods, leverage, derivatives, and short positions.
+        \item \textbf{Standard 4.A.14--19.} Significant events, periods of non-compliance, firm and composite redefinition, name changes, and minimum asset levels.
+        \item \textbf{Standard 4.A.20--22.} Withholding of taxes, FX differences in the benchmark, and local laws followed in place of GIPS.
+        \item \textbf{Standard 4.A.23--26.} Allocation of cash to carve-outs, fees in bundled fees, sub-advisors, and not valued on month end.
+        \item \textbf{Standard 4.A.27--28.} Unobservable inputs and valuation hierarchy.
+        \item \textbf{Standard 4.A.29--32.} Lack of benchmark, changes in benchmark, components of composite benchmark, and definition of significant cash flows.
+        \item \textbf{Standard 4.A.33--35.} If or why standard deviation is not available, and performance from a past firm.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Disclosure Recommendations}
+    \begin{itemize}
+        \item \textbf{Standard 4.B.1--2.} Material changes to valuation and calculation methodologies.
+        \item \textbf{Standard 4.B.3.} Material differences between benchmark and composite investment mandate, objective, or strategy.
+        \item \textbf{Standard 4.B.4.} Key assumptions used to value investments.
+        \item \textbf{Standard 4.B.5.} Each subsidiary should disclose a list of other subsidiaries.
+        \item \textbf{Standard 4.B.6.} Use of unobservable inputs.
+        \item \textbf{Standard 4.B.7.} Use of a sub-advisor.
+        \item \textbf{Standard 4.B.1.} If a composite contains proprietary assets.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Presentation and Reporting Requirements}
+    \begin{itemize}[itemsep=.2\itemsep]
+        \item \textbf{Standard 5.A.1.} The following must be reported for each composite.
+            \begin{itemize}
+                \item Five years of annual performance.
+                \item Annual returns identified as gross- or net-of-fees.
+                \item Annual returns for a benchmark.
+                \item Number of portfolios in a composite, if five or more.
+                \item Amount of composite and firm assets at the end of each year.
+                \item Portfolio returns for each year, if five or more.
+            \end{itemize}
+        \item \textbf{Standard 5.A.2.} After 01.01.2011, three-year standard deviation or other risk measure.
+        \item \textbf{Standard 5.A.3.} May link non-compliant returns before 01.01.2000 with disclosure.
+        \item \textbf{Standard 5.A.4.} Return periods of less than one year can't be annualized.
+        \item \textbf{Standard 5.A.5.} Between 01.01.2006 and 01.01.2011 carve-outs must include percentage of composite.
+        \item \textbf{Standard 5.A.6--7.} Percentage of composite made of non-fee-paying and bundled-fee portfolios.
+        \item \textbf{Standard 5.A.8.} Can add acquisitions within a year if most decision-makers are employed, decision-making process stays the same, and records are kept.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Presentation and Reporting Recommendations}
+    \begin{itemize}
+        \item \textbf{Standard 5.B.1.} Present gross of fees returns.
+        \item \textbf{Standard 5.B.2.} Should present
+            \begin{itemize}
+                \item Cumulative returns for composite and benchmark.
+                \item Equal-weighted mean and median returns for each composite.
+                \item Quarterly or monthly returns.
+                \item Annualized composite and benchmark returns.
+            \end{itemize}
+        \item \textbf{Standard 5.B.3--4.} After 01.01.2011, three-year standard deviation for composite and benchmark and corresponding annualized return.
+        \item \textbf{Standard 5.B.5.} If annual returns are presented, then annualized standard deviations should be.
+        \item \textbf{Standard 5.B.6.} Additional composite risk measures.
+        \item \textbf{Standard 5.B.7.} More than ten years of annual performance.
+        \item \textbf{Standard 5.B.8.} Comply with GIPS for all historical periods.
+        \item \textbf{Standard 5.B.9.} Update presentations quarterly.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Assets not Qualifying as Real Estate or Private Equity}
+    \begin{itemize}
+        \item These real estate asset classes fall under the general provisions of GIPS.
+            \begin{itemize}
+                \item Publicly traded real estate securities.
+                \item Mortgage-back securities.
+                \item Private debt investments, including commercial and residential loans where the expected return is based on contractual interest rates.
+            \end{itemize}
+        \item These private equity asset classes fall under the general provisions of GIPS.
+            \begin{itemize}
+                \item Open-end funds.
+                \item Evergreen funds.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Real Estate Requirements}
+    \begin{itemize}[itemsep=.2\itemsep]
+        \item \textbf{Standard 6.A.1--3.} Valued at fair value at end of quarter.
+        \item \textbf{Standard 6.A.4--5.} External valuation every three years, annual starting 2012.
+        \item \textbf{Standard 6.A.6--8.} Returns must be calculated quarterly after transaction costs and income returns must be separate.
+        \item \textbf{Standard 6.A.10.} Define discretion and disclose method and frequency of valuation.
+        \item \textbf{Standard 6.A.11, 15.} Can't link compliant and non-compliant performance.
+        \item \textbf{Standard 6.A.14.} Disclose capital and income return which must sum to total return.
+        \item \textbf{Standard 6.A.16.} Disclose high and low returns and external valuator if more than five portfolios.
+        \item \textbf{Standard 6.A.17--23.} Disclose final liquidation date and quarterly SI-IRR net-of-fees with cash flow frequency. Composites must be defined by vintage year.
+        \item \textbf{Standard 6.A.24--25.} Report benchmark SI-IRR, committed capital and PIC, distributions, TVPI, DPI, RVPI.
+        \item \textbf{Standard 6.A.26.} Benchmark must reflect objective or strategy, be presented at same time period, and be the same vintage year.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Private Equity Requirements}
+    \begin{itemize}[itemsep=0\itemsep]
+        \item \textbf{Standard 7.A.1--4.} Valued annually at fair value, SI-IRR calculated daily.
+        \item \textbf{Standard 7.A.5--7.} Net-of-fees returns exclude management fees and carried interest. Fund of funds must exclude partnership fees, fund fees, expenses, and carried interest.
+        \item \textbf{Standard 7.A.8.} Composite definitions must remain consistent.
+        \item \textbf{Standard 7.A.9-10.} Primary funds and fund of funds must be included in a composite defined by vintage year or strategy.
+        \item \textbf{Standard 7.A.11--20.} Disclose vintage year, valuation method, industry guidelines, benchmark, cash flow frequency, deducted fees, and periods of noncompliance.
+        \item \textbf{Standard 7.A.21-22.} Present net- and gross-of-fees SI-IRR and SI-IRR of underlying investments grouped by vintage year.
+        \item \textbf{Standard 7.A.23.} Must report PIC, cumulative capital, distributions, TVPI, DIP, RVPI.
+        \item \textbf{Standard 7.A.24-25.} If a benchmark is shown, must present SI-IRR and for fund of funds, benchmark must be the same vintage year or strategy.
+        \item \textbf{Standard 7.A.26--27.} Primary funds and fund of funds must present percentage of composite assets invested in investment vehicles and direct investments respectively.
+        \item \textbf{Standard 7.A.28.} Before 01.01.2006, may use non-compliant performance.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Private Equity Recommendations}
+    \begin{itemize}
+        \item \textbf{Standard 7.B.1--3.} Valuation should be done at least quarterly. Before 01.01.2011, SI-IRR should be calculated using daily cash flows. Disclose material differences between valuations in performance and financial reporting.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Wrap Fee/Separately Managed Accounts}
+    \begin{itemize}
+        \item In a WFSMA, a GIPS-compliant manager is a subadvisor to a sponsor.
+        \item Performance must be computed, documented, and verified.
+        \item Returns must be calculated after trading expenses.
+        \item All fees in a bundled fee must be disclosed.
+        \item Composites must disclose percentage of portfolios with bundled fees.
+        \item Include actual WFSMA performance for WFSMA prospects.
+        \item Disclose composite periods which don't include WFSMA accounts or have non-compliant results.
+        \item If a manager has two WFSMAs with the same style from two sponsors, both WFSMAs must be included in the composite. Results must be after the entire wrap fee. A sponsor-specific composite can be used, but the sponsor's name must be disclosed.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Fair Value Hierarchy}
+    \begin{enumerate}
+        \item Market value. E.g., last trade price for actively traded securities.
+        \item Quoted prices for less actively traded identical investments.
+        \item Use market-based inputs to estimate price. E.g., use P/E for comparable actively traded stocks or YTM for similar actively traded bonds.
+        \item Price estimates based on non-directly-observable inputs. E.g., a discounted free cash flow price estimate.
+    \end{enumerate}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Real Estate, Private Equity, and Miscellaneous Valuation Principles}
+    \begin{itemize}[nosep]
+        \item Real estate valuation principles
+            \begin{itemize}[nosep]
+                \item Required to be valued externally by outside sources following accepted valuation standards.
+                \item Amount of external valuator's fee must not be based on the resulting value.
+                \item Recommended to report a single value instead of a range.
+                \item Rotate external valuators every three to five years.
+            \end{itemize}
+        \item Private equity valuation principles
+            \begin{itemize}[nosep]
+                \item Valuation methodology used must be the most appropriate for a particular investment based on the nature, facts, and circumstances of the investment.
+                \item Valuation process should consider
+                    \begin{itemize}
+                        \item Reliable appraisal data.
+                        \item Comparable enterprise or transaction data.
+                        \item Enterprise's stage of development.
+                        \item Additional characteristics unique to the enterprise.
+                    \end{itemize}
+            \end{itemize}
+        \item Other miscellaneous valuation requirements
+            \begin{itemize}[nosep]
+                \item If local valuation laws conflict with GIPS, they should be followed and disclosed.
+                \item Must disclose valuation policies and hierarchy.
+                \item After 01.01.2011, must disclose significant subjective valuations.
+                \item Disclose if the valuation hierarchy differs from the GIPS hierarchy.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Advertising Requirements}
+    \begin{itemize}[itemsep=.2\itemsep]
+        \item Description of the firm.
+        \item How to obtain a compliant presentation and list of all firm composites.
+        \item Advertising Guidelines compliance statement.
+        \item Description of the composite being advertised.
+        \item One of the three sets of total returns.
+            \begin{itemize}
+                \item 1-, 3-, and 5-year annualized composite returns through the most recent period.
+                \item Period-to-date composite results in addition to 1-, 3-, and 5-year cumulative annualized returns.
+                \item Period-to-date composite returns in addition to five years of annual returns.
+            \end{itemize}
+        \item Whether performance is gross or net of management fees.
+        \item Benchmark total returns for the same period and a description of the benchmark.
+        \item Currency used to express returns.
+        \item Extent and use of leverage, derivatives, and short selling to describe risks involved.
+        \item Disclose information not in compliance for periods before 01.01.2000.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Considerations for Verification}
+    \begin{itemize}
+        \item Single verification report is issued to the entire firm.
+        \item Cannot be partial. Can't be compliant with GIPS except for some items.
+        \item Not a requirement for compliance, but is strongly encouraged.
+        \item Minimum period is one year, but recommended period is everything being claimed for compliance.
+        \item Verifier may conclude non-compliance, in which case they must issue a statement explaining why.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Two Methods for Incorporating Tax Effects Into Returns}
+    \begin{itemize}
+        \item \textbf{Pre-liquidation} method calculates after-tax returns based on income and recognized gains and losses. Ignores unrealized gains and losses, generally understating tax liability and overstating after-tax return.
+        \item \textbf{Mark-to-liquidation} method assumes all gains, recognized or not, are taxed each period. Ignores value of tax deferral, overstating tax liability and understating after-tax return.
+    \end{itemize}
+\end{flashcard}
+\end{document}

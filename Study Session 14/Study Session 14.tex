@@ -64,7 +64,7 @@
     \begin{itemize}
         \item \textbf{Market risk} is created by changes in interest rates, exchange rates, market prices, etc. This is frequently the largest component of risk.
         \item \textbf{Credit risk} is the risk of loss caused by a counterparty failing to pay. Historically, credit risk was a binary measurement, but credit derivatives allow for a more continuous measurement. It is often the second largest financial risk.
-        \item \textbf{Liquidity risk} is the risk of loss due to the inability to take on or remove a position quickly at a fair price. It can be difficult to measure as liquidity can appear adequate until a certain even occurs. A narrow bid-ask spread generally indicates good liquidity. Average trading volume may give a better indication of liquidity. Liquidity of derivatives is generally linked to that of the underlying security.
+        \item \textbf{Liquidity risk} is the risk of loss due to the inability to take on or remove a position quickly at a fair price. It can be difficult to measure as liquidity can appear adequate until a certain event occurs. A narrow bid-ask spread generally indicates good liquidity. Average trading volume may give a better indication of liquidity. Liquidity of derivatives is generally linked to that of the underlying security.
     \end{itemize}
 \end{flashcard}
 
@@ -78,7 +78,7 @@
         \item \textbf{Regulatory risk} is present when it's unclear how a transaction will be regulated or if that regulation will change.
         \item \textbf{Tax, accounting and legal risk} like regulator risk, refer to situations in which laws may change. Political risk refers specifically to changes in government triggering one of these risks.
         \item \textbf{Environmental, social and governance risk} (ESG) exists if company decisions cause environmental damage, human resource issues, or poor corporate governance which harm the company.
-        \item \textbf{Performance netting risk} is when payments from a party are used for another.
+        \item \textbf{Performance netting risk} is payments from a party used for another.
         \item \textbf{Settlement netting risk} refers the liquidator of a counterparty in default changing terms of netting agreements such that the non-defaulting party now has to make payments to the defaulting party.
     \end{itemize}
 \end{flashcard}
@@ -179,7 +179,7 @@
         \begin{itemize}
             \item Industry standard required by many regulators.
             \item Aggregates all risk into a single, easy to understand number.
-            \item Can be used in capital allocation by giving each unity a certain amount of VaR. When units have less than perfect correlation, the firm-wide VaR is less than the sum of the unit VaR.
+            \item Can be used in capital allocation by giving each unit a certain amount of VaR. When units have less than perfect correlation, the firm-wide VaR is less than the sum of the unit VaR.
         \end{itemize}
         \item Disadvantages
         \begin{itemize}
@@ -221,7 +221,7 @@
         \begin{itemize}[parsep=1pt,itemsep=1pt]
             \item \textbf{Factor push analysis} in which factors are pushed to the most disadvantageous combination.
             \item \textbf{Maximum loss optimization} which uses mathematical and computer modeling to find the worst combination of factors.
-            \item \textbf{Worst-case secenario} which uses the worst case an analyst thinks likely to occur.
+            \item \textbf{Worst-case secenario} uses the worst case an analyst thinks likely to occur.
         \end{itemize}
     \end{flushleft}
 \end{flashcard}
@@ -232,7 +232,7 @@
 
         Potential credit risk is based on payments due in the future and exists even if there is no current credit risk. It can change over time.\newline
 
-        Cross-default provisions are present in most lending agreements and specify that if a debtor defaults on one payment, he defaults on all obligations. This means that there is a credit risk associated with payments to due to other creditors.
+        Cross-default provisions are present in most lending agreements and specify that if a debtor defaults on one payment, he defaults on all obligations. This means that there is a credit risk associated with payments due to other creditors.
     \end{flushleft}
 \end{flashcard}
 
@@ -266,7 +266,7 @@
 
 \begin{flashcard}[\studyArea]{Methods of Managing Market Risk}
     \begin{flushleft}
-        Risk budgeting finds acceptable levels of risk and allocates risk to different business units. In an enterprise risk management (ERM) system, capital is allocated to portfolio managers based on risk and exposure to each sector. This allow monitoring of the risk budget as well as measuring risk-adjusted performance with return on VaR.\newline
+        Risk budgeting finds acceptable levels of risk and allocates risk to different business units. In an enterprise risk management (ERM) system, capital is allocated to portfolio managers based on risk and exposure to each sector. This allows monitoring of the risk budget as well as measuring risk-adjusted performance with return on VaR.\newline
 
         In addition to VaR, other methods for budgeting risk include
         \begin{itemize}
@@ -310,7 +310,7 @@
         \[
             \text{RoMAD} = \frac{\overline{R}_P}{\text{maximum drawdown}}
         \]
-        \item \textbf{Sortino ratio} is excess return, calculated as portfolio return less minimum acceptable portfolio return (MAR), divided by risk, measured as standard deviation of returns using only returns below MAR. By only using downside volatility measurements, good performance cannot inflate the risk metric.
+        \item \textbf{Sortino ratio} is excess return, calculated as portfolio return less minimum acceptable portfolio return (MAR), divided by risk, measured as standard deviation of returns using only returns below MAR\@. By only using downside volatility measurements, good performance cannot inflate the risk metric.
         \[
             \text{Sortino Ratio} = \frac{\overline{R}_P - \text{MAR}}{\text{downside deviation}}
         \]
@@ -340,8 +340,8 @@
 \end{flashcard}
 
 \begin{flashcard}[\studyArea]{Currency Call and Put Option Relationships}
-    \begin{tabular}{
-            >{\raggedright}p{1in}
+    \begin{tabular}
+           {>{\raggedright}p{1in}
             >{\raggedright}p{1.6in}
             >{\raggedright\arraybackslash}p{1.6in}} \toprule
         \textit{As the price of the base currency increases} &
@@ -457,7 +457,7 @@
     \begin{itemize}
         \item The bid-ask cost on currency trades is generally small, but frequent rebalancing can be costly.
         \item Options require a premium which is lost if the option expires out-of-the-money.
-        \item Forward currency contracts are often shorting than the hedging period, so they require FX swaps. This creates cash flow volatility from gains and losses on the contracts.
+        \item Forward currency contracts are often shorter than the hedging period, so they require FX swaps. This creates cash flow volatility from gains and losses on the contracts.
         \item Overhead costs can be high, requiring a back office and trading infrastructure. Cash must be held in multiple currencies for settlement and margins.
         \item Hedging every currency movement is generally too costly. Managers choose partial hedges and rebalance monthly instead of daily.
     \end{itemize}
@@ -579,8 +579,8 @@
 \end{flashcard}
 
 \begin{flashcard}[\studyArea]{Impact of Forward Premia and Discounts and Roll Yield on Hedging Costs}
-    \begin{tabular}{
-            >{\raggedright}p{1in}
+    \begin{tabular}
+           {>{\raggedright}p{1in}
             >{\raggedright}p{1.6in}
             >{\raggedright\arraybackslash}p{1.6in}} \toprule
         If the hedge requires: &
@@ -632,7 +632,7 @@
 
 \begin{flashcard}[\studyArea]{Minimum-variance Hedge Ratio}
     \begin{flushleft}
-        A mathematical approach to determining hedge ratio. It's a regression of the past changes in the value of the portfolio ($R_{\text{DC}}$) to the past changes in the value of the hedging instrument. The hedge ration is the beta (slope) of this regression. It minimizes tracking error.
+        A mathematical approach to determining hedge ratio. It's a regression of the past changes in the value of the portfolio ($R_{\text{DC}}$) to the past changes in the value of the hedging instrument. The hedge ratio is the beta (slope) of this regression. It minimizes tracking error.
     \end{flushleft}
 \end{flashcard}
 

@@ -1,0 +1,148 @@
+\documentclass[../custom]{flashcards}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\newcommand{\studyArea}{Economic Concepts for Asset Valuation}
+
+\def\labelitemii{$\circ$}
+\def\labelitemiii{$\diamond$}
+\def\labelitemiv{$\cdot$}
+
+\begin{document}
+\cardfrontstyle{headings}
+\cardfrontfoot{Study Session 7}
+
+\begin{flashcard}[\studyArea]{Cobb-Douglas Production Function}
+    \begin{flushleft}
+        \begin{align*}
+            Y &= AK^{\alpha}L^{1 - \alpha}\\
+            \text{where:}
+            Y &= \text{total real economic output}\\
+            A &= \text{total factor productivity (TFP)}\\
+            K &= \text{capital stock}\\
+            L &= \text{labor input}\\
+            \alpha &= \text{output elasticity of $K$ ($0 < \alpha < 1$)}
+        \end{align*}
+
+        This can be rewritten as
+        \begin{align*}
+            \frac{\Delta Y}{Y} &\approx \frac{\Delta A}{A} + \alpha \frac{\Delta K}{K} + (1 - \alpha) \frac{\Delta L}{L}\\
+            \text{where:}\\
+            \frac{\Delta Y}{Y} &= \text{percent change in real output}\\
+            \frac{\Delta A}{A} &= \text{percent change in total factor productivity}\\
+            \frac{\Delta K}{K} &= \text{percent change in capital stock}\\
+            \frac{\Delta L}{L} &= \text{percent change in labor}\\
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Solow Residual}
+    \begin{flushleft}
+        The Solow residual is the change in TFP (i.e., $\% \Delta A$).
+        \[
+            \% \Delta \text{TFP} = \% \Delta Y + \alpha \% \Delta K + (1 - \alpha) \% \Delta L
+        \]
+
+        An economy's TFP can change over time due to
+        \begin{itemize}
+            \item Changing technology.
+            \item Changing restrictions on capital flows and labor mobility.
+            \item Changing trade restrictions.
+            \item Changing laws.
+            \item Changing division of labor.
+            \item Depleting or discovering natural resources.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Dividend Discount Model and H-Model}
+    \begin{flushleft}
+        The constant dividend discount model is
+        \begin{align*}
+            P_0 &= \frac{D_1}{r - g_L} = \frac{D_0 (1 + g_L}{r - g_L}\\
+        \intertext{The H-model assumes a short period of high growth at rate $g_S$}
+            P_0 &= \frac{D_0}{r - g_L} \left ( (1 + g_L) + \frac{N}{2}(g_S - g_L) \right )\\
+            \text{where:}\\
+            P_0 &= \text{current price}\\
+            D_0 &= \text{current dividend}\\
+            r &= \text{equity discount rate}\\
+            g_S &= \text{short-term real rate of growth}\\
+            g_L &= \text{long-term sustainable growth rate}
+        \end{align*}
+
+        For developing markets or markets undergoing change, particular problems are
+        \begin{itemize}[nosep]
+            \item Economic data can be scarce or unreliable. Fundamental change can make past data no longer relevant.
+            \item Market earnings growth rates will not track economic growth for countries undergoing structural economic change.
+            \item Developing economies can have erratic monetary policy, inflation, and hyperinflation, which these models don't account for.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Reasons Why EPS Estimates Vary Between Top-Down and Bottom-Up Forecasts}
+    \begin{itemize}
+        \item Econometric models use historical values and variables adjusted by the user. The models can also be specified incorrectly. Relationships may no longer exist, or other variables might be more appropriate.
+        \item Bottom-up approaches are usually biased on manager expectations. Because most managers expect to outperform the industry, aggregating individual expectations can lead to significantly overestimated expectation. Also, managers tend to be more optimistic going into a recession and pessimistic as the market begins to recover.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Fed Model}
+    \begin{flushleft}
+        Assumes expected operating earnings yield on the S\&P 500 should be the same as the yield on long-term Treasuries.
+        \[
+            \text{Fed model ratio} = \frac{\text{S\&P 500 earnings yield}}{\text{10-year Treasury yield}}
+        \]
+        If the S\&P earnings yield is higher, the index value is too low relative to earnings, equities are undervalued and should increase. The criticisms of the Fed model are
+        \begin{itemize}
+            \item It ignores the equity risk premium by assuming yield on treasuries is the same as the earnings yield on the S\&P 500.
+            \item It ignores earnings growth because Treasury yields have no growth components.
+            \item It compares a real variable---S\&P 500 yield---to a nominal variable---the yield on Treasuries.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Yardeni Model}
+    \begin{flushleft}
+        \begin{align*}
+            \frac{E_1}{P_0} &= Y_B - d(\text{LTEG})\\
+            \text{where:}\\
+            \frac{E_1}{P_0} &= \text{expected market earnings yield}\\
+            Y_B &= \text{yield on A-rated corporate bonds}\\
+            d &= \text{factor for the importance of earnings growth, historically 0.10}
+        \end{align*}
+
+        The market is undervalued if
+            \[
+                \frac{E_1}{P_0} - \left ( Y_B - d (\text{LTEG}) \right ) > 0
+            \]
+        or
+            \[
+                \frac{E_1/P_0}{Y_B - d(\text{LTEG})} > 1
+            \]
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{10-Year Moving Average Price/Earnings Ratio}
+    \begin{flushleft}
+        Numerator of P/10-year MA(E) is the market price of the S\&P 500, and the denominator is the average of the previous ten years' reported real earnings. Both are adjusted for inflation using CPI.\newline
+
+        To use P/10-year MA(E), an analyst compares current value to historical value to determine if the market is over- or underpriced.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Tobin's q and Equity q}
+    \begin{itemize}
+        \item Tobin's q compares current market value of a company to the replacement costs of its assets. The theoretical value is 1.0, and higher values indicate overpriced.
+            \[
+                \text{Tobin's q} = \frac{\text{asset market value}}{\text{asset replacement cost}} = \frac{\text{market value of debt and equity}}{\text{asset replacement cost}}
+            \]
+        \item Equity q compares aggregate market value of equity to replacement cost of net assets. Theoretical value is 1.0.
+            \begin{align*}
+                \text{equity q} &= \frac{\text{market value of equity}}{\text{replacement cost of net worth}}\\
+                &= \frac{\text{outstanding shares} \times \text{price}}{\text{replacement value of assets} - \text{liabilities}}
+            \end{align*}
+        \item Both are mean-reverting so values above 1.0 are expected to fall.
+        \item Both have long-term value as indicators, but it's difficult to estimate replacement values and high or low q ratios can persist for long periods of time.
+    \end{itemize}
+\end{flashcard}
+\end{document}

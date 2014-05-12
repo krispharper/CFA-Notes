@@ -1,8 +1,8 @@
 \documentclass[../custom,grid]{flashcards}
 \usepackage{enumitem}
-%\usepackage{amsmath}
-%\usepackage{booktabs}
-%\usepackage{array}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath}
 %\usepackage{multirow}
 
 \newcommand{\studyArea}{Private Wealth Management}
@@ -172,6 +172,304 @@
                 \item Models that simulate the return of asset classes but not the actual assets held.
                 \item Tax modeling that is simplistic and not tailored to the investor's situation.
             \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Types of Taxes}
+    \begin{itemize}
+        \item \textbf{Taxes on income}
+            \begin{itemize}
+                \item Paid by individuals, corporations, and other legal entities on income including wages, interest, dividends, and capital gains.
+            \end{itemize}
+        \item \textbf{Wealth-based taxes}
+            \begin{itemize}
+                \item Paid on the value of assets held and on wealth transferred.
+            \end{itemize}
+        \item \textbf{Taxes on compensation}
+            \begin{itemize}
+                \item Sales taxes paid by the consumer.
+                \item Value-added taxes paid at each intermediate production step according to value added at the step. Ultimately borne by the consumer.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Characteristics of Tax Regimes}
+    \begin{tabular}
+        {>{\raggedright}m{1.4in}
+         >{\raggedright}m{0.7in}
+         >{\raggedright}m{0.7in}
+         >{\raggedright}m{0.7in}
+         >{\raggedright\arraybackslash}m{0.7in}} \toprule
+
+        \textit{Tax Regime} &
+        \textit{Ordinary Income Tax Structure} &
+        \textit{Favorable Treatment for Interest Income?} &
+        \textit{Favorable Treatment for Dividend Income?} &
+        \textit{Favorable Treatment for Capital Gains?}\\ \midrule
+
+        Common Progressive &
+        Progressive &
+        Yes &
+        Yes &
+        Yes\\ \addlinespace
+
+        Heavy Dividend Tax &
+        Progressive &
+        Yes &
+        No &
+        Yes\\ \addlinespace
+
+        Heavy Capital Gain Tax &
+        Progressive &
+        Yes &
+        Yes &
+        No\\ \addlinespace
+
+        Heavy Interest Tax &
+        Progressive &
+        No &
+        Yes &
+        Yes\\ \addlinespace
+
+        Light Capital Gain Tax &
+        Progressive &
+        No &
+        No &
+        Yes\\ \addlinespace
+
+        Flat and Light &
+        Flat &
+        Yes &
+        Yes &
+        Yes\\ \addlinespace
+
+        Flat and Heavy &
+        Flat &
+        Yes &
+        No &
+        No\\ \bottomrule
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Accrual Taxes}
+    \begin{flushleft}
+        \begin{align*}
+            \text{FVIF}_{\text{IT}} &= (1 + R(1 - T_{\text{I}}))^N\\
+            \\
+            \text{where:}\\
+            \text{FVIF}_{\text{IT}} &= \text{future value interest factor after investment income tax}\\
+            R &= \text{before-tax investment return}\\
+            T_{\text{I}} &= \text{annual tax rate on investment income}\\
+            N &= \text{number of investment periods}
+        \end{align*}
+
+        \begin{itemize}
+            \item $\text{TD}_{\%} > T_{\text{I}}$
+            \item As time horizon increases, $\text{TD}_{\$}$ and $\text{TD}_{\%}$ increase.
+            \item As return increases, $\text{TD}_{\$}$ and $\text{TD}_{\%}$ increase.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Capital Gains Taxes}
+    \begin{flushleft}
+        \begin{align*}
+            \text{FVIF}_{\text{CGT}} &= (1 + R)^N (1 - T_{\text{CG}}) + T_{\text{CG}}B\\
+            \\
+            \text{where:}\\
+            \text{FVIF}_{\text{CGT}} &= \text{future value interest factor after capital gains tax}\\
+            R &= \text{before-tax investment return}\\
+            T_{\text{CG}} &= \text{tax rate on capital gains}\\
+            N &= \text{number of investment periods}\\
+            B &= \text{ratio of cost basis to current market value}
+        \end{align*}
+
+        \begin{itemize}
+            \item $\text{TD}_{\%} = T_{\text{CG}}$
+            \item As time horizon increases, $\text{TD}_{\$}$ and $\text{TD}_{\%}$ are unchanged.
+            \item As return increases, $\text{TD}_{\$}$ and $\text{TD}_{\%}$ are unchanged.
+            \item As time horizon increases, value of the tax deferral increases.
+            \item As return increases, value of the tax deferral increases.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Wealth-Based Taxes}
+    \begin{flushleft}
+        \begin{align*}
+            \text{FVIF}_{\text{WT}} &= ((1 + R)(1 - T_{\text{W}}))^N\\
+            \\
+            \text{where:}\\
+            \text{FVIF}_{\text{WT}} &= \text{future value interest factor after wealth-based tax}\\
+            R &= \text{before-tax investment return}\\
+            T_{\text{W}} &= \text{wealth-based tax rate}\\
+            N &= \text{number of investment periods}
+        \end{align*}
+
+        \begin{itemize}
+            \item $\text{TD}_{\%} > T_{\text{W}}$
+            \item As time horizon increases, $\text{TD}_{\$}$ and $\text{TD}_{\%}$ increase.
+            \item As return increases, $\text{TD}_{\$}$ increases and $\text{TD}_{\%}$ decreases.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Future Value Interest Factor Considering All Taxes}
+    \begin{flushleft}
+        Start with annual return after taxes.
+        \begin{align*}
+            R_{\text{ART}} &= R(1 - \text{realized tax rate})\\
+            &= R(1 - (P_{\text{I}}T_{\text{I}} + P_{\text{D}}T_{\text{D}} + P_{\text{CG}}T_{\text{CG}}))\\
+            \\
+            \text{where:}\\
+            R_{\text{ART}} &= \text{annual return after realized taxes}\\
+            R &= \text{before-tax investment return}\\
+            P_\text{\text{X}} &= \text{proportion of total return from X, taxed at $T_{\text{X}}$}
+        \end{align*}
+
+        We can find the effective capital gains tax rate, $T_{\text{ECG}}$.
+        \[
+            T_{\text{ECG}} = T_{\text{CG}} \frac{1 - (P_{\text{I}} + P_{\text{D}} + P_{\text{CG}})}{1 - (P_{\text{I}}T_{\text{I}} + P_{\text{D}}T_{\text{D}} + P_{\text{CG}}T_{\text{CG}})}
+        \]
+
+        Finally, we have the future value interest factor considering all taxes as well as cost basis.
+        \[
+            \text{FVIF}_{\text{T}} = (1 + R_{\text{ART}})^N (1 - T_{\text{ECG}}) + T_{\text{ECG}} - (1 - B)T_{\text{CG}}
+        \]
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Accrual Equivalent Tax}
+    \begin{flushleft}
+        The accrual equivalent tax return is the annual return that produces the same terminal value as the taxable portfolio.
+        \[
+            R_{\text{AE}} = \left ( \frac{\text{FV}_T}{\text{PV}} \right )^{\frac{1}{N}} - 1 
+        \]
+
+        The accrual equivalent tax rate is the tax rate that makes the pre-tax return equal to the accrual equivalent after-tax return.
+        \[
+            T_{\text{AE}} = 1 - \frac{R_{\text{AE}}}{R}
+        \]
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Tax-Deferred Account}
+    \begin{flushleft}
+        Contributions reduce current taxes, and returns on the contributions accrue tax fee. They are taxed when withdrawn from. They have front-end loaded tax benefits.
+        \begin{align*}
+            \text{FVIF}_{\text{TDA}} &= (1 + R)^N (1 - T_N)\\
+            \\
+            \text{where:}\\
+            \text{FVIF}_{\text{TDA}} &= \text{future value interest factor for a TDA}\\
+            R &= \text{before-tax return on the account}\\
+            T_N &= \text{tax rate in effect at the time of the withdrawal}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Tax-Exempt Account}
+    \begin{flushleft}
+        Contributions are made with after-tax funds and do not reduce the current tax bill. Funds are withdrawn tax-free, and so they have back-end loaded tax benefits.
+        \begin{align*}
+            \text{FVIF}_{\text{TEA}} &= (1 + R)^N (1 - T_0)\\
+            \\
+            \text{where:}\\
+            \text{FVIF}_{\text{TEA}} &= \text{future value interest factor for a TDA}\\
+            R &= \text{before-tax return on the account}\\
+            T_0 &= \text{tax rate in effect at the time of the contribution}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{After-Tax Investment Risk}
+    \begin{flushleft}
+        If investment returns are taxed solely as income at the rate of $T_{\text{I}}$ and the pre-tax standard deviation of returns is $\sigma$, the after-tax risk is $\sigma (1 - T_{\text{I}})$.\newline
+
+        If the investment is held in a tax-exempt account, the investor bears all the investment risk. This is also true for TDAs prior to withdrawal because annual returns are not subject to taxes.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Tax Alpha}
+    \begin{flushleft}
+        Value created by the effective tax management of investments. From a tax-management standpoint, an investor should locate heavily taxed assets in tax-advantaged accounts and lightly taxed assets in taxable accounts.\newline
+
+        In most countries, the strategy would be to put equities in taxable accounts because their current income is lower and capital gains can be deferred. Bonds, with higher current income, would be placed in a tax-protected account.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{After-Tax Returns of Investor Types}
+    \begin{itemize}
+        \item \textbf{Traders.} Due to frequent trading, traders forgo the tax advantages associated with equity. All gains are short-term and taxed annually.
+        \item \textbf{Active investors.} Trade less frequently than traders so many gains are longer term and taxed at lower rates.
+        \item \textbf{Passive investors.} Buy and hold equity so that gains are deferred long term and taxed at preferential rates.
+        \item \textbf{Exempt investors.} Hold all their stock in tax-exempt accounts, thereby avoiding taxation altogether.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Tax Loss Harvesting}
+    \begin{flushleft}
+        The practice of using investment losses to offset investment gains or income and thus avoid the associated taxes. Government may place limits on the amount of losses that can be recognized or the type of gains that can be offset.\newline
+
+        Although it saves current taxes, it generally does not save on cumulative taxes as it usually raises future tax bills.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Highest-In First Out Tax Lot Accounting}
+    \begin{flushleft}
+        When allowed, investors can generate significant tax savings by using HIFO accounting to liquidate positions with the highest cost basis. Total taxes over time are unchanged with HIFO, but it allows tax savings to be reinvested earlier, creating a tax alpha.\newline
+
+        If tax rates are not expected to be constant, the value of HIFO can vary. If tax rates are expected to rise, it could be beneficial to use LIFO accounting and associate the higher gain with the lower rate.\newline
+
+        Volatile security prices have the most potential for creating tax alpha.\newline
+
+        Though excessive trading can create tax inefficiencies, a limited amount of trading can be beneficial when capital losses can be harvested.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Holding Period Management}
+    \begin{itemize}
+        \item Patient traders win out over rapid traders.
+        \item Rapid trading would require a much higher pre-tax return to break even.
+        \item If a sale is being considered near the tax year end, make the sale
+            \begin{itemize}
+                \item Before year end if it is a loss in order to place the loss in the current tax year and offset gains this year. This will lower taxes this year, but raise taxes next year.
+                \item After year end if it is a gain. This will defer the gain and tax until next year's tax return.
+            \end{itemize}
+        \item If tax rates are going to change, the analysis could become more complicated.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{}
+    \begin{flushleft}
+        Ideally, the efficient frontier should be viewed on an after-tax basis. Because the tax status of an investment depends on the account it's in, it could appear on the efficient frontier in both taxable and non-taxable forms.\newline
+
+        The mean-variance optimization should optimally allocate assets and determine the optimal asset location for each asset. Accrual equivalent after-tax returns would be substituted for before-tax returns, and risk on an after-tax basis would be substituted for before-tax risk.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Probate}
+    \begin{flushleft}
+        A legal process that takes place at death, during which a court determines the validity of the decedent's will, inventories the decedent's property, resolves any claims against the decedent, and distributes remaining property according to the will.\newline
+
+        Involves considerable costs which are borne by the decedent's estate. If the decedent leaves no will, or if the will is deemed invalid, the decedent is said to have died intestate and the distribution of the assets is determined by the court.\newline
+
+        Assets solely owned by the decedent must be transferred by a will through the probate process. This can avoided through joint ownership with rights of survivorship, living trusts, retirement plans, and life insurance.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Gifts and Bequests}
+    \begin{itemize}
+        \item \textbf{Gifts} are referred to as lifetime gratuitous transfer or inter vivos transfers and may be subject to gift taxes. Whether the gift is taxed and who pays the tax is determined by the taxing authorities.
+        \item \textbf{Bequests} are referred to as testamentary gratuitous transfers and can be subject to estate taxes, paid by the grantor, or inheritance taxes, paid by the recipient.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Ownership Rights}
+    \begin{itemize}
+        \item \textbf{Forced heirship} means children have a right to a portion of a parent's estate, regardless of the location of the child vis-\`{a}-vis the parent, their relationship, or the parents' relationship.
+        \item \textbf{Claw-back} provisions add gifts and external accounts back to the decedent's estate before calculating the child's share. If the estate isn't sufficient to meet the child's entitlement, in some cases he can legally seek the difference from those who received the gifts.
+        \item \textbf{Community property rights} regime means each spouse is entitled to half of the estate earned during the marriage. Gifts and inheritances received before or during the marriage may be held separate. Assets not distributed under community property rights are distributed according to the will.
+        \item \textbf{Separate property rights} regime means each spouse owns and controls his or her property. Each spouse may, barring forced heirship rules, bequeath assets as they wish.
     \end{itemize}
 \end{flashcard}
 \end{document}

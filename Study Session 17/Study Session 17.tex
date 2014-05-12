@@ -111,7 +111,7 @@
         \item \textbf{Factor-model based.} Relate factor exposures to returns.
             \begin{align*}
                 R_P &= a_P + \sum_{i=1}^K b_iF_i + \varepsilon\\
-                \text{where:}
+                \text{where:}\\
                 R_P &= \text{periodic return on an account}\\
                 a_P &= \text{value of $R_P$ if all factors were zero}\\
                 F_i &= \text{factors that have systematic effect on performance}\\
@@ -266,29 +266,16 @@
             \vspace{-3mm}
             \begin{align*}
                 R_{\text{AC}} &= \sum_{i=1}^A w_i (R_i - R_F)\\
-                %\text{where:}\\
-                %R_{\text{AC}} &= \text{incremental return above $R_F$}\\
-                %R_i - R_F &= \text{excess return above the risk-free rate for asset category $i$}\\
-                %w_i &= \text{weight of asset category $i$}\\
-                %A &= \text{number of asset categories}
             \end{align*}
         \item \textbf{Benchmark level} allows manager benchmarks different from the policy benchmark. Can be calculated as
             \vspace{-3mm}
             \begin{align*}
                 R_{\text{B}} &= \sum_{i=1}^A \sum_{j=1}^M w_i w_{i,j} (R_{B_{i,j}} - R_i)\\
-                %\text{where:}\\
-                %R_{\text{B}} &= \text{incremental return for the benchmark strategy}\\
-                %w_{i,j} &= \text{weight assigned in manager $j$ in asset category $i$}\\
-                %R_{B_{i,j}} &= \text{return for manager $j$'s benchmark in asset category $i$}\\
-                %M &= \text{number of managers}
             \end{align*}
         \item \textbf{Active management} simulates returns actually produced by managers. Can be calculated as
             \vspace{-3mm}
             \begin{align*}
                 R_{\text{IM}} &= \sum_{i=1}^A \sum_{j=1}^M w_i w_{i,j} (R_{A_{i,j}} - R_{B_{i,j}})\\
-                %\text{where:}\\
-                %R_{\text{IM}} &= \text{incremental return for the investment manager level}\\
-                %R_{A_{i,j}} &= \text{return for manager $j$'s portfolio in asset category $i$}
             \end{align*}
         \item \textbf{Allocation effects} is a plug to sum to the portfolio ending value.
     \end{enumerate}
@@ -299,6 +286,7 @@
         \begin{align*}
             R_V &= \underbrace{\sum_{i=1}^S (w_{P,i} - w_{B,i})(R_{B,i} - R_B)}_{\text{pure sector allocation}} + \underbrace{\sum_{i=1}^S (w_{P,i} - w_{B,i})(R_{P,i} - R_{B,i})}_{\text{allocation interaction}}\\
             &+ \underbrace{\sum_{i=1}^S w_{B,i} (R_{P,i} - R_{B,i})}_{\text{within-sector selection}}\\
+            \\
             \text{where:}\\
             R_V &= \text{value added return}\\
             w_{P,i} &= \text{portfolio weight of sector $i$}\\
@@ -338,9 +326,8 @@
                         \item Relatively easy to calculate.
                     \end{itemize}
                 \item Weaknesses
-
                     \begin{itemize}
-                        \item Needs and appropriate benchmark with securities and weights at beginning of evaluation period.
+                        \item Needs an appropriate benchmark with securities and weights at beginning of evaluation period.
                         \item Security selection will affect weighting.
                     \end{itemize}
             \end{itemize}
@@ -380,22 +367,14 @@
         \item \textbf{Ex post alpha} is difference between actual return and return required to compensate for systematic risk, i.e., actual return and CAPM return.
             \begin{align*}
                 \alpha_A &= R_{A_t} - \hat{R}_A = R_{A_t} - (R_F + \beta_A (\hat{R}_M - R_F))\\
-                %\text{where:}\\
-                %\alpha_A &= \text{ex post alpha on the account}\\
-                %R_{A_t} &= \text{actual return in period $t$}\\
-                %\hat{R}_A &= \text{return predicted by CAPM}\\
             \end{align*}
         \item \textbf{Treynor measure} is the slope of the line from the risk free rate through a portfolio above the SML.
             \begin{align*}
                 T_A &= \frac{\bar{R}_A - \bar{R}_F}{\beta_A}\\
-                %\text{where:}\\
-                %\beta_A &= \text{account beta}
             \end{align*}
         \item \textbf{Sharpe ratio} uses total risk instead of beta. It is the slope of the CAL.
             \begin{align*}
                 S_A &= \frac{\bar{R}_A - \bar{R}_F}{\sigma_A}\\
-                %\text{where:}\\
-                %\sigma_A &= \text{standard deviation of account returns}
             \end{align*}
         \item \textbf{$M^2$ measure} measures value added or lost relative to the market assuming the same risk.
             \begin{align*}
@@ -449,7 +428,7 @@
         \item Alpha and Treynor are criticized because they use beta and CAPM.
             \begin{itemize}
                 \item Assumes single priced risk instead of multifactor model.
-                \item Uses a market proxy, e.g. the S\&P 500 to stand for the market.
+                \item Uses a market proxy, e.g.\ the S\&P 500 to stand for the market.
             \end{itemize}
         \item $M^2$ is criticized because the benchmark may not be replicable and transaction costs are not considered.
         \item Alpha, Treynor, and Sharpe are the more widely used measures.

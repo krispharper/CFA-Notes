@@ -4,6 +4,7 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{amsmath}
+\usepackage{tikz}
 
 \def\labelitemii{$\circ$}
 \def\labelitemiii{$\diamond$}
@@ -12,8 +13,66 @@
 \begin{document}
 \cardfrontstyle{headings}
 
+\cardfrontfoot{Study Session 3}
+\newcommand{\studyArea}{Behavioral Finance}
+
+\begin{flashcard}[\studyArea]{Pompian Model Behavioral Investment Types}
+    \begin{itemize}[nosep]
+        \item \textbf{Passive Preserver.}
+            \begin{itemize}[nosep]
+                \item Low risk tolerance.
+                \item Suffers from emotional biases.
+                \item Not wiling to risk own capital.
+                \item Usually not financially sophisticated.
+                \item Possibly difficult to advise because he's driven by emotion.
+            \end{itemize}
+        \item \textbf{Friendly follower.}
+            \begin{itemize}[nosep]
+                \item Passive investor with low to moderate risk tolerance.
+                \item Suffers from cognitive biases.
+                \item Tends to overestimate risk tolerance.
+                \item Wants to invest in the most popular things without regard to fit.
+                \item Best approach in advising is to use quantitative methods to educate.
+            \end{itemize}
+        \item \textbf{Independent Individualist.}
+            \begin{itemize}[nosep]
+                \item Active investor willing to risk own capital.
+                \item Has moderate to high risk tolerance.
+                \item Suffers from cognitive biases.
+                \item Likes to invest, does own research.
+                \item Difficult to advise but will listen to sound advice.
+            \end{itemize}
+        \item \textbf{Active Accumulator.}
+            \begin{itemize}[nosep]
+                \item Active investor with high risk tolerance.
+                \item Suffers from emotional biases. 
+                \item Aggressive investor who likes to get involved.
+                \item Often from entrepreneurial background.
+                \item Most difficult type to advise, and should not be involved in investments.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Availability Bias}
+    \begin{flushleft}
+        Putting undue emphasis on information that is readily available. It can include
+        \begin{itemize}
+            \item Retrievability, focusing on what is first thought of.
+            \item Categorization, putting emphasis on how an idea is categorized.
+            \item Narrow range of experience.
+            \item Resonance occurs when people assume what interests them is representative of what others find important.\newline
+        \end{itemize}
+
+        May produce market participants who
+        \begin{itemize}
+            \item Choose managers based on advertising.
+            \item Limit investment choices to what they are familiar with leading to under-diversification and inappropriate asset allocation.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
 \cardfrontfoot{Study Session 5}
-\newcommand{\studyArea}{Portfolio Management for Institutional Investors}
+\renewcommand{\studyArea}{Portfolio Management for Institutional Investors}
 
 \begin{flashcard}[\studyArea]{Factors Affecting Objectives and Constraints for Pension Plans}
     \begin{itemize}[itemsep=.2\itemsep]
@@ -87,46 +146,6 @@
                 \item Better is to earn a net interest spread, a return higher than actuarial assumption. This would grow the surplus and allow the company to offer products at a lower price.
                 \item Can be difficult to measure total return in the insurance industry.
                 \item Investments are heavily fixed income with the exception of the surplus which may invest in stock, real estate, and private equity.
-            \end{itemize}
-    \end{itemize}
-\end{flashcard}
-
-\cardfrontfoot{Study Session 3}
-\renewcommand{\studyArea}{Behavioral Finance}
-
-\begin{flashcard}[\studyArea]{Pompian Model Behavioral Investment Types}
-    \begin{itemize}[nosep]
-        \item \textbf{Passive Preserver.}
-            \begin{itemize}[nosep]
-                \item Low risk tolerance.
-                \item Suffers from emotional biases.
-                \item Not wiling to risk own capital.
-                \item Usually not financially sophisticated.
-                \item Possibly difficult to advise because he's driven by emotion.
-            \end{itemize}
-        \item \textbf{Friendly follower.}
-            \begin{itemize}[nosep]
-                \item Passive investor with low to moderate risk tolerance.
-                \item Suffers from cognitive biases.
-                \item Tends to overestimate risk tolerance.
-                \item Wants to invest in the most popular things without regard to fit.
-                \item Best approach in advising is to use quantitative methods to educate.
-            \end{itemize}
-        \item \textbf{Independent Individualist.}
-            \begin{itemize}[nosep]
-                \item Active investor willing to risk own capital.
-                \item Has moderate to high risk tolerance.
-                \item Suffers from cognitive biases.
-                \item Likes to invest, does own research.
-                \item Difficult to advise but will listen to sound advice.
-            \end{itemize}
-        \item \textbf{Active Accumulator.}
-            \begin{itemize}[nosep]
-                \item Active investor with high risk tolerance.
-                \item Suffers from emotional biases. 
-                \item Aggressive investor who likes to get involved.
-                \item Often from entrepreneurial background.
-                \item Most difficult type to advise, and should not be involved in investments.
             \end{itemize}
     \end{itemize}
 \end{flashcard}
@@ -301,5 +320,219 @@
         \item Overhead costs can be high, requiring a back office and trading infrastructure. Cash must be held in multiple currencies for settlement and margins.
         \item Hedging every currency movement is generally too costly. Managers choose partial hedges and rebalance monthly instead of daily.
     \end{itemize}
+\end{flashcard}
+
+\cardfrontfoot{Study Session 15}
+\renewcommand{\studyArea}{Risk Management Applications of Derivatives}
+
+\begin{flashcard}[\studyArea]{Bull Spread}
+    \begin{flushleft}
+        Purchase a call option with a low exercise price, $X_L$ and sell a call with a higher exercise price, $X_H$. At inception, $X_L < X_H$ and $C_{L, 0} > C_{H, 0}$. The investor expects the stock price to end up between $X_L$ and $X_H$. This provides limited upside if the stock rises, with a limited downside.
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[<->] (0, -1.5) -- (0, 3) node[above] {Profit};
+                \draw[->] (0, 0) node[left] {\$0} -- (8, 0) node[right] {Stock Price};
+                \draw[dashed] (0, -1) -- (2, -1) -- (6, 2) node[above right] {long call at $X_L$};
+                \draw[ultra thick] (0, -0.5) -- (2, -0.5) -- (4, 1) -- (6, 1) node[right] {bull call spread};
+                \draw (0, 0.5) -- (4, 0.5) -- (6, -1) node[below right] {short call at $X_H$};
+                \draw (2, 0.1) -- (2, 0) node [above] {$X_L$} -- (2, -0.1);
+                \draw (4, 0.1) -- (4, -0.1) node[below] {$X_H$};
+            \end{tikzpicture}
+        \end{center}
+        \begin{align*}
+            \text{profit} &= \max(0, S_T - X_L) - \max(0, S_T - X_H) - C_{L, 0} + C_{H, 0}\\
+            \text{maximum profit} &= X_H - X_L - C_{L, 0} + C_{H, 0}\\
+            \text{maximum loss} &= C_{L, 0} - C_{H, 0}\\
+            \text{breakeven price} &= X_L + C_{L, 0} - C_{H, 0}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Number of Futures Contracts Needed to Achieve a Target Portfolio Duration}
+    \begin{flushleft}
+        \begin{align*}
+            \text{number of contracts} &= (\text{yield beta}) \left ( \frac{\text{MD}_T - \text{MD}_P}{\text{MD}_F} \right ) \left ( \frac{V_P}{P_f \times \text{multiplier}} \right )\\
+            \\
+            \text{where:}\\
+            V_P &= \text{current value of the portfolio}\\
+            P_f &= \text{futures price}\\
+            \text{MD}_T &= \text{target modified duration}\\
+            \text{MD}_P &= \text{modified duration of the portfolio}\\
+            \text{MD}_F &= \text{modified duration of the futures contract}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Effects of Gamma on Delta Hedging}
+    \begin{flushleft}
+        The greater the value of gamma the more risk in the position (i.e., the more variability in the value of the option.)\newline
+
+        The gamma of an at-the-money option is greatest near the expiration. When gamma is large, option values are subject to large changes, the position faces the most risk, and the investor is most likely to use a two-option hedge. In this situation, two options are used to force both delta and gamma to zero.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Interest Rate Caps and Floors}
+    \begin{flushleft}
+        Interest rate caps and floors are series of interest rate call and put options. Each cap and floor is called a caplet and floorlet.\newline
+
+        Caps and floors are OTC contracts so they're tailored. The terms generally specify
+        \begin{itemize}
+            \item Reference rate---typically LIBOR.
+            \item Cap or floor strike rate.
+            \item Length of the agreement.
+            \item Reset frequency, whcih determines days in each settlement period, $D_t$.
+            \item Notional principal ($\text{NP}$).
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Swaps for International Diversification}
+    \begin{flushleft}
+        Swaps can be used to create international diversification by paying the return on a domestic index and receiving the return on an international index. This creates extra cash flow risk compared to a fixed-receiver swap because of the possibility of both indices declining and having to make two payments.\newline
+
+        Benefits of using these swaps are
+        \begin{itemize}
+            \item Costs are generally lower than selling domestic and buying international stock.
+            \item Can be defined for a temporary period of time for which exposure is desired.
+            \item Can be paid in U.S. dollars to avoid foreign currency exposure.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\cardfrontfoot{Study Session 16}
+\renewcommand{\studyArea}{Trading, Monitoring and Rebalancing}
+
+\begin{flashcard}[\studyArea]{Summary of Trading Tactics}
+    \begin{tabular}
+        {>{\raggedright}p{1.05in}
+         >{\raggedright}p{1.05in}
+         >{\raggedright}p{1.05in}
+         >{\raggedright\arraybackslash}p{1.05in}}
+        \toprule
+
+        \textit{Trading Tactic} &
+        \textit{Strengths} &
+        \textit{Weaknessess} &
+        \textit{Usual Trade Motivation}\\ \midrule
+
+        Liquidity-at-any-cost &
+        Quick, certain execution &
+        High costs and leakage of information &
+        Information\\ \addlinespace
+
+        Costs-are-not-important &
+        Quick, certain execution at market price &
+        Loss of control of trade costs &
+        Variety of motivations\\ \addlinespace
+
+        Need-trustworthy-agent &
+        Broker uses skill and time to get low price &
+        High commission and potential leak of intention &
+        Not information\\ \addlinespace
+
+        Advertise-to-draw-liquidity &
+        Market-determined price &
+        High costs and possible front running &
+        Not information\\ \addlinespace
+
+        Low-cost-whatever-the-liquidity &
+        Low trading costs &
+        Uncertain timing and possible trade into weakness&
+        Passive and value\\ \bottomrule
+    \end{tabular}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Constant Proportion Portfolio Insurance}
+    \begin{flushleft}
+        Using CPPI, target weight varies with portfolio value and a specified minimum value. The difference is called the cushion. To get target allocation use
+        \[
+            \text{target investment} = M \times (\text{portfolio value} - \text{floor value} = M \times \text{cushion})
+        \]
+        where $M$ is the constant proportion for an asset class. To use CPPI, $M$ must be greater than $1$ and it doesn't change once selected.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Performance of Rebalancing Strategies in Different Markets}
+    \begin{itemize}
+        \item \textbf{Up or down trending market}
+            \begin{itemize}
+                \item CPPI will outperform. As values increase or decrease, the cushion and resulting allocation increases or decreases, respectively.
+                \item Buy-and-hold underperforms CPPI because no purchases or sales are made to capitalize on the changing market values.
+                \item Constant mix strategy has the worst performance. Increases in value require selling to bring allocations back to the target. This lowers exposure to future increases in value. The opposite is true for decreases in value.
+            \end{itemize}
+        \item \textbf{Nontrending, mean-reverting markets}
+            \begin{itemize}
+                \item CPPI will have the worst performance. A rise in value triggers more allocation, which will then add exposure to an asset that will fall in value. The opposite is true of a fall in value.
+                \item Buy-and-hold will perform better than CPPI because no buys or sells are made.
+                \item Constant mix has the best performance because increases in value trigger sales at market highs and decreases trigger buys at market lows.
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\cardfrontfoot{Study Session 17}
+\renewcommand{\studyArea}{Evaluating Portfolio Performance}
+
+\begin{flashcard}[\studyArea]{Strengths and Weaknesses of Micro Attribution and Fundamental Factor Model Attribution}
+    \begin{itemize}
+        \item \textbf{Micro attribution}
+            \begin{itemize}
+                \item Strengths
+                    \begin{itemize}
+                        \item Separates performance between sectors and securities.
+                        \item Relatively easy to calculate.
+                    \end{itemize}
+                \item Weaknesses
+                    \begin{itemize}
+                        \item Needs an appropriate benchmark with securities and weights at beginning of evaluation period.
+                        \item Security selection will affect weighting.
+                    \end{itemize}
+            \end{itemize}
+        \item \textbf{Fundamental factor model attribution}
+            \begin{itemize}
+                \item Strengths
+                    \begin{itemize}
+                        \item Identifies factors other than security selection and sector allocation.
+                    \end{itemize}
+                \item Weaknesses
+                    \begin{itemize}
+                        \item Factor exposures must be determined at start of evaluation period.
+                        \item Can be complex and lead to spurious correlation.
+                    \end{itemize}
+            \end{itemize}
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Diagram of Risk-Adjusted Measures}
+    \begin{flushleft}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[->] (0, 0) -- (0, 5) node[above] {$R$};
+                \draw[->] (0, 0) -- (5, 0) node[right] {$\beta$};
+                \draw[ultra thick] (0, 1) -- (5, 4) node[above left] {SML};
+                \draw[ultra thick] (0, 1) -- (2, 3);
+                \draw[dashed] (2, 2.2) -- (2, 3);
+                \draw[->] (3, 4) node[above] {$\alpha_A$} -- (2.2, 2.6);
+                \draw[->] (1.2, 4) node[above, text width=2cm] {slope of this line is $T_A$} -- (1, 2.2);
+                \draw[fill] (0, 1) circle[radius=1.5pt] node[left] {$R_F$};
+                \draw[fill] (2, 3) circle[radius=1.5pt] node[above left] {$A$};
+                \draw[fill] (3, 2.8) circle[radius=1.5pt] node[below] {$M$};
+                \draw[fill] (3, 0) circle[radius=1.5pt] node[below] {1.0};
+            \end{tikzpicture}
+            \begin{tikzpicture}
+                \draw[->] (0, 0) -- (0, 5) node[above] {$R$};
+                \draw[->] (0, 0) -- (5, 0) node[right] {$\sigma$};
+                \draw[ultra thick] (0, 1) -- (5, 4) node[above left] {CML};
+                \draw[ultra thick] (0, 1) -- (2, 3);
+                \draw[dashed] (2, 3) -- (4, 5) node[left] {CAL};
+                \draw[dashed] (3, 0) -- (3, 4);
+                \draw[->] (4, 2) node[above] {$M^2_A$} -- (3.2, 1.1);
+                \draw[->] (1.2, 4) node[above, text width=2cm] {slope of this line is $S_A$} -- (1, 2.2);
+                \draw[fill] (0, 1) circle[radius=1.5pt] node[left] {$R_F$};
+                \draw[fill] (2, 3) circle[radius=1.5pt] node[above left] {$A$};
+                \draw[fill] (3, 2.8) circle[radius=1.5pt] node[below right] {$M$};
+                \draw[fill] (3, 0) circle[radius=1.5pt] node[below] {$\sigma_M$};
+            \end{tikzpicture}
+        \end{center}
+    \end{flushleft}
 \end{flashcard}
 \end{document}

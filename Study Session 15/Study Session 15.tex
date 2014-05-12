@@ -62,7 +62,7 @@
     \end{flushleft}
 \end{flashcard}
 
-\begin{flashcard}[\studyArea]{Number of Futures Contracts Needed to Achieve for a Target Portfolio Duration}
+\begin{flashcard}[\studyArea]{Number of Futures Contracts Needed to Achieve a Target Portfolio Duration}
     \begin{flushleft}
         \begin{align*}
             \text{number of contracts} &= (\text{yield beta}) \left ( \frac{\text{MD}_T - \text{MD}_P}{\text{MD}_F} \right ) \left ( \frac{V_P}{P_f \times \text{multiplier}} \right )\\
@@ -196,7 +196,7 @@
 
 \begin{flashcard}[\studyArea]{Bull Spread}
     \begin{flushleft}
-        Purchase a call option with a low exercise price, $X_L$ and sell a call with a higher exercise price, $X_H$. At inception, $X_L < X_H$ and $C_{L, 0} < C_{H, 0}$. The investor expects the stock price to end up between $X_L$ and $X_H$. This provides limited upside if the stock rises, with a limited downside.
+        Purchase a call option with a low exercise price, $X_L$ and sell a call with a higher exercise price, $X_H$. At inception, $X_L < X_H$ and $C_{L, 0} > C_{H, 0}$. The investor expects the stock price to end up between $X_L$ and $X_H$. This provides limited upside if the stock rises, with a limited downside.
         \begin{center}
             \begin{tikzpicture}
                 \draw[<->] (0, -1.5) -- (0, 3) node[above] {Profit};
@@ -258,7 +258,7 @@
             &+ \max(0, S_T - X_H) - C_{L, 0} + 2C_{M, 0} - C_{H, 0}\\
             \text{maximum profit} &= X_M - X_L - C_{L, 0} + 2C_{M, 0} - C_{H, 0}\\
             \text{maximum loss} &= C_{L, 0} - 2 C_{M, 0} + C_{H, 0}\\
-            \text{breakeven price} &= X_L + C_{L, 0} - 2C_{M, 0} + C_{H, 0} \text{ and } 2X_M - X_L - C_{L, 0} + 2C_{M, 0} - C_{H, 0}\\
+            \text{breakeven price} &= \text{$X_L + C_{L, 0} - 2C_{M, 0} + C_{H, 0}$ and $2X_M - X_L - C_{L, 0} + 2C_{M, 0} - C_{H, 0}$}
         \end{align*}
     \end{flushleft}
 \end{flashcard}
@@ -279,7 +279,7 @@
             \text{profit} &= \max(0, S_T - X) + \max(0, X - S_T) - C_0 - P_0\\
             \text{maximum profit} &= S_T - X - C_0 - P_0\\
             \text{maximum loss} &= C_0 + P_0\\
-            \text{breakeven price} &= X - C_0 - P_0 \text{ and } X + C_0 + P_0
+            \text{breakeven price} &= \text{$X - C_0 - P_0$ and $X + C_0 + P_0$}
         \end{align*}
     \end{flushleft}
 \end{flashcard}
@@ -347,7 +347,7 @@
             \item Reference rate---typically LIBOR.
             \item Cap or floor strike rate.
             \item Length of the agreement.
-            \item Length of the agreement ($D$).
+            \item Reset frequency, whcih determines days in each settlement period, $D_t$.
             \item Notional principal ($\text{NP}$).
         \end{itemize}
     \end{flushleft}
@@ -366,7 +366,7 @@
     \begin{flushleft}
         The greater the value of gamma the more risk in the position (i.e., the more variability in the value of the option.)\newline
 
-        The gamma of an at-the-money option is greatest near the expiration. When gamma is large, option values are subject to large changes the position faces the most risk and the investor is most likely to use a two-option hedge. In this situation, two options are used to force both delta and gamma to zero.
+        The gamma of an at-the-money option is greatest near the expiration. When gamma is large, option values are subject to large changes, the position faces the most risk, and the investor is most likely to use a two-option hedge. In this situation, two options are used to force both delta and gamma to zero.
     \end{flushleft}
 \end{flashcard}
 
@@ -374,7 +374,7 @@
     \begin{itemize}
         \item For fixed-rate instruments, duration will be highest as interest rate changes will change the PV of cash flows.
         \item Floating-rate instruments have duration close to zero as future cash flows vary with interest rates.
-        \item Floating-rate instruments can have non-zero duration if the next payment is set, e.g. with swaps. The convention is to treat the duration of the floating-rate side of a swap as half of the reset period.
+        \item Floating-rate instruments can have non-zero duration if the next payment is set, e.g.\ with swaps. The convention is to treat the duration of the floating-rate side of a swap as half of the reset period.
         \item For a pay-floating swap, the duration is
         \[
             D_{\text{pay floating}} = D_{\text{fixed}} - D_{\text{floating}} > 0
@@ -411,7 +411,7 @@
     \begin{flushleft}
         Dealers will use contracts to create currency swaps which do not require exchange of principal. This is essentially a series of exchange-rate purchases in the future at a fixed exchange rate. The amounts exchanged are a function of the current exchange rate and the interest rate of the countries involved.
         \begin{enumerate}
-            \item Divide the foreign cash flow received by the foreign interest rate to get the foreign-denominated NP. This is the foreign NP that would have produced the foreign cash flow at the given exchange rate.
+            \item Divide the foreign cash flow received by the foreign interest rate to get the foreign-denominated NP\@. This is the foreign NP that would have produced the foreign cash flow at the given exchange rate.
             \item Using the current exchange rate, convert the foreign NP into the corresponding domestic NP.
             \item Enter the swap with this NP.
             \begin{enumerate}
@@ -432,7 +432,7 @@
 
 \begin{flashcard}[\studyArea]{Swaps for International Diversification}
     \begin{flushleft}
-        Swaps can be used to create international diversification by paying the return on a domestic index and receiving the return on an international index. This creates extra cash flow compared to a fixed-receiver swap because of the possibility of both indices declining and having to make two payments.\newline
+        Swaps can be used to create international diversification by paying the return on a domestic index and receiving the return on an international index. This creates extra cash flow risk compared to a fixed-receiver swap because of the possibility of both indices declining and having to make two payments.\newline
 
         Benefits of using these swaps are
         \begin{itemize}

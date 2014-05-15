@@ -3,7 +3,8 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{amsmath}
-%\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{float}
 
 \newcommand{\studyArea}{Private Wealth Management}
 
@@ -536,7 +537,6 @@
 \end{flashcard}
 
 \begin{flashcard}[\studyArea]{Relative Value of a Charitable Gift}
-    %\vspace{-6mm}
     \begin{flushleft}
         \begin{align*}
             \text{RV}_{\text{charitable gift}} &= \frac{\text{FV}_{\text{charitable gift}}}{\text{FV}_{\text{bequest}}}\\
@@ -680,6 +680,129 @@
         \item \textbf{Equity forward sale contract.} Enter a forward contract to sell the position. There is no upside or downside risk.
         \item \textbf{Forward conversion with options.} A pair of options is used to hedge the position, selling calls and buying puts with the same strike.
         \item \textbf{Total return equity swap.} Pay the total return on the position and receive LIBOR\@. The investor is fully hedged.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Prepaid Variable Forwards}
+    \begin{flushleft}
+        PVFs are similar to a collar and a loan in one transaction. The investor receives a set price per share now in exchange for delivery of shares in the future.\newline
+
+        The contract could specify certain amounts of shares to be delivered based on the resulting price of the shares.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Tax-Optimization Equity Strategies for Concentrated Positions}
+    \begin{itemize}
+        \item \textbf{Index tracking with active tax management.} Cash from a monetized concentrated stock position is invested to track a broad market index on a pre-tax basis and outperform the index on an after-tax basis.
+        \item \textbf{Completeness portfolio.} Structures the other portfolio assets for greatest diversification benefit to complement the concentrated position.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Cross Hedge Possibilities for Concentrated Positions}
+    \begin{itemize}
+        \item Short shares of a highly correlated stock which will increase to offset decreases in the concentrated position and vice versa.
+        \item Short an index that is highly correlated. This (and shorting a single stock) introduces company-specific risk. A negative event could affect the concentrated position with no offsetting value on the short position.
+        \item Purchase puts on the concentrated position.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Exchange Funds}
+    \begin{flushleft}
+        A number of investors who have concentrated positions pool them together and take pro rata shares of the new fund. They now all participate in a diversified portfolio and have deferred any tax event until shares of the fund are sold.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Considerations for Exit Strategies for Privately Held Businesses}
+    \begin{itemize}
+        \item Value of the business
+        \item Tax rates that would apply to the potential exit strategy.
+        \item Availability and terms of credit, as borrowing may be involved in financing any transaction.
+        \item Buying power of potential buyers.
+        \item Currency values if the transaction involves foreign currency.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Possible Exit Strategies for Privately Held Businesses}
+    \begin{itemize}[nosep]
+        \item \textbf{Strategic buyers} take a buy and hold perspective and generally offer the highest price.
+        \item \textbf{Financial buyer} or \textbf{financial sponsor} is often a PE fund planning to restructure, add value, and resell. Generally purchase more mature businesses.
+        \item \textbf{Recapitalization} is generally used for less mature companies. In leverage recapitalization the owner may retain 20--40\% and sell 60--80\% of his shares back to the company. Continues to manage with a financial stake.
+        \item \textbf{Sale to management or key employees} has drawbacks in a discounted price, lack of financing, possible need for future success, and possible failed negotiations damaging relationship.
+        \item \textbf{Divestiture, sale, or disposition of non-core business assets} sells nonessential assets and then directs the company to use proceeds to pay a large dividend or repurchase stock.
+        \item \textbf{Sale of gift to family members} could be structured with tax advantages such as estate tax freeze or limited partnership valuation discounts.
+        \item \textbf{Personal line of credit secured by company shares} means owner can borrow from company and pledge stock as collateral.
+        \item \textbf{Initial public offering} sells a portion of owner shares to the public and transforms remaining shares into liquid public shares. Generally assumed owner will retain significant ownership stake.
+        \item \textbf{Employee stock ownership plan} sells stock to the ESOP which in turns sells to employees. In a leveraged ESOP, the company borrows to finance the stock purchase.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Strategies for Managing Concentrated Real Estate Positions}
+    \begin{itemize}
+        \item \textbf{Mortgage financing} can raise funds without loss of control of the property. With a nonrecourse loan, the lender's only recourse is to seize the property. The borrower effectively has a put option on the property. The borrower effectively has a put option on the property.
+        \item \textbf{Donor-advised fund} or \textbf{charitable trust} can allow the property owner to take a tax deduction, gift more money to the charity, and influence the use of the donation.
+        \item \textbf{Sale and leaseback} can provide immediate funds while retaining use of the property.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Human Capital}
+    \begin{flushleft}
+        Measure of the individual's lifetime earning capacity. Present value of expected future labor income from salary, wages, bonuses, etc. Should be treated as another asset.
+        \begin{align*}
+            \text{HC}_j &= \sum_{t=j+1}^n \frac{\hat{I}_{t}}{(1 + r)^{t-j}}\\
+            \\
+            \text{where:}\\
+            j &= \text{individual's current age}\\
+            \text{HC}_j &= \text{individual's human capital at age $j$}\\
+            \hat{I}_t &= \text{expected income in year $t$}\\
+            n &= \text{expected remaining years of life (at age $j$)}\\
+            r &= \text{discount rate reflecting inherent risk of income}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Relationship Between Human Capital and Financial Capital}
+    \begin{flushleft}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[->] (0, 0) -- (0, 7) node[above] {\$};
+                \draw[->] (0, 0) -- (10, 0) node[right] {Age};
+                \draw[dashed] (8, 0) -- (8, 7);
+                \node [right, rotate=90] at (8.25, 2)  {Retirement};
+                \node [below] at (4, 0) {Accumulation Phase};
+                \draw[->] (2, -0.25) -- (0.25, -0.25);
+                \draw[->] (6, -0.25) -- (7.75, -0.25);
+                \draw[dashed] (0.25, 0.25) .. controls (3, 1.5) and (5, 2) .. (7.75, 6);
+                \draw (0.25, 6) .. controls (3, 4.8) and (5, 3.74) .. (7.75, 0.25);
+                \draw[->] (5.75, 5) node[above left] {Financial Capital} -- (6.5, 4.5);
+                \draw[->] (5.75, 1) node[below left] {Financial Capital} -- (6.5, 1.5);
+            \end{tikzpicture}
+        \end{center}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Considerations for Allocating Life Insurance and Human Capital}
+    \begin{itemize}
+        \item Individual's risk aversion will affect riskiness of the portfolio.
+        \item Asset allocation and life insurance holdings both affect investor utility and should be solved for jointly.
+        \item Strong correlation between HC and risky assets reduces the allocation to risky assets in the FC as well as need for life insurance. This is caused by high correlation raising risk, increasing the discount rate, lowering HC, and thus lowering life insurance.
+        \item An asset allocation is expected to meet both pre- and post-death objectives. The larger the post-death objectives, the greater the need for life insurance.
+        \item Those with relatively more FC have less HC to insure and less need for life insurance.
+        \item As FC increases over time, the risk take with the FC should be positively related to the riskiness of the HC.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Significant Risks of Investors in Retirement}
+    \begin{itemize}
+        \item Financial risk is due to changes in financial market prices or conditions. In the short term, holding assets witb low volatility, lowers portfolio volatility, but in the long run may produce lower return.
+        \item Longevity risk is the risk of outliving the FC assets, and it rises now that HC is zero. This risk has been rising as life expectancies have been increasing. While public and private DB plans have been becoming less significant.
+        \item Spending uncertainty risk is the inability to precisely predict how much will be needed during retirement or how long it will be needed.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Fixed and Variable Annuities}
+    \begin{itemize}
+        \item Fixed annuity makes a constant nominal payment for life and leaves the beneficiary exposed to declining real value over time.
+        \item A variable annuity is also for life, but the size of the payments is linked to an underlying portfolio, market, or assets. This may give some inflation protection over time.
     \end{itemize}
 \end{flashcard}
 \end{document}

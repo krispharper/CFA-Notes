@@ -1,0 +1,187 @@
+\documentclass[../custom]{flashcards}
+\usepackage{amsmath}
+
+\newcommand{\studyArea}{Asset Allocation}
+
+\def\labelitemii{$\circ$}
+\def\labelitemiii{$\diamond$}
+\def\labelitemiv{$\cdot$}
+
+\begin{document}
+\cardfrontstyle{headings}
+\cardfrontfoot{Study Session 8}
+
+\begin{flashcard}[\studyArea]{Dynamic and Static Asset Allocation}
+    \begin{itemize}
+        \item \textbf{Static asset allocation} ignores the link between optimal asset allocation across different time periods.
+        \item \textbf{Dynamic asset allocation} recognizes that performance in one period affects the required return and risk level for subsequent periods. It is difficult and costly to implement. But with significant liabilities with uncertain timing, the costs are acceptable. Investors who use an ALM approach typically prefer dynamic allocation.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Utility-Adjusted Return}
+    \begin{flushleft}
+        \begin{align*}
+            U_p &= \hat{R}_P - 0.5 A \sigma^2_P\\
+            \\
+            \text{where:}\\
+            U_P &= \text{investor's utility from investing in the portfolio}\\
+            \hat{R}_P &= \text{portfolio expected return}\\
+            A &= \text{investor's risk aversion score}\\
+            \sigma^2_P &= \text{the portfolio variance as a decimal}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Roy's Safety First Measure}
+    \begin{flushleft}
+        One of the oldest and most cited measures of downside risk. Ratio of excess return to risk.
+        \begin{align*}
+            \text{RSF} &= \frac{\hat{R}_P - R_{\text{MAR}}}{\sigma_P}\\
+            \\
+            \text{where:}\\
+            \hat{R}_P &= \text{portfolio expected return}\\
+            R_{\text{MAR}} &= \text{investor's minimum expected return}\\
+            \sigma_P &= \text{portfolio standard deviation}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Conditions for Appropriately Specifying Asset Classes}
+    \begin{itemize}
+        \item Assets in the class are similar qualitatively and statistically.
+        \item Assets are not highly correlated so they give diversification.
+        \item Individual assets cannot be classified in more than one class.
+        \item Cover the majority of all possible investable assets.
+        \item Contain a sufficiently large percentage of liquid assets.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Test for Adding an Asset Class to an Existing Portfolio}
+    \begin{flushleft}
+        If
+        \begin{align*}
+            S_i &> S_P \rho_{i,P}\\
+            \intertext{then adding the investment will improve the portfolio Sharpe ratio}
+            \text{where:}\\
+            S_i &= \text{Sharpe ratio of proposed investment}\\
+            S_P &= \text{Sharpe ratio of current portfolio}\\
+            \rho_{i,P} &= \text{correlation of proposed investment and portfolio returns}
+        \end{align*}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Risk in International Investments}
+    \begin{itemize}
+        \item \textbf{Currency Risk.} Correlation of $R_{\text{FC}}$ and $R_{\text{FX}}$ is generally less than 1. Thus the volatility will be less than volatility of $R_{\text{FC}}$ plus volatility of $R_{\text{FX}}$. As the correlation approaches -1, the lower the overall volatility becomes.
+
+            Empirical evidences suggests that the standard deviation of currency is about half the standard deviation of stock prices. It's the less important determinant of risk.
+        \item \textbf{Political risk.} Exists when a country has either irresponsible fiscal or monetary policy, or lacks legal and regulatory rules to support markets. Could arise if a government confiscates property, restricts foreign investment, suspends capital and currency movement, manipulates currency or taxes foreign investors unfairly, or is unstable or defaults on its debt.
+        \item \textbf{Home country bias.} Investors tend to overweight investments in their own country. Could reflect a lack of familiarity with foreign investments, financial reporting, and language. Can also reflect lack of liquidity and higher political risk in foreign markets, or a need to match domestic liabilities with assets.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Costs in International Investments}
+    \begin{itemize}
+        \item Transaction costs can be higher and liquidity can be lower. Market impact costs are more significant than explicit transaction costs, highest in emerging markets.
+        \item Withholding taxes on foreign investors may not be fully offset by tax treaties. For tax exempt investors, they are a pure cost.
+        \item Free-float can be an issue as stated market cap can include shares held by the government.
+        \item Inefficient market infrastructure can mean high cost for security registration, settlement, custody, management, or information.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Opportunities in International Investments}
+    \begin{itemize}
+        \item Foreign markets could be undervalued and offer better expected returns.
+        \item Even though the home market had the best returns in the past, that is not an indicator of future returns.
+        \item Even in correlations rise in the short term during crises, the long-term benefits of diversification can remain.
+        \item Correlations among bond markets tend to be lower than among equity markets. Adding international bonds can reduce risk.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Considerations for Emerging Markets}
+    \begin{itemize}
+        \item Liquidity and free-float can be limited, which drives up the price. Governments may impose capital and currency restrictions or discriminatory taxes.
+        \item Non-normal return distributions can be leptokurtic. Return patterns show periods of both positive and negative skew in the returns. Daily returns can be extreme and make up most of the annual returns.
+        \item Strong economic growth may not benefit existing shareholders. New share issuance dilutes existing shareholder market value. Growth opportunities could be unfairly allocated by the government and not be available to publicly owned companies. Corporate governance to protect shareholders can be weak.
+        \item Contagion occurs when a crisis in one market spreads to other emerging markets.
+        \item Currency devaluations as emerging market governments devalue their currency, creating a negative $R_{\text{FX}}$, or restrict the ability of an investor to repatriate the funds to their own market. A currency crisis in one market has been observed to lead to contagion.
+        \item Inefficient markets may allow better informed and capitalized institutional investors or those with local presence to earn excess returns.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Progression from Emerging to Developed Market Status}
+    \begin{itemize}
+        \item Equity share prices rise as capital can now flow freely and there's lower stand-alone risk.
+        \item Expected returns increase as capital flows into the market, but then declines after the initial inflow to be consistent with the now higher stock prices and lower risk going forward.
+        \item Long-run return volatility should decline as prices reflect information that is more freely available and political risk declines.
+        \item Diversification benefits can decline despite the fall in stand-alone risk as correlation and covariance with world markets increases.
+        \item Market microstructure and efficiency improve as transaction costs fall, liquidity increases, and prices are more internationally efficient.
+        \item Capital costs fall with higher stock prices and lower risk. Lower capital costs finance higher economic growth.
+    \end{itemize}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Mean-Variance Optimization Approach}
+    \begin{flushleft}
+        To determine an efficient portfolio with an expected return of $k$ and given that there are $j$ asset classes, we find the allocation that has the lowest standard deviation, such that
+        \begin{align*}
+            \hat{R}_P &= \sum_{i=1}^j w_i \hat{R}_i = k\\
+            \\
+            \text{where:}\\
+            \hat{R}_P &= \text{expected return on the portfolio}\\
+            w_i &= \text{weight of class $i$}\\
+            \hat{R}_i &= \text{expected return for class $i$}
+        \end{align*}
+
+        Mean-variance optimization and the efficient frontier can be constructed on either a constrained---without short selling---or constrained---allowing short selling---basis. In both cases, the weights of the portfolio must total 100\%.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Resampled Efficient Frontier}
+    \begin{flushleft}
+        Uses Monte Carlo simulation to create an efficient frontier. Each portfolio on the frontier is an average of many portfolios that have that expected return.
+
+        \begin{itemize}
+            \item Advantages over traditional mean-variance optimization
+                \begin{itemize}
+                    \item Uses an averaging process and generates an efficient frontier that is more stable. Small changes in the input variables result in minor changes.
+                    \item Portfolios generated through this process tend to be more diversified.
+                    \item By comparing any asset mix of an existing portfolio to a range of asset mixes across multiple portfolios, it's possible to see if the current mix is within the boundaries of what is acceptable.
+                \end{itemize}
+            \item Disadvantages over traditional mean-variance optimization
+                \begin{itemize}
+                    \item There is no theoretical reasoning to support the contention that a portfolio constructed through resampling should be superior relative to another constructed through mean-variance analysis.
+                \end{itemize}
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Unconstrained Black-Litterman Model}
+    \begin{flushleft}
+        Starts with weights of asset classes from a global index, applies a Bayseian process, and changes weights based on views of expected returns with no constraints against short sales.\newline
+
+        The UBL is intuitive. It does not define how to make adjustments to weights, but in practice, most managers select relatively diversified portfolios without negative weights.
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Constrained Black-Litterman Model}
+    \begin{flushleft}
+        Allows no negative asset weights, produces well-diversified portfolios that incorporate manager's views, and is a more defined process. BL can calculate the market's consensus expectations of returns by asset class, and then construct an MVO portfolio adjusted for the manager's views of those returns. The steps are as follows.
+        
+        \begin{itemize}
+            \item Select a relevant global market index. Input the market weights for the asset classes in that index and a covariance matrix for those classes.
+            \item Use reverse optimization to back-solve for the implied, expected returns. These will be consensus expectations.
+            \item Manager reviews returns and expresses opinions regarding returns and strength of those opinions.
+            \item Adjust any implied returns to reflect opinions and conviction level.
+            \item A new MVO is run using the adjust returns where the manager had an opinion and the market consensus otherwise. The new MVO produces the asset mix.
+        \end{itemize}
+    \end{flushleft}
+\end{flashcard}
+
+\begin{flashcard}[\studyArea]{Surplus Asset Liability Management}
+    \begin{flushleft}
+        In surplus liability asset management, the expect surplus is plotted against portfolio risk as in traditional MVO\@. Portfolios plotted in this space then generate an efficient frontier with a minimum surplus variance portfolio. This portfolio has minimum variability of the surplus. There is no guarantee that the MSVP has positive expected surplus.\newline
+
+        The choice of a portfolio on the frontier is a client and manager decision. They accept more risk as the expected surplus increases.
+    \end{flushleft}
+\end{flashcard}
+\end{document}
